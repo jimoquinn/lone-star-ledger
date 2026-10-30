@@ -322,6 +322,7 @@ const DEFS = {
   tarrant:  "In-person: early-voting roster. Mail: ballots returned.",
   collin:   "In-person: early-voting roster (certificate number = VUID). Mail: absentee ballots received.",
   denton:   "In-person: early-voting roster (state ID = VUID). Mail: ballots returned.",
+  randall:  "In-person: early-voting roster (state ID = VUID). Mail: ballots received.",
 };
 
 const fmt = n => Math.round(n).toLocaleString("en-US");
@@ -474,7 +475,7 @@ fetch("data.json", {cache:"no-store"}).then(r=>r.json()).then(d=>{
   const fmt = n => Math.round(n).toLocaleString("en-US");
   const sgn = n => (n>0?"+":n<0?"−":"±")+fmt(Math.abs(n));
   const compact = n => Math.abs(n)>=1e3 ? Math.round(n/1e3)+"K" : String(Math.round(n));
-  const NAMES = {harris:"Harris",dallas:"Dallas",bexar:"Bexar",travis:"Travis",hidalgo:"Hidalgo","el-paso":"El Paso",cameron:"Cameron",hays:"Hays",tarrant:"Tarrant",collin:"Collin",denton:"Denton"};
+  const NAMES = {harris:"Harris",dallas:"Dallas",bexar:"Bexar",travis:"Travis",hidalgo:"Hidalgo","el-paso":"El Paso",cameron:"Cameron",hays:"Hays",tarrant:"Tarrant",collin:"Collin",denton:"Denton",randall:"Randall"};
   const mk = (t,a) => { const n=document.createElementNS("http://www.w3.org/2000/svg",t); for(const k in a) n.setAttribute(k,a[k]); return n; };
   const niceStep = m => { const raw=m/3, p=Math.pow(10,Math.floor(Math.log10(raw))), n=raw/p; return (n<1.5?1:n<3?2:n<7?5:10)*p; };
   let S=null, metric="ip", revCounty=null;

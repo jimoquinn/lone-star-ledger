@@ -9,10 +9,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
-ORDER = ["harris", "dallas", "bexar", "collin", "denton", "travis", "hidalgo", "el-paso", "cameron", "hays", "tarrant"]
+ORDER = ["harris", "dallas", "bexar", "collin", "denton", "travis", "hidalgo", "el-paso", "cameron", "hays", "tarrant", "randall"]
 NICE = {"harris": "Harris", "dallas": "Dallas", "bexar": "Bexar", "travis": "Travis",
         "hidalgo": "Hidalgo", "el-paso": "El Paso", "cameron": "Cameron", "hays": "Hays",
-        "tarrant": "Tarrant", "collin": "Collin", "denton": "Denton"}
+        "tarrant": "Tarrant", "collin": "Collin", "denton": "Denton", "randall": "Randall"}
 
 
 def source_last_changed():

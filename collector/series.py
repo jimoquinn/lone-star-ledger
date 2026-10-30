@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 EV_START = "2026-10-19"
 NICE = match.NICE if hasattr(match, "NICE") else None
-ORDER = ["harris", "dallas", "bexar", "travis", "hidalgo", "el-paso", "cameron", "hays", "tarrant", "collin", "denton"]
+ORDER = ["harris", "dallas", "bexar", "travis", "hidalgo", "el-paso", "cameron", "hays", "tarrant", "collin", "denton", "randall"]
 
 
 def sos_captures():

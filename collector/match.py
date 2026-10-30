@@ -32,7 +32,7 @@ import diff  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
-COUNTIES = ["harris", "dallas", "bexar", "travis", "hidalgo", "el-paso", "cameron", "hays", "tarrant", "collin", "denton"]
+COUNTIES = ["harris", "dallas", "bexar", "travis", "hidalgo", "el-paso", "cameron", "hays", "tarrant", "collin", "denton", "randall"]
 
 COUNTY_DEFS = {
     "harris": "in-person: unofficial cumulative EV roster (check-ins); mail: unofficial BBM roster (ballots returned)",
@@ -47,6 +47,7 @@ COUNTY_DEFS = {
     "comal": "in-person: daily IN PERSON roster (State ID = 10-digit VUID; no per-row date, file date = check-in date); mail: daily BBM RETD roster (ballots returned; comalcounty.gov DocumentCenter)",
     "collin": "in-person: cumulative early-voting roster (CertificateNumber = VUID, VoteDate per-row); mail: cumulative absentee-returns roster (VUID, ReceivedDate = ballots received); collincountytx.gov/elections/rosters",
     "denton": "in-person: cumulative Early-Voting-Roster (State ID = VUID, SOS-verified 99.8%; check-in Time only, no per-row vote date); mail: Returned_Mail_Roster (SOS_Vuid, Return Date = ballots returned); votedenton.gov/early-voting-election-day-rosters (via prod box)",
+    "randall": "in-person: Early-Voting-Roster PDF (State ID = VUID, SOS-verified 99.6%; Time = per-row vote datetime); mail: Mail-Ballot-Roster PDF (VUID, Ballot Received Date); randallcounty.gov DocumentCenter (stable View ids, content replaced daily)",
 }
 
 Rec = tuple  # (date 'YYYY-MM-DD' or '', method 'in-person'|'mail')
@@ -375,6 +376,40 @@ def county_denton() -> dict:
     return out
 
 
+def _pdf_vuid_date(path: str):
+    """Yield (VUID, date) per row of a Randall roster PDF. The single 10-digit token on a row is the
+    VUID; the MM/DD/YYYY on the row is the vote/received date. Never prints rows."""
+    import subprocess
+    try:
+        out = subprocess.run(["pdftotext", "-layout", str(path), "-"],
+                             capture_output=True, timeout=600).stdout.decode("utf-8", "replace")
+    except Exception as e:
+        print(f"    ! pdftotext failed on {Path(path).name}: {type(e).__name__}: {e}")
+        return
+    for line in out.splitlines():
+        mv = re.search(r"\b(\d{10})\b", line)
+        if not mv:
+            continue
+        md = re.search(r"\b(\d{1,2}/\d{1,2}/\d{4})\b", line)
+        yield mv.group(1), (us_date(md.group(1)) if md else "")
+
+
+def county_randall() -> dict:
+    """Randall posts CivicPlus DocumentCenter PDFs at stable View ids (content replaced daily):
+    Early-Voting-Roster (No./Precinct/State ID=VUID/Name/Time) and Mail-Ballot-Roster
+    (VUID/Name/Ballot Received Date). State ID SOS-verified at 99.6%. Never prints rows."""
+    out: dict = {}
+    f = latest("randall/*/*ev_roster*.pdf")
+    if f:
+        for v, d in _pdf_vuid_date(f):
+            add(out, v, d, "in-person")
+    f = latest("randall/*/*mail_roster*.pdf")
+    if f:
+        for v, d in _pdf_vuid_date(f):
+            add(out, v, d, "mail")
+    return out
+
+
 def county_none() -> dict:
     return {}
 
@@ -382,7 +417,8 @@ def county_none() -> dict:
 COUNTY_PARSERS = {"harris": county_harris, "dallas": county_dallas, "travis": county_travis,
                   "hidalgo": county_hidalgo, "el-paso": county_el_paso, "cameron": county_cameron,
                   "bexar": county_bexar, "hays": county_hays, "tarrant": county_tarrant,
-                  "comal": county_comal, "collin": county_collin, "denton": county_denton}
+                  "comal": county_comal, "collin": county_collin, "denton": county_denton,
+                  "randall": county_randall}
 
 
 # ---------------------------------------------------------------- compare

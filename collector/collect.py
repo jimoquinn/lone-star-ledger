@@ -68,7 +68,7 @@ COUNTIES = {  # name in Civix -> slug
     "HAYS": "hays", "HIDALGO": "hidalgo", "EL PASO": "el-paso", "CAMERON": "cameron",
     "TARRANT": "tarrant",
     # Reconciler expansion (SOS roster side; county-side fetch wiring in progress):
-    "COLLIN": "collin", "COMAL": "comal", "DENTON": "denton",
+    "COLLIN": "collin", "COMAL": "comal", "DENTON": "denton", "RANDALL": "randall",
 }
 
 DOC_EXT = r"\.(pdf|xlsx|xls|csv|zip|txt)(\?|$)"
@@ -484,6 +484,19 @@ def collect_bexar_docs(state: dict) -> None:
     state["bexar|dc_scan"] = scan
 
 
+# Randall: per-voter roster PDFs at stable CivicPlus DocumentCenter View ids (content replaced daily),
+# unwalled. State ID = VUID (SOS-verified 99.6%). View ids are election-specific.
+RANDALL_DOCS = {
+    "ev_roster": "https://www.randallcounty.gov/DocumentCenter/View/4867",
+    "mail_roster": "https://www.randallcounty.gov/DocumentCenter/View/4827",
+}
+
+
+def collect_randall(state: dict) -> None:
+    for name, url in RANDALL_DOCS.items():
+        fetch_and_store("randall", url, state, pii=True, name=name)
+
+
 def collect_county(slug: str, state: dict) -> None:
     print(slug)
     ingest_inbox(slug, state)
@@ -516,6 +529,8 @@ def collect_county(slug: str, state: dict) -> None:
             time.sleep(0.3)
     if slug == "bexar":
         collect_bexar_docs(state)
+    if slug == "randall":
+        collect_randall(state)
 
 
 # ---------------------------------------------------------------- main
@@ -547,7 +562,7 @@ def main() -> int:
             except Exception as e:
                 print(f"  ! SOS failed: {type(e).__name__}: {e}")
             save_state(state)
-        for slug in ["harris", "bexar", "travis", "dallas", "hays", "hidalgo", "el-paso", "cameron", "tarrant", "collin", "denton"]:
+        for slug in ["harris", "bexar", "travis", "dallas", "hays", "hidalgo", "el-paso", "cameron", "tarrant", "collin", "denton", "randall"]:
             if only and slug not in only:
                 continue
             try:
