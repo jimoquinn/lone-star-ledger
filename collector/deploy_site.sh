@@ -6,10 +6,11 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 python3 collector/dashboard_data.py >/dev/null
 python3 collector/series.py >/dev/null
+python3 collector/reg_churn.py >/dev/null
 if ssh prod 'command -v rsync >/dev/null 2>&1'; then
   rsync -az --delete frontend/dashboard/ prod:/srv/ledger/
 else
-  tar czf - -C frontend/dashboard index.html discovered.html technical.html data.json series.json \
+  tar czf - -C frontend/dashboard index.html discovered.html technical.html churn.html data.json series.json reg_churn.json \
     | ssh prod 'tar xzf - -C /srv/ledger'
 fi
 echo "deployed $(date -u +%FT%TZ) -> prod:/srv/ledger"

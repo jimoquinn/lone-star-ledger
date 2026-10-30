@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Voter Registration Churn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* All 254 Texas counties' registered-voter totals vs. the Oct 5 certified baseline.
+   Same tokens/faces as the dashboard. Dark-first; light mirrored. */
+:root {
+  color-scheme: dark;
+  --bg:#0a1020; --surface:#111a2e; --surface-2:#18243d; --line:#243150;
+  --fg:#eaf0fa; --fg-2:#b9c4d8; --muted:#7e8ba3; --accent:#7fbcff;
+  --drop:#e5484d; --rise:#fab219; --good:#2fb344;
+  --font-ui:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:10px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg:#f3f5f9; --surface:#ffffff; --surface-2:#eef1f6; --line:#d8dee9;
+    --fg:#0f1829; --fg-2:#39455c; --muted:#6b7690; --accent:#1f5fbf;
+    --drop:#c4292e; --rise:#b4790f; --good:#1f8f38;
+  }
+}
+:root[data-theme="dark"] { color-scheme: dark; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:var(--font-ui); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg); }
+a { color:var(--accent); }
+.wrap { max-width:1000px; margin:0 auto; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:0 56px; }
+.topbar { position:sticky; top:env(safe-area-inset-top,0px); z-index:9; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.topbar .in { max-width:1000px; margin:0 auto; display:flex; align-items:center; gap:14px; padding:10px max(16px,env(safe-area-inset-left,0px)); }
+.brand { font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; color:var(--fg); white-space:nowrap; }
+.brand b { color:var(--accent); }
+.topbar a.back { margin-left:auto; font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--fg-2); text-decoration:none; }
+.eyebrow { font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+h1 { font-size:clamp(26px,4.4vw,38px); line-height:1.07; margin:12px 0 8px; font-weight:700; letter-spacing:-.01em; text-wrap:balance; }
+.lede { color:var(--fg-2); font-size:17px; margin:0 0 6px; max-width:70ch; }
+.meta { color:var(--muted); font-size:13px; font-family:var(--font-mono); }
+.tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:20px 0; }
+.tile { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; }
+.tile .k { font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.tile .v { font-size:24px; font-weight:700; margin-top:4px; font-variant-numeric:tabular-nums; }
+.tile .s { color:var(--muted); font-size:12px; margin-top:2px; }
+.banner { border-radius:var(--radius); padding:14px 16px; margin:4px 0 8px; border:1px solid var(--line); font-size:14.5px; }
+.banner.ok   { border-left:3px solid var(--good); background:color-mix(in srgb,var(--good) 8%,var(--surface)); }
+.banner.warn { border-left:3px solid var(--drop); background:color-mix(in srgb,var(--drop) 8%,var(--surface)); }
+.controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:18px 0 8px; }
+.controls input { background:var(--surface); border:1px solid var(--line); border-radius:8px; color:var(--fg); padding:7px 11px; font:inherit; font-size:14px; min-width:200px; }
+.controls label { font-size:13.5px; color:var(--fg-2); display:flex; align-items:center; gap:6px; }
+.tbl { overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); }
+table { border-collapse:collapse; width:100%; font-size:13.5px; min-width:640px; }
+th { background:var(--surface-2); text-align:right; font-family:var(--font-mono); font-size:10.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--fg-2); padding:9px 12px; border-bottom:1px solid var(--line); position:sticky; top:0; cursor:pointer; white-space:nowrap; }
+th:first-child, td:first-child { text-align:left; }
+th[aria-sort="ascending"]::after { content:" ▲"; color:var(--accent); }
+th[aria-sort="descending"]::after { content:" ▼"; color:var(--accent); }
+td { padding:8px 12px; border-bottom:1px solid var(--line); color:var(--fg-2); text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+tr:last-child td { border-bottom:0; }
+tbody tr:hover td { background:color-mix(in srgb,var(--accent) 6%,transparent); }
+td.name { color:var(--fg); font-weight:500; }
+td.drop { color:var(--drop); font-weight:600; }
+td.rise { color:var(--rise); font-weight:600; }
+td.zero { color:var(--muted); }
+.sub { color:var(--muted); font-size:11px; }
+section { border-top:1px solid var(--line); padding-block:22px; margin-top:22px; }
+h2 { font-size:19px; font-weight:600; margin:0 0 10px; }
+p { margin:0 0 12px; color:var(--fg-2); }
+ul { margin:0 0 12px; padding-left:20px; color:var(--fg-2); } li { margin:0 0 6px; }
+.readmore { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+.readmore a { display:flex; flex-direction:column; gap:3px; text-decoration:none; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; flex:1; min-width:220px; }
+.readmore a:hover { border-color:var(--accent); } .readmore a b { color:var(--fg); } .readmore a span { color:var(--muted); font-size:12.5px; }
+footer { color:var(--muted); font-size:12.5px; padding-block:22px; border-top:1px solid var(--line); margin-top:8px; }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="in">
+  <a class="brand" href="index.html">LONE STAR <b>LEDGER</b></a>
+  <a class="back" href="index.html">← Dashboard</a>
+</div></div>
+
+<main class="wrap">
+  <header style="padding-block:30px 6px">
+    <div class="eyebrow">Statewide · all 254 counties</div>
+    <h1>Voter Registration Churn</h1>
+    <p class="lede">Texas registration closed on October 5, 2026, and federal law bars systematic voter removals in the 90 days before the election — so the county rolls should barely move between now and November 3. This page tracks every county's registered-voter total against the Secretary of State's certified October&nbsp;5 figures and flags any change, up or down.</p>
+    <p class="meta" id="meta">Loading…</p>
+  </header>
+
+  <div id="banner"></div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="controls">
+    <input id="q" type="search" placeholder="Filter counties…" autocomplete="off">
+    <label><input type="checkbox" id="onlyChanged"> Only counties that changed</label>
+  </div>
+
+  <div class="tbl"><table id="tbl">
+    <thead><tr>
+      <th data-k="name" aria-sort="ascending">County</th>
+      <th data-k="current_reg">Registered (now)</th>
+      <th data-k="delta">&Delta; since Oct 5</th>
+      <th data-k="baseline_suspense">Suspense (Oct 5)</th>
+      <th data-k="suspct">Suspense&nbsp;%</th>
+      <th data-k="last">Last changed</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+
+  <section>
+    <h2>How to read this</h2>
+    <ul>
+      <li><strong>&Delta; since Oct 5</strong> is the current total minus the Secretary of State's certified November 2026 figure. A <span style="color:var(--drop);font-weight:600">drop</span> during this window is the item worth attention; a <span style="color:var(--rise);font-weight:600">rise</span> is unusual after the deadline too. A dash means unchanged.</li>
+      <li><strong>Suspense</strong> voters are registrations flagged for an address check. They can still vote, but a county with a large suspense share is where list-maintenance actions land hardest — useful context, shown as of October 5. (The live feed doesn't report suspense, so this column is the baseline only.)</li>
+      <li><strong>This is net, not gross.</strong> We see each county's total, not individual additions and removals, so equal churn in both directions would look like no change. The full registration file isn't public; this is the honest limit of a free, aggregate source.</li>
+      <li><strong>A change is a question, not a verdict.</strong> There are lawful reasons a roll shifts — deaths, felony convictions, confirmed moves, de-duplication, deadline processing. A flag here means "worth a look," nothing more.</li>
+    </ul>
+    <p class="sub" id="src"></p>
+  </section>
+
+  <div class="readmore">
+    <a href="index.html"><b>← Early-vote dashboard</b><span>County vs. SOS early-vote counts.</span></a>
+    <a href="technical.html"><b>Methods and code →</b><span>Every source and how it's collected.</span></a>
+  </div>
+
+  <footer>Lone Star Ledger · ledger.precinctlabs.com · registration baseline from the Texas Secretary of State; live totals from the SOS Civix feed (election 53815).</footer>
+</main>
+
+<script>
+const fmt = n => (n==null?"—":Number(n).toLocaleString("en-US"));
+const CT = new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",hour12:true,timeZoneName:"short"});
+function parseUTC(s){ const m=String(s).match(/(\d{4})-(\d\d)-(\d\d)[ T](\d\d):(\d\d)(?::(\d\d))?/); return m?new Date(Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5],+(m[6]||0))):null; }
+function ctime(s){ const d=parseUTC(s); return d?CT.format(d):"—"; }
+
+let DATA=null, rows=[], sortK="name", sortDir=1;
+
+fetch("reg_churn.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
+  DATA=d;
+  rows = d.counties.map(c=>({...c, suspct: c.baseline_reg? 100*c.baseline_suspense/c.baseline_reg : 0}));
+  document.getElementById("meta").textContent =
+    `Baseline: ${d.baseline_label}. Updated ${ctime(d.generated_utc)}. Checked every 15 minutes.`;
+  document.getElementById("src").innerHTML =
+    `Baseline source: <a href="${d.baseline_source}" target="_blank" rel="noopener noreferrer">Texas SOS, November 2026 Voter Registration Figures</a>. Live totals: SOS Civix early-voting feed, election 53815.`;
+  renderTiles(); renderBanner(); applySort();
+}).catch(()=>{ document.getElementById("meta").textContent="Could not load the churn data (reg_churn.json). Please refresh."; });
+
+function renderTiles(){
+  const s=DATA.statewide;
+  const t=document.getElementById("tiles");
+  const tile=(k,v,sub,cls)=>`<div class="tile"><div class="k">${k}</div><div class="v ${cls||''}">${v}</div><div class="s">${sub}</div></div>`;
+  const dv = s.delta===0 ? "—" : (s.delta>0?"+":"")+fmt(s.delta);
+  t.innerHTML =
+    tile("Statewide registered", fmt(s.current_reg), "across all 254 counties") +
+    tile("Net change since Oct 5", dv, "state total vs. certified figure", s.delta<0?"":"") +
+    tile("Counties changed", `${DATA.n_changed} of ${DATA.n_counties}`, DATA.n_changed? "see table" : "all rolls steady") +
+    tile("On suspense (Oct 5)", fmt(s.baseline_suspense), (100*s.baseline_suspense/s.baseline_reg).toFixed(1)+"% of registrations");
+}
+
+function renderBanner(){
+  const b=document.getElementById("banner");
+  if(DATA.n_changed===0){
+    b.className="banner ok";
+    b.textContent=`All ${DATA.n_counties} counties match the October 5 certified registration figures — no change recorded in the tracking window. The rolls are steady.`;
+  } else {
+    b.className="banner warn";
+    b.textContent=`${DATA.n_changed} of ${DATA.n_counties} counties have a registered-voter total that differs from the October 5 certified figure. They are listed first below.`;
+  }
+}
+
+function applySort(){
+  const q=document.getElementById("q").value.trim().toLowerCase();
+  const only=document.getElementById("onlyChanged").checked;
+  let r=rows.filter(c=>(!q||c.name.toLowerCase().includes(q))&&(!only||c.changed));
+  r.sort((a,b)=>{
+    let av,bv;
+    if(sortK==="name"){ av=a.name; bv=b.name; return sortDir*av.localeCompare(bv); }
+    if(sortK==="delta"){ av=Math.abs(a.delta||0); bv=Math.abs(b.delta||0); }
+    else if(sortK==="last"){ av=a.last_change_ts||""; bv=b.last_change_ts||""; }
+    else if(sortK==="suspct"){ av=a.suspct; bv=b.suspct; }
+    else { av=a[sortK]??0; bv=b[sortK]??0; }
+    if(av<bv) return -sortDir; if(av>bv) return sortDir; return a.name.localeCompare(b.name);
+  });
+  const tb=document.getElementById("rows");
+  tb.innerHTML = r.map(c=>{
+    const dcls = c.delta<0?"drop":(c.delta>0?"rise":"zero");
+    const dtxt = c.delta===0||c.delta==null ? "—" : `${c.delta>0?"+":""}${fmt(c.delta)} <span class="sub">(${c.pct>0?"+":""}${c.pct}%)</span>`;
+    return `<tr>
+      <td class="name">${c.name}</td>
+      <td>${fmt(c.current_reg)}</td>
+      <td class="${dcls}">${dtxt}</td>
+      <td>${fmt(c.baseline_suspense)}</td>
+      <td class="sub">${c.suspct.toFixed(1)}%</td>
+      <td class="sub">${c.last_change_ts?ctime(c.last_change_ts):"—"}</td>
+    </tr>`;
+  }).join("") || `<tr><td colspan="6" class="sub" style="text-align:center;padding:18px">No counties match.</td></tr>`;
+}
+
+document.querySelectorAll("th[data-k]").forEach(th=>{
+  th.addEventListener("click",()=>{
+    const k=th.dataset.k;
+    if(sortK===k) sortDir=-sortDir; else { sortK=k; sortDir=(k==="name")?1:-1; }
+    document.querySelectorAll("th[data-k]").forEach(h=>h.removeAttribute("aria-sort"));
+    th.setAttribute("aria-sort", sortDir===1?"ascending":"descending");
+    applySort();
+  });
+});
+document.getElementById("q").addEventListener("input",applySort);
+document.getElementById("onlyChanged").addEventListener("change",applySort);
+</script>
+</body>
+</html>

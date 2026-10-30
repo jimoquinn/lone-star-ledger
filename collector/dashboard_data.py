@@ -51,7 +51,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--match", default="")
     a = ap.parse_args()
-    md = Path(a.match) if a.match else Path(sorted(glob.glob(str(ROOT / "data" / "match" / "*")))[-1])
+    if a.match:
+        md = Path(a.match)
+    else:
+        # Newest match dir that has a summary.json — skip any dir a concurrent match run is
+        # still writing (the hourly cron can be mid-run when deploy fires).
+        done = [p for p in sorted(glob.glob(str(ROOT / "data" / "match" / "*"))) if (Path(p) / "summary.json").exists()]
+        if not done:
+            raise SystemExit("no completed match dir (with summary.json) found")
+        md = Path(done[-1])
     summary = json.load(open(md / "summary.json"))
     mres = {r["county"]: r for r in summary["results"]}
 

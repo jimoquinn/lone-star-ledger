@@ -1,0 +1,4842 @@
+{
+ "generated_utc": "2026-10-30 02:06 UTC",
+ "baseline_label": "Texas SOS certified figures, November 2026 (registration deadline Oct 5, 2026)",
+ "baseline_source": "https://www.sos.state.tx.us/elections/historical/nov2026.shtml",
+ "statewide": {
+  "baseline_reg": 19041684,
+  "current_reg": 19041684,
+  "delta": 0,
+  "baseline_suspense": 1763730
+ },
+ "n_counties": 254,
+ "n_changed": 0,
+ "events": [],
+ "counties": [
+  {
+   "name": "Anderson",
+   "precincts": 23,
+   "baseline_reg": 31222,
+   "baseline_suspense": 2599,
+   "baseline_nonsuspense": 28623,
+   "current_reg": 31222,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 31222
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Andrews",
+   "precincts": 5,
+   "baseline_reg": 10820,
+   "baseline_suspense": 1108,
+   "baseline_nonsuspense": 9712,
+   "current_reg": 10820,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 10820
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Angelina",
+   "precincts": 43,
+   "baseline_reg": 56330,
+   "baseline_suspense": 4373,
+   "baseline_nonsuspense": 51957,
+   "current_reg": 56330,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 56330
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Aransas",
+   "precincts": 8,
+   "baseline_reg": 19867,
+   "baseline_suspense": 2548,
+   "baseline_nonsuspense": 17319,
+   "current_reg": 19867,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 19867
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Archer",
+   "precincts": 14,
+   "baseline_reg": 7093,
+   "baseline_suspense": 491,
+   "baseline_nonsuspense": 6602,
+   "current_reg": 7093,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7093
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Armstrong",
+   "precincts": 8,
+   "baseline_reg": 1436,
+   "baseline_suspense": 73,
+   "baseline_nonsuspense": 1363,
+   "current_reg": 1436,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1436
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Atascosa",
+   "precincts": 21,
+   "baseline_reg": 32925,
+   "baseline_suspense": 2666,
+   "baseline_nonsuspense": 30259,
+   "current_reg": 32925,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 32925
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Austin",
+   "precincts": 10,
+   "baseline_reg": 22824,
+   "baseline_suspense": 1277,
+   "baseline_nonsuspense": 21547,
+   "current_reg": 22824,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 22824
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Bailey",
+   "precincts": 5,
+   "baseline_reg": 3239,
+   "baseline_suspense": 269,
+   "baseline_nonsuspense": 2970,
+   "current_reg": 3239,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3239
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Bandera",
+   "precincts": 11,
+   "baseline_reg": 19330,
+   "baseline_suspense": 1650,
+   "baseline_nonsuspense": 17680,
+   "current_reg": 19330,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 19330
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Bastrop",
+   "precincts": 27,
+   "baseline_reg": 65427,
+   "baseline_suspense": 4747,
+   "baseline_nonsuspense": 60680,
+   "current_reg": 65427,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 65427
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Baylor",
+   "precincts": 5,
+   "baseline_reg": 2387,
+   "baseline_suspense": 77,
+   "baseline_nonsuspense": 2310,
+   "current_reg": 2387,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2387
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Bee",
+   "precincts": 14,
+   "baseline_reg": 15758,
+   "baseline_suspense": 1287,
+   "baseline_nonsuspense": 14471,
+   "current_reg": 15758,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 15758
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Bell",
+   "precincts": 73,
+   "baseline_reg": 246817,
+   "baseline_suspense": 35930,
+   "baseline_nonsuspense": 210887,
+   "current_reg": 246817,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 246817
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Bexar",
+   "precincts": 807,
+   "baseline_reg": 1325780,
+   "baseline_suspense": 146501,
+   "baseline_nonsuspense": 1179279,
+   "current_reg": 1325780,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1325780
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Blanco",
+   "precincts": 6,
+   "baseline_reg": 11369,
+   "baseline_suspense": 780,
+   "baseline_nonsuspense": 10589,
+   "current_reg": 11369,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 11369
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Borden",
+   "precincts": 6,
+   "baseline_reg": 477,
+   "baseline_suspense": 24,
+   "baseline_nonsuspense": 453,
+   "current_reg": 477,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 477
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Bosque",
+   "precincts": 12,
+   "baseline_reg": 13761,
+   "baseline_suspense": 1020,
+   "baseline_nonsuspense": 12741,
+   "current_reg": 13761,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 13761
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Bowie",
+   "precincts": 44,
+   "baseline_reg": 61596,
+   "baseline_suspense": 4497,
+   "baseline_nonsuspense": 57099,
+   "current_reg": 61596,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 61596
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Brazoria",
+   "precincts": 85,
+   "baseline_reg": 261323,
+   "baseline_suspense": 21032,
+   "baseline_nonsuspense": 240291,
+   "current_reg": 261323,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 261323
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Brazos",
+   "precincts": 78,
+   "baseline_reg": 147077,
+   "baseline_suspense": 17625,
+   "baseline_nonsuspense": 129452,
+   "current_reg": 147077,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 147077
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Brewster",
+   "precincts": 9,
+   "baseline_reg": 7119,
+   "baseline_suspense": 448,
+   "baseline_nonsuspense": 6671,
+   "current_reg": 7119,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7119
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Briscoe",
+   "precincts": 5,
+   "baseline_reg": 1022,
+   "baseline_suspense": 50,
+   "baseline_nonsuspense": 972,
+   "current_reg": 1022,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1022
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Brooks",
+   "precincts": 6,
+   "baseline_reg": 4735,
+   "baseline_suspense": 537,
+   "baseline_nonsuspense": 4198,
+   "current_reg": 4735,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4735
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Brown",
+   "precincts": 19,
+   "baseline_reg": 25916,
+   "baseline_suspense": 2695,
+   "baseline_nonsuspense": 23221,
+   "current_reg": 25916,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 25916
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Burleson",
+   "precincts": 14,
+   "baseline_reg": 14321,
+   "baseline_suspense": 957,
+   "baseline_nonsuspense": 13364,
+   "current_reg": 14321,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 14321
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Burnet",
+   "precincts": 22,
+   "baseline_reg": 39466,
+   "baseline_suspense": 136,
+   "baseline_nonsuspense": 39330,
+   "current_reg": 39466,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 39466
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Caldwell",
+   "precincts": 25,
+   "baseline_reg": 28491,
+   "baseline_suspense": 1276,
+   "baseline_nonsuspense": 27215,
+   "current_reg": 28491,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 28491
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Calhoun",
+   "precincts": 12,
+   "baseline_reg": 13031,
+   "baseline_suspense": 912,
+   "baseline_nonsuspense": 12119,
+   "current_reg": 13031,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 13031
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Callahan",
+   "precincts": 9,
+   "baseline_reg": 10636,
+   "baseline_suspense": 840,
+   "baseline_nonsuspense": 9796,
+   "current_reg": 10636,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 10636
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Cameron",
+   "precincts": 103,
+   "baseline_reg": 244070,
+   "baseline_suspense": 18629,
+   "baseline_nonsuspense": 225441,
+   "current_reg": 244070,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 244070
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Camp",
+   "precincts": 5,
+   "baseline_reg": 8510,
+   "baseline_suspense": 281,
+   "baseline_nonsuspense": 8229,
+   "current_reg": 8510,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8510
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Carson",
+   "precincts": 9,
+   "baseline_reg": 4253,
+   "baseline_suspense": 189,
+   "baseline_nonsuspense": 4064,
+   "current_reg": 4253,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4253
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Cass",
+   "precincts": 19,
+   "baseline_reg": 21881,
+   "baseline_suspense": 2035,
+   "baseline_nonsuspense": 19846,
+   "current_reg": 21881,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 21881
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Castro",
+   "precincts": 9,
+   "baseline_reg": 3467,
+   "baseline_suspense": null,
+   "baseline_nonsuspense": 3467,
+   "current_reg": 3467,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3467
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Chambers",
+   "precincts": 20,
+   "baseline_reg": 39119,
+   "baseline_suspense": 1997,
+   "baseline_nonsuspense": 37122,
+   "current_reg": 39119,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 39119
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Cherokee",
+   "precincts": 26,
+   "baseline_reg": 32796,
+   "baseline_suspense": 2833,
+   "baseline_nonsuspense": 29963,
+   "current_reg": 32796,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 32796
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Childress",
+   "precincts": 5,
+   "baseline_reg": 3580,
+   "baseline_suspense": 19,
+   "baseline_nonsuspense": 3561,
+   "current_reg": 3580,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3580
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Clay",
+   "precincts": 17,
+   "baseline_reg": 8340,
+   "baseline_suspense": 508,
+   "baseline_nonsuspense": 7832,
+   "current_reg": 8340,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8340
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Cochran",
+   "precincts": 6,
+   "baseline_reg": 1486,
+   "baseline_suspense": 105,
+   "baseline_nonsuspense": 1381,
+   "current_reg": 1486,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1486
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Coke",
+   "precincts": 5,
+   "baseline_reg": 2532,
+   "baseline_suspense": 7,
+   "baseline_nonsuspense": 2525,
+   "current_reg": 2532,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2532
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Coleman",
+   "precincts": 5,
+   "baseline_reg": 6144,
+   "baseline_suspense": 570,
+   "baseline_nonsuspense": 5574,
+   "current_reg": 6144,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 6144
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Collin",
+   "precincts": 274,
+   "baseline_reg": 788729,
+   "baseline_suspense": 64402,
+   "baseline_nonsuspense": 724327,
+   "current_reg": 788729,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 788729
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Collingsworth",
+   "precincts": 9,
+   "baseline_reg": 1857,
+   "baseline_suspense": 62,
+   "baseline_nonsuspense": 1795,
+   "current_reg": 1857,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1857
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Colorado",
+   "precincts": 12,
+   "baseline_reg": 14766,
+   "baseline_suspense": 751,
+   "baseline_nonsuspense": 14015,
+   "current_reg": 14766,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 14766
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Comal",
+   "precincts": 42,
+   "baseline_reg": 151987,
+   "baseline_suspense": 13098,
+   "baseline_nonsuspense": 138889,
+   "current_reg": 151987,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 151987
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Comanche",
+   "precincts": 15,
+   "baseline_reg": 10336,
+   "baseline_suspense": 952,
+   "baseline_nonsuspense": 9384,
+   "current_reg": 10336,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 10336
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Concho",
+   "precincts": 9,
+   "baseline_reg": 1814,
+   "baseline_suspense": 173,
+   "baseline_nonsuspense": 1641,
+   "current_reg": 1814,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1814
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Cooke",
+   "precincts": 18,
+   "baseline_reg": 31222,
+   "baseline_suspense": 1619,
+   "baseline_nonsuspense": 29603,
+   "current_reg": 31222,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 31222
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Coryell",
+   "precincts": 17,
+   "baseline_reg": 47037,
+   "baseline_suspense": 4562,
+   "baseline_nonsuspense": 42475,
+   "current_reg": 47037,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 47037
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Cottle",
+   "precincts": 4,
+   "baseline_reg": 979,
+   "baseline_suspense": 83,
+   "baseline_nonsuspense": 896,
+   "current_reg": 979,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 979
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Crane",
+   "precincts": 5,
+   "baseline_reg": 2756,
+   "baseline_suspense": 96,
+   "baseline_nonsuspense": 2660,
+   "current_reg": 2756,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2756
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Crockett",
+   "precincts": 5,
+   "baseline_reg": 2259,
+   "baseline_suspense": 76,
+   "baseline_nonsuspense": 2183,
+   "current_reg": 2259,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2259
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Crosby",
+   "precincts": 5,
+   "baseline_reg": 3557,
+   "baseline_suspense": 333,
+   "baseline_nonsuspense": 3224,
+   "current_reg": 3557,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3557
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Culberson",
+   "precincts": 6,
+   "baseline_reg": 1732,
+   "baseline_suspense": 198,
+   "baseline_nonsuspense": 1534,
+   "current_reg": 1732,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1732
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Dallam",
+   "precincts": 10,
+   "baseline_reg": 2836,
+   "baseline_suspense": 360,
+   "baseline_nonsuspense": 2476,
+   "current_reg": 2836,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2836
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Dallas",
+   "precincts": 792,
+   "baseline_reg": 1493955,
+   "baseline_suspense": 155013,
+   "baseline_nonsuspense": 1338942,
+   "current_reg": 1493955,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1493955
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Dawson",
+   "precincts": 10,
+   "baseline_reg": 6481,
+   "baseline_suspense": 557,
+   "baseline_nonsuspense": 5924,
+   "current_reg": 6481,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 6481
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Deaf Smith",
+   "precincts": 5,
+   "baseline_reg": 8821,
+   "baseline_suspense": 906,
+   "baseline_nonsuspense": 7915,
+   "current_reg": 8821,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8821
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Delta",
+   "precincts": 8,
+   "baseline_reg": 4116,
+   "baseline_suspense": 295,
+   "baseline_nonsuspense": 3821,
+   "current_reg": 4116,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4116
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Denton",
+   "precincts": 253,
+   "baseline_reg": 688032,
+   "baseline_suspense": 73785,
+   "baseline_nonsuspense": 614247,
+   "current_reg": 688032,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 688032
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Dewitt",
+   "precincts": 11,
+   "baseline_reg": 11657,
+   "baseline_suspense": 490,
+   "baseline_nonsuspense": 11167,
+   "current_reg": 11657,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 11657
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Dickens",
+   "precincts": 7,
+   "baseline_reg": 1363,
+   "baseline_suspense": 76,
+   "baseline_nonsuspense": 1287,
+   "current_reg": 1363,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1363
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Dimmit",
+   "precincts": 8,
+   "baseline_reg": 6567,
+   "baseline_suspense": 612,
+   "baseline_nonsuspense": 5955,
+   "current_reg": 6567,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 6567
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Donley",
+   "precincts": 7,
+   "baseline_reg": 2463,
+   "baseline_suspense": 126,
+   "baseline_nonsuspense": 2337,
+   "current_reg": 2463,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2463
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Duval",
+   "precincts": 12,
+   "baseline_reg": 7777,
+   "baseline_suspense": 435,
+   "baseline_nonsuspense": 7342,
+   "current_reg": 7777,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7777
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Eastland",
+   "precincts": 10,
+   "baseline_reg": 12664,
+   "baseline_suspense": 1256,
+   "baseline_nonsuspense": 11408,
+   "current_reg": 12664,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 12664
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Ector",
+   "precincts": 42,
+   "baseline_reg": 84739,
+   "baseline_suspense": 4023,
+   "baseline_nonsuspense": 80716,
+   "current_reg": 84739,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 84739
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Edwards",
+   "precincts": 5,
+   "baseline_reg": 1488,
+   "baseline_suspense": 63,
+   "baseline_nonsuspense": 1425,
+   "current_reg": 1488,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1488
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "El Paso",
+   "precincts": 237,
+   "baseline_reg": 530978,
+   "baseline_suspense": 46602,
+   "baseline_nonsuspense": 484376,
+   "current_reg": 530978,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 530978
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Ellis",
+   "precincts": 61,
+   "baseline_reg": 159133,
+   "baseline_suspense": 13059,
+   "baseline_nonsuspense": 146074,
+   "current_reg": 159133,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 159133
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Erath",
+   "precincts": 21,
+   "baseline_reg": 26965,
+   "baseline_suspense": 2688,
+   "baseline_nonsuspense": 24277,
+   "current_reg": 26965,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 26965
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Falls",
+   "precincts": 13,
+   "baseline_reg": 10771,
+   "baseline_suspense": 683,
+   "baseline_nonsuspense": 10088,
+   "current_reg": 10771,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 10771
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Fannin",
+   "precincts": 18,
+   "baseline_reg": 24550,
+   "baseline_suspense": 1339,
+   "baseline_nonsuspense": 23211,
+   "current_reg": 24550,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 24550
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Fayette",
+   "precincts": 13,
+   "baseline_reg": 18401,
+   "baseline_suspense": 890,
+   "baseline_nonsuspense": 17511,
+   "current_reg": 18401,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 18401
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Fisher",
+   "precincts": 5,
+   "baseline_reg": 2739,
+   "baseline_suspense": 49,
+   "baseline_nonsuspense": 2690,
+   "current_reg": 2739,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2739
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Floyd",
+   "precincts": 5,
+   "baseline_reg": 3582,
+   "baseline_suspense": 319,
+   "baseline_nonsuspense": 3263,
+   "current_reg": 3582,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3582
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Foard",
+   "precincts": 5,
+   "baseline_reg": 779,
+   "baseline_suspense": 67,
+   "baseline_nonsuspense": 712,
+   "current_reg": 779,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 779
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Fort Bend",
+   "precincts": 202,
+   "baseline_reg": 581636,
+   "baseline_suspense": 46995,
+   "baseline_nonsuspense": 534641,
+   "current_reg": 581636,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 581636
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Franklin",
+   "precincts": 8,
+   "baseline_reg": 7801,
+   "baseline_suspense": 520,
+   "baseline_nonsuspense": 7281,
+   "current_reg": 7801,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7801
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Freestone",
+   "precincts": 15,
+   "baseline_reg": 13538,
+   "baseline_suspense": 1006,
+   "baseline_nonsuspense": 12532,
+   "current_reg": 13538,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 13538
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Frio",
+   "precincts": 10,
+   "baseline_reg": 9650,
+   "baseline_suspense": 570,
+   "baseline_nonsuspense": 9080,
+   "current_reg": 9650,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 9650
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Gaines",
+   "precincts": 8,
+   "baseline_reg": 10888,
+   "baseline_suspense": 721,
+   "baseline_nonsuspense": 10167,
+   "current_reg": 10888,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 10888
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Galveston",
+   "precincts": 96,
+   "baseline_reg": 251059,
+   "baseline_suspense": 10394,
+   "baseline_nonsuspense": 240665,
+   "current_reg": 251059,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 251059
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Garza",
+   "precincts": 7,
+   "baseline_reg": 2528,
+   "baseline_suspense": 300,
+   "baseline_nonsuspense": 2228,
+   "current_reg": 2528,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2528
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Gillespie",
+   "precincts": 14,
+   "baseline_reg": 22570,
+   "baseline_suspense": 1400,
+   "baseline_nonsuspense": 21170,
+   "current_reg": 22570,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 22570
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Glasscock",
+   "precincts": 4,
+   "baseline_reg": 857,
+   "baseline_suspense": 57,
+   "baseline_nonsuspense": 800,
+   "current_reg": 857,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 857
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Goliad",
+   "precincts": 10,
+   "baseline_reg": 5747,
+   "baseline_suspense": 425,
+   "baseline_nonsuspense": 5322,
+   "current_reg": 5747,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 5747
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Gonzales",
+   "precincts": 16,
+   "baseline_reg": 13364,
+   "baseline_suspense": 159,
+   "baseline_nonsuspense": 13205,
+   "current_reg": 13364,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 13364
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Gray",
+   "precincts": 8,
+   "baseline_reg": 12303,
+   "baseline_suspense": 1460,
+   "baseline_nonsuspense": 10843,
+   "current_reg": 12303,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 12303
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Grayson",
+   "precincts": 43,
+   "baseline_reg": 104013,
+   "baseline_suspense": 9803,
+   "baseline_nonsuspense": 94210,
+   "current_reg": 104013,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 104013
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Gregg",
+   "precincts": 22,
+   "baseline_reg": 74495,
+   "baseline_suspense": 5957,
+   "baseline_nonsuspense": 68538,
+   "current_reg": 74495,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 74495
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Grimes",
+   "precincts": 14,
+   "baseline_reg": 22206,
+   "baseline_suspense": 1099,
+   "baseline_nonsuspense": 21107,
+   "current_reg": 22206,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 22206
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Guadalupe",
+   "precincts": 79,
+   "baseline_reg": 138088,
+   "baseline_suspense": 11857,
+   "baseline_nonsuspense": 126231,
+   "current_reg": 138088,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 138088
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hale",
+   "precincts": 31,
+   "baseline_reg": 18374,
+   "baseline_suspense": 190,
+   "baseline_nonsuspense": 18184,
+   "current_reg": 18374,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 18374
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hall",
+   "precincts": 8,
+   "baseline_reg": 1831,
+   "baseline_suspense": 168,
+   "baseline_nonsuspense": 1663,
+   "current_reg": 1831,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1831
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hamilton",
+   "precincts": 12,
+   "baseline_reg": 6348,
+   "baseline_suspense": 504,
+   "baseline_nonsuspense": 5844,
+   "current_reg": 6348,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 6348
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hansford",
+   "precincts": 9,
+   "baseline_reg": 2977,
+   "baseline_suspense": 108,
+   "baseline_nonsuspense": 2869,
+   "current_reg": 2977,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2977
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hardeman",
+   "precincts": 5,
+   "baseline_reg": 2191,
+   "baseline_suspense": 93,
+   "baseline_nonsuspense": 2098,
+   "current_reg": 2191,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2191
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hardin",
+   "precincts": 20,
+   "baseline_reg": 43968,
+   "baseline_suspense": 3727,
+   "baseline_nonsuspense": 40241,
+   "current_reg": 43968,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 43968
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Harris",
+   "precincts": 1225,
+   "baseline_reg": 2746177,
+   "baseline_suspense": 282402,
+   "baseline_nonsuspense": 2463775,
+   "current_reg": 2746177,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2746177
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Harrison",
+   "precincts": 27,
+   "baseline_reg": 47906,
+   "baseline_suspense": 2036,
+   "baseline_nonsuspense": 45870,
+   "current_reg": 47906,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 47906
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hartley",
+   "precincts": 7,
+   "baseline_reg": 2821,
+   "baseline_suspense": 290,
+   "baseline_nonsuspense": 2531,
+   "current_reg": 2821,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2821
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Haskell",
+   "precincts": 11,
+   "baseline_reg": 3445,
+   "baseline_suspense": 273,
+   "baseline_nonsuspense": 3172,
+   "current_reg": 3445,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3445
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hays",
+   "precincts": 89,
+   "baseline_reg": 203490,
+   "baseline_suspense": 23800,
+   "baseline_nonsuspense": 179690,
+   "current_reg": 203490,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 203490
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hemphill",
+   "precincts": 8,
+   "baseline_reg": 2290,
+   "baseline_suspense": 124,
+   "baseline_nonsuspense": 2166,
+   "current_reg": 2290,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2290
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Henderson",
+   "precincts": 31,
+   "baseline_reg": 61329,
+   "baseline_suspense": 4941,
+   "baseline_nonsuspense": 56388,
+   "current_reg": 61329,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 61329
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hidalgo",
+   "precincts": 259,
+   "baseline_reg": 466208,
+   "baseline_suspense": 30590,
+   "baseline_nonsuspense": 435618,
+   "current_reg": 466208,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 466208
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hill",
+   "precincts": 14,
+   "baseline_reg": 27866,
+   "baseline_suspense": 2718,
+   "baseline_nonsuspense": 25148,
+   "current_reg": 27866,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 27866
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hockley",
+   "precincts": 15,
+   "baseline_reg": 14373,
+   "baseline_suspense": 1140,
+   "baseline_nonsuspense": 13233,
+   "current_reg": 14373,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 14373
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hood",
+   "precincts": 18,
+   "baseline_reg": 54192,
+   "baseline_suspense": 2299,
+   "baseline_nonsuspense": 51893,
+   "current_reg": 54192,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 54192
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hopkins",
+   "precincts": 22,
+   "baseline_reg": 25858,
+   "baseline_suspense": 1754,
+   "baseline_nonsuspense": 24104,
+   "current_reg": 25858,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 25858
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Houston",
+   "precincts": 22,
+   "baseline_reg": 13919,
+   "baseline_suspense": 970,
+   "baseline_nonsuspense": 12949,
+   "current_reg": 13919,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 13919
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Howard",
+   "precincts": 32,
+   "baseline_reg": 16861,
+   "baseline_suspense": 1843,
+   "baseline_nonsuspense": 15018,
+   "current_reg": 16861,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 16861
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hudspeth",
+   "precincts": 9,
+   "baseline_reg": 2103,
+   "baseline_suspense": 248,
+   "baseline_nonsuspense": 1855,
+   "current_reg": 2103,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2103
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hunt",
+   "precincts": 40,
+   "baseline_reg": 77012,
+   "baseline_suspense": 7784,
+   "baseline_nonsuspense": 69228,
+   "current_reg": 77012,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 77012
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Hutchinson",
+   "precincts": 9,
+   "baseline_reg": 13404,
+   "baseline_suspense": 1325,
+   "baseline_nonsuspense": 12079,
+   "current_reg": 13404,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 13404
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Irion",
+   "precincts": 5,
+   "baseline_reg": 1221,
+   "baseline_suspense": 76,
+   "baseline_nonsuspense": 1145,
+   "current_reg": 1221,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1221
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Jack",
+   "precincts": 7,
+   "baseline_reg": 5967,
+   "baseline_suspense": 446,
+   "baseline_nonsuspense": 5521,
+   "current_reg": 5967,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 5967
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Jackson",
+   "precincts": 10,
+   "baseline_reg": 10054,
+   "baseline_suspense": 604,
+   "baseline_nonsuspense": 9450,
+   "current_reg": 10054,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 10054
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Jasper",
+   "precincts": 21,
+   "baseline_reg": 24585,
+   "baseline_suspense": 2000,
+   "baseline_nonsuspense": 22585,
+   "current_reg": 24585,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 24585
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Jeff Davis",
+   "precincts": 6,
+   "baseline_reg": 1539,
+   "baseline_suspense": 135,
+   "baseline_nonsuspense": 1404,
+   "current_reg": 1539,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1539
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Jefferson",
+   "precincts": 105,
+   "baseline_reg": 148754,
+   "baseline_suspense": 14280,
+   "baseline_nonsuspense": 134474,
+   "current_reg": 148754,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 148754
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Jim Hogg",
+   "precincts": 6,
+   "baseline_reg": 3405,
+   "baseline_suspense": 305,
+   "baseline_nonsuspense": 3100,
+   "current_reg": 3405,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3405
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Jim Wells",
+   "precincts": 22,
+   "baseline_reg": 26107,
+   "baseline_suspense": 1700,
+   "baseline_nonsuspense": 24407,
+   "current_reg": 26107,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 26107
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Johnson",
+   "precincts": 51,
+   "baseline_reg": 135277,
+   "baseline_suspense": 13053,
+   "baseline_nonsuspense": 122224,
+   "current_reg": 135277,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 135277
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Jones",
+   "precincts": 5,
+   "baseline_reg": 11231,
+   "baseline_suspense": 596,
+   "baseline_nonsuspense": 10635,
+   "current_reg": 11231,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 11231
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Karnes",
+   "precincts": 16,
+   "baseline_reg": 8281,
+   "baseline_suspense": 519,
+   "baseline_nonsuspense": 7762,
+   "current_reg": 8281,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8281
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Kaufman",
+   "precincts": 38,
+   "baseline_reg": 119211,
+   "baseline_suspense": 2831,
+   "baseline_nonsuspense": 116380,
+   "current_reg": 119211,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 119211
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Kendall",
+   "precincts": 18,
+   "baseline_reg": 41174,
+   "baseline_suspense": 1211,
+   "baseline_nonsuspense": 39963,
+   "current_reg": 41174,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 41174
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Kenedy",
+   "precincts": 7,
+   "baseline_reg": 269,
+   "baseline_suspense": 28,
+   "baseline_nonsuspense": 241,
+   "current_reg": 269,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 269
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Kent",
+   "precincts": 7,
+   "baseline_reg": 566,
+   "baseline_suspense": 1,
+   "baseline_nonsuspense": 565,
+   "current_reg": 566,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 566
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Kerr",
+   "precincts": 21,
+   "baseline_reg": 39762,
+   "baseline_suspense": 3404,
+   "baseline_nonsuspense": 36358,
+   "current_reg": 39762,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 39762
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Kimble",
+   "precincts": 8,
+   "baseline_reg": 3353,
+   "baseline_suspense": 248,
+   "baseline_nonsuspense": 3105,
+   "current_reg": 3353,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3353
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "King",
+   "precincts": 5,
+   "baseline_reg": 179,
+   "baseline_suspense": 15,
+   "baseline_nonsuspense": 164,
+   "current_reg": 179,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 179
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Kinney",
+   "precincts": 5,
+   "baseline_reg": 2195,
+   "baseline_suspense": 157,
+   "baseline_nonsuspense": 2038,
+   "current_reg": 2195,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2195
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Kleberg",
+   "precincts": 18,
+   "baseline_reg": 18028,
+   "baseline_suspense": 2045,
+   "baseline_nonsuspense": 15983,
+   "current_reg": 18028,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 18028
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Knox",
+   "precincts": 7,
+   "baseline_reg": 2262,
+   "baseline_suspense": 76,
+   "baseline_nonsuspense": 2186,
+   "current_reg": 2262,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2262
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Lamar",
+   "precincts": 27,
+   "baseline_reg": 33431,
+   "baseline_suspense": 3088,
+   "baseline_nonsuspense": 30343,
+   "current_reg": 33431,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 33431
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Lamb",
+   "precincts": 11,
+   "baseline_reg": 7668,
+   "baseline_suspense": 357,
+   "baseline_nonsuspense": 7311,
+   "current_reg": 7668,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7668
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Lampasas",
+   "precincts": 11,
+   "baseline_reg": 17556,
+   "baseline_suspense": 45,
+   "baseline_nonsuspense": 17511,
+   "current_reg": 17556,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 17556
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Lasalle",
+   "precincts": 7,
+   "baseline_reg": 4096,
+   "baseline_suspense": 198,
+   "baseline_nonsuspense": 3898,
+   "current_reg": 4096,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4096
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Lavaca",
+   "precincts": 13,
+   "baseline_reg": 14463,
+   "baseline_suspense": 889,
+   "baseline_nonsuspense": 13574,
+   "current_reg": 14463,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 14463
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Lee",
+   "precincts": 16,
+   "baseline_reg": 12262,
+   "baseline_suspense": 731,
+   "baseline_nonsuspense": 11531,
+   "current_reg": 12262,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 12262
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Leon",
+   "precincts": 15,
+   "baseline_reg": 12449,
+   "baseline_suspense": 29,
+   "baseline_nonsuspense": 12420,
+   "current_reg": 12449,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 12449
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Liberty",
+   "precincts": 23,
+   "baseline_reg": 59345,
+   "baseline_suspense": 3709,
+   "baseline_nonsuspense": 55636,
+   "current_reg": 59345,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 59345
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Limestone",
+   "precincts": 22,
+   "baseline_reg": 14484,
+   "baseline_suspense": 973,
+   "baseline_nonsuspense": 13511,
+   "current_reg": 14484,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 14484
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Lipscomb",
+   "precincts": 7,
+   "baseline_reg": 1878,
+   "baseline_suspense": 157,
+   "baseline_nonsuspense": 1721,
+   "current_reg": 1878,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1878
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Live Oak",
+   "precincts": 15,
+   "baseline_reg": 7686,
+   "baseline_suspense": 791,
+   "baseline_nonsuspense": 6895,
+   "current_reg": 7686,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7686
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Llano",
+   "precincts": 10,
+   "baseline_reg": 18564,
+   "baseline_suspense": 1505,
+   "baseline_nonsuspense": 17059,
+   "current_reg": 18564,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 18564
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Loving",
+   "precincts": 5,
+   "baseline_reg": 148,
+   "baseline_suspense": 15,
+   "baseline_nonsuspense": 133,
+   "current_reg": 148,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 148
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Lubbock",
+   "precincts": 120,
+   "baseline_reg": 204340,
+   "baseline_suspense": 10073,
+   "baseline_nonsuspense": 194267,
+   "current_reg": 204340,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 204340
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Lynn",
+   "precincts": 9,
+   "baseline_reg": 4475,
+   "baseline_suspense": 243,
+   "baseline_nonsuspense": 4232,
+   "current_reg": 4475,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4475
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Madison",
+   "precincts": 5,
+   "baseline_reg": 8576,
+   "baseline_suspense": 557,
+   "baseline_nonsuspense": 8019,
+   "current_reg": 8576,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8576
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Marion",
+   "precincts": 11,
+   "baseline_reg": 7878,
+   "baseline_suspense": 620,
+   "baseline_nonsuspense": 7258,
+   "current_reg": 7878,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7878
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Martin",
+   "precincts": 7,
+   "baseline_reg": 3589,
+   "baseline_suspense": 307,
+   "baseline_nonsuspense": 3282,
+   "current_reg": 3589,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3589
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Mason",
+   "precincts": 5,
+   "baseline_reg": 3320,
+   "baseline_suspense": 212,
+   "baseline_nonsuspense": 3108,
+   "current_reg": 3320,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3320
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Matagorda",
+   "precincts": 19,
+   "baseline_reg": 22526,
+   "baseline_suspense": 2099,
+   "baseline_nonsuspense": 20427,
+   "current_reg": 22526,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 22526
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Maverick",
+   "precincts": 17,
+   "baseline_reg": 37239,
+   "baseline_suspense": 2825,
+   "baseline_nonsuspense": 34414,
+   "current_reg": 37239,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 37239
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Mcculloch",
+   "precincts": 10,
+   "baseline_reg": 5380,
+   "baseline_suspense": 493,
+   "baseline_nonsuspense": 4887,
+   "current_reg": 5380,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 5380
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Mclennan",
+   "precincts": 96,
+   "baseline_reg": 161164,
+   "baseline_suspense": 25657,
+   "baseline_nonsuspense": 135507,
+   "current_reg": 161164,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 161164
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Mcmullen",
+   "precincts": 5,
+   "baseline_reg": 644,
+   "baseline_suspense": 23,
+   "baseline_nonsuspense": 621,
+   "current_reg": 644,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 644
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Medina",
+   "precincts": 16,
+   "baseline_reg": 40743,
+   "baseline_suspense": 2747,
+   "baseline_nonsuspense": 37996,
+   "current_reg": 40743,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 40743
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Menard",
+   "precincts": 7,
+   "baseline_reg": 1474,
+   "baseline_suspense": 84,
+   "baseline_nonsuspense": 1390,
+   "current_reg": 1474,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1474
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Midland",
+   "precincts": 49,
+   "baseline_reg": 99805,
+   "baseline_suspense": 6760,
+   "baseline_nonsuspense": 93045,
+   "current_reg": 99805,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 99805
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Milam",
+   "precincts": 12,
+   "baseline_reg": 17565,
+   "baseline_suspense": 1460,
+   "baseline_nonsuspense": 16105,
+   "current_reg": 17565,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 17565
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Mills",
+   "precincts": 8,
+   "baseline_reg": 3643,
+   "baseline_suspense": 270,
+   "baseline_nonsuspense": 3373,
+   "current_reg": 3643,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3643
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Mitchell",
+   "precincts": 5,
+   "baseline_reg": 4473,
+   "baseline_suspense": 425,
+   "baseline_nonsuspense": 4048,
+   "current_reg": 4473,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4473
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Montague",
+   "precincts": 16,
+   "baseline_reg": 15801,
+   "baseline_suspense": 940,
+   "baseline_nonsuspense": 14861,
+   "current_reg": 15801,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 15801
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Montgomery",
+   "precincts": 122,
+   "baseline_reg": 487323,
+   "baseline_suspense": 41696,
+   "baseline_nonsuspense": 445627,
+   "current_reg": 487323,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 487323
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Moore",
+   "precincts": 7,
+   "baseline_reg": 10247,
+   "baseline_suspense": 1007,
+   "baseline_nonsuspense": 9240,
+   "current_reg": 10247,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 10247
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Morris",
+   "precincts": 9,
+   "baseline_reg": 8815,
+   "baseline_suspense": 728,
+   "baseline_nonsuspense": 8087,
+   "current_reg": 8815,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8815
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Motley",
+   "precincts": 7,
+   "baseline_reg": 829,
+   "baseline_suspense": 41,
+   "baseline_nonsuspense": 788,
+   "current_reg": 829,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 829
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Nacogdoches",
+   "precincts": 20,
+   "baseline_reg": 40402,
+   "baseline_suspense": 4169,
+   "baseline_nonsuspense": 36233,
+   "current_reg": 40402,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 40402
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Navarro",
+   "precincts": 34,
+   "baseline_reg": 33825,
+   "baseline_suspense": 2454,
+   "baseline_nonsuspense": 31371,
+   "current_reg": 33825,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 33825
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Newton",
+   "precincts": 24,
+   "baseline_reg": 9424,
+   "baseline_suspense": 771,
+   "baseline_nonsuspense": 8653,
+   "current_reg": 9424,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 9424
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Nolan",
+   "precincts": 10,
+   "baseline_reg": 8835,
+   "baseline_suspense": 287,
+   "baseline_nonsuspense": 8548,
+   "current_reg": 8835,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8835
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Nueces",
+   "precincts": 130,
+   "baseline_reg": 217666,
+   "baseline_suspense": 11463,
+   "baseline_nonsuspense": 206203,
+   "current_reg": 217666,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 217666
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Ochiltree",
+   "precincts": 5,
+   "baseline_reg": 5221,
+   "baseline_suspense": 468,
+   "baseline_nonsuspense": 4753,
+   "current_reg": 5221,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 5221
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Oldham",
+   "precincts": 8,
+   "baseline_reg": 1395,
+   "baseline_suspense": 121,
+   "baseline_nonsuspense": 1274,
+   "current_reg": 1395,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1395
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Orange",
+   "precincts": 35,
+   "baseline_reg": 56955,
+   "baseline_suspense": 4276,
+   "baseline_nonsuspense": 52679,
+   "current_reg": 56955,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 56955
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Palo Pinto",
+   "precincts": 30,
+   "baseline_reg": 20923,
+   "baseline_suspense": 1166,
+   "baseline_nonsuspense": 19757,
+   "current_reg": 20923,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 20923
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Panola",
+   "precincts": 20,
+   "baseline_reg": 17896,
+   "baseline_suspense": 1476,
+   "baseline_nonsuspense": 16420,
+   "current_reg": 17896,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 17896
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Parker",
+   "precincts": 47,
+   "baseline_reg": 133925,
+   "baseline_suspense": 8995,
+   "baseline_nonsuspense": 124930,
+   "current_reg": 133925,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 133925
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Parmer",
+   "precincts": 8,
+   "baseline_reg": 4516,
+   "baseline_suspense": 371,
+   "baseline_nonsuspense": 4145,
+   "current_reg": 4516,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4516
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Pecos",
+   "precincts": 10,
+   "baseline_reg": 8431,
+   "baseline_suspense": 1140,
+   "baseline_nonsuspense": 7291,
+   "current_reg": 8431,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8431
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Polk",
+   "precincts": 23,
+   "baseline_reg": 44574,
+   "baseline_suspense": 4789,
+   "baseline_nonsuspense": 39785,
+   "current_reg": 44574,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 44574
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Potter",
+   "precincts": 25,
+   "baseline_reg": 59103,
+   "baseline_suspense": 7392,
+   "baseline_nonsuspense": 51711,
+   "current_reg": 59103,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 59103
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Presidio",
+   "precincts": 8,
+   "baseline_reg": 4373,
+   "baseline_suspense": 322,
+   "baseline_nonsuspense": 4051,
+   "current_reg": 4373,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4373
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Rains",
+   "precincts": 9,
+   "baseline_reg": 9772,
+   "baseline_suspense": 414,
+   "baseline_nonsuspense": 9358,
+   "current_reg": 9772,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 9772
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Randall",
+   "precincts": 32,
+   "baseline_reg": 102715,
+   "baseline_suspense": 10627,
+   "baseline_nonsuspense": 92088,
+   "current_reg": 102715,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 102715
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Reagan",
+   "precincts": 5,
+   "baseline_reg": 1808,
+   "baseline_suspense": 189,
+   "baseline_nonsuspense": 1619,
+   "current_reg": 1808,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1808
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Real",
+   "precincts": 6,
+   "baseline_reg": 2701,
+   "baseline_suspense": 244,
+   "baseline_nonsuspense": 2457,
+   "current_reg": 2701,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2701
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Red River",
+   "precincts": 22,
+   "baseline_reg": 8664,
+   "baseline_suspense": 290,
+   "baseline_nonsuspense": 8374,
+   "current_reg": 8664,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8664
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Reeves",
+   "precincts": 10,
+   "baseline_reg": 8030,
+   "baseline_suspense": 596,
+   "baseline_nonsuspense": 7434,
+   "current_reg": 8030,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8030
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Refugio",
+   "precincts": 11,
+   "baseline_reg": 4922,
+   "baseline_suspense": 454,
+   "baseline_nonsuspense": 4468,
+   "current_reg": 4922,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4922
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Roberts",
+   "precincts": 6,
+   "baseline_reg": 713,
+   "baseline_suspense": 48,
+   "baseline_nonsuspense": 665,
+   "current_reg": 713,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 713
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Robertson",
+   "precincts": 14,
+   "baseline_reg": 12971,
+   "baseline_suspense": 446,
+   "baseline_nonsuspense": 12525,
+   "current_reg": 12971,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 12971
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Rockwall",
+   "precincts": 28,
+   "baseline_reg": 91659,
+   "baseline_suspense": 7337,
+   "baseline_nonsuspense": 84322,
+   "current_reg": 91659,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 91659
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Runnels",
+   "precincts": 9,
+   "baseline_reg": 6848,
+   "baseline_suspense": 394,
+   "baseline_nonsuspense": 6454,
+   "current_reg": 6848,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 6848
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Rusk",
+   "precincts": 23,
+   "baseline_reg": 34488,
+   "baseline_suspense": 2651,
+   "baseline_nonsuspense": 31837,
+   "current_reg": 34488,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 34488
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Sabine",
+   "precincts": 9,
+   "baseline_reg": 8393,
+   "baseline_suspense": 575,
+   "baseline_nonsuspense": 7818,
+   "current_reg": 8393,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8393
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "San Augustine",
+   "precincts": 12,
+   "baseline_reg": 6045,
+   "baseline_suspense": 434,
+   "baseline_nonsuspense": 5611,
+   "current_reg": 6045,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 6045
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "San Jacinto",
+   "precincts": 12,
+   "baseline_reg": 21104,
+   "baseline_suspense": 1879,
+   "baseline_nonsuspense": 19225,
+   "current_reg": 21104,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 21104
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "San Patricio",
+   "precincts": 28,
+   "baseline_reg": 45611,
+   "baseline_suspense": 2839,
+   "baseline_nonsuspense": 42772,
+   "current_reg": 45611,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 45611
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "San Saba",
+   "precincts": 6,
+   "baseline_reg": 3774,
+   "baseline_suspense": 147,
+   "baseline_nonsuspense": 3627,
+   "current_reg": 3774,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3774
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Schleicher",
+   "precincts": 5,
+   "baseline_reg": 1779,
+   "baseline_suspense": 86,
+   "baseline_nonsuspense": 1693,
+   "current_reg": 1779,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1779
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Scurry",
+   "precincts": 12,
+   "baseline_reg": 9254,
+   "baseline_suspense": 786,
+   "baseline_nonsuspense": 8468,
+   "current_reg": 9254,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 9254
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Shackelford",
+   "precincts": 8,
+   "baseline_reg": 2467,
+   "baseline_suspense": 231,
+   "baseline_nonsuspense": 2236,
+   "current_reg": 2467,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2467
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Shelby",
+   "precincts": 15,
+   "baseline_reg": 16476,
+   "baseline_suspense": 1117,
+   "baseline_nonsuspense": 15359,
+   "current_reg": 16476,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 16476
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Sherman",
+   "precincts": 8,
+   "baseline_reg": 1366,
+   "baseline_suspense": 97,
+   "baseline_nonsuspense": 1269,
+   "current_reg": 1366,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1366
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Smith",
+   "precincts": 67,
+   "baseline_reg": 164156,
+   "baseline_suspense": 12383,
+   "baseline_nonsuspense": 151773,
+   "current_reg": 164156,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 164156
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Somervell",
+   "precincts": 5,
+   "baseline_reg": 7577,
+   "baseline_suspense": 608,
+   "baseline_nonsuspense": 6969,
+   "current_reg": 7577,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7577
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Starr",
+   "precincts": 15,
+   "baseline_reg": 36485,
+   "baseline_suspense": 2401,
+   "baseline_nonsuspense": 34084,
+   "current_reg": 36485,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 36485
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Stephens",
+   "precincts": 6,
+   "baseline_reg": 5908,
+   "baseline_suspense": 261,
+   "baseline_nonsuspense": 5647,
+   "current_reg": 5908,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 5908
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Sterling",
+   "precincts": 5,
+   "baseline_reg": 902,
+   "baseline_suspense": 96,
+   "baseline_nonsuspense": 806,
+   "current_reg": 902,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 902
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Stonewall",
+   "precincts": 4,
+   "baseline_reg": 960,
+   "baseline_suspense": null,
+   "baseline_nonsuspense": 960,
+   "current_reg": 960,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 960
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Sutton",
+   "precincts": 5,
+   "baseline_reg": 2284,
+   "baseline_suspense": 183,
+   "baseline_nonsuspense": 2101,
+   "current_reg": 2284,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2284
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Swisher",
+   "precincts": 8,
+   "baseline_reg": 3882,
+   "baseline_suspense": 365,
+   "baseline_nonsuspense": 3517,
+   "current_reg": 3882,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3882
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Tarrant",
+   "precincts": 708,
+   "baseline_reg": 1228367,
+   "baseline_suspense": 103585,
+   "baseline_nonsuspense": 1124782,
+   "current_reg": 1228367,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1228367
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Taylor",
+   "precincts": 69,
+   "baseline_reg": 90886,
+   "baseline_suspense": 8341,
+   "baseline_nonsuspense": 82545,
+   "current_reg": 90886,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 90886
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Terrell",
+   "precincts": 5,
+   "baseline_reg": 622,
+   "baseline_suspense": 76,
+   "baseline_nonsuspense": 546,
+   "current_reg": 622,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 622
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Terry",
+   "precincts": 7,
+   "baseline_reg": 6202,
+   "baseline_suspense": 39,
+   "baseline_nonsuspense": 6163,
+   "current_reg": 6202,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 6202
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Throckmorton",
+   "precincts": 5,
+   "baseline_reg": 1192,
+   "baseline_suspense": 146,
+   "baseline_nonsuspense": 1046,
+   "current_reg": 1192,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 1192
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Titus",
+   "precincts": 20,
+   "baseline_reg": 18307,
+   "baseline_suspense": 1463,
+   "baseline_nonsuspense": 16844,
+   "current_reg": 18307,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 18307
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Tom Green",
+   "precincts": 36,
+   "baseline_reg": 73870,
+   "baseline_suspense": 7233,
+   "baseline_nonsuspense": 66637,
+   "current_reg": 73870,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 73870
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Travis",
+   "precincts": 309,
+   "baseline_reg": 945505,
+   "baseline_suspense": 138342,
+   "baseline_nonsuspense": 807163,
+   "current_reg": 945505,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 945505
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Trinity",
+   "precincts": 21,
+   "baseline_reg": 12380,
+   "baseline_suspense": 534,
+   "baseline_nonsuspense": 11846,
+   "current_reg": 12380,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 12380
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Tyler",
+   "precincts": 18,
+   "baseline_reg": 14992,
+   "baseline_suspense": 1362,
+   "baseline_nonsuspense": 13630,
+   "current_reg": 14992,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 14992
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Upshur",
+   "precincts": 20,
+   "baseline_reg": 31152,
+   "baseline_suspense": 2117,
+   "baseline_nonsuspense": 29035,
+   "current_reg": 31152,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 31152
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Upton",
+   "precincts": 7,
+   "baseline_reg": 2079,
+   "baseline_suspense": 242,
+   "baseline_nonsuspense": 1837,
+   "current_reg": 2079,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 2079
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Uvalde",
+   "precincts": 15,
+   "baseline_reg": 17679,
+   "baseline_suspense": 856,
+   "baseline_nonsuspense": 16823,
+   "current_reg": 17679,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 17679
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Val Verde",
+   "precincts": 18,
+   "baseline_reg": 31026,
+   "baseline_suspense": 3564,
+   "baseline_nonsuspense": 27462,
+   "current_reg": 31026,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 31026
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Van Zandt",
+   "precincts": 19,
+   "baseline_reg": 43058,
+   "baseline_suspense": 2915,
+   "baseline_nonsuspense": 40143,
+   "current_reg": 43058,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 43058
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Victoria",
+   "precincts": 36,
+   "baseline_reg": 58190,
+   "baseline_suspense": 2399,
+   "baseline_nonsuspense": 55791,
+   "current_reg": 58190,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 58190
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Walker",
+   "precincts": 19,
+   "baseline_reg": 40280,
+   "baseline_suspense": 4328,
+   "baseline_nonsuspense": 35952,
+   "current_reg": 40280,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 40280
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Waller",
+   "precincts": 20,
+   "baseline_reg": 46110,
+   "baseline_suspense": 3523,
+   "baseline_nonsuspense": 42587,
+   "current_reg": 46110,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 46110
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Ward",
+   "precincts": 9,
+   "baseline_reg": 7027,
+   "baseline_suspense": 314,
+   "baseline_nonsuspense": 6713,
+   "current_reg": 7027,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7027
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Washington",
+   "precincts": 20,
+   "baseline_reg": 26247,
+   "baseline_suspense": 1515,
+   "baseline_nonsuspense": 24732,
+   "current_reg": 26247,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 26247
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Webb",
+   "precincts": 79,
+   "baseline_reg": 150324,
+   "baseline_suspense": 8432,
+   "baseline_nonsuspense": 141892,
+   "current_reg": 150324,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 150324
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Wharton",
+   "precincts": 13,
+   "baseline_reg": 26520,
+   "baseline_suspense": 1430,
+   "baseline_nonsuspense": 25090,
+   "current_reg": 26520,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 26520
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Wheeler",
+   "precincts": 5,
+   "baseline_reg": 3347,
+   "baseline_suspense": 309,
+   "baseline_nonsuspense": 3038,
+   "current_reg": 3347,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 3347
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Wichita",
+   "precincts": 41,
+   "baseline_reg": 78749,
+   "baseline_suspense": 10645,
+   "baseline_nonsuspense": 68104,
+   "current_reg": 78749,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 78749
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Wilbarger",
+   "precincts": 5,
+   "baseline_reg": 8256,
+   "baseline_suspense": 898,
+   "baseline_nonsuspense": 7358,
+   "current_reg": 8256,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8256
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Willacy",
+   "precincts": 18,
+   "baseline_reg": 11578,
+   "baseline_suspense": 196,
+   "baseline_nonsuspense": 11382,
+   "current_reg": 11578,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 11578
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Williamson",
+   "precincts": 178,
+   "baseline_reg": 472191,
+   "baseline_suspense": 55061,
+   "baseline_nonsuspense": 417130,
+   "current_reg": 472191,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 472191
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Wilson",
+   "precincts": 13,
+   "baseline_reg": 40405,
+   "baseline_suspense": 2468,
+   "baseline_nonsuspense": 37937,
+   "current_reg": 40405,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 40405
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Winkler",
+   "precincts": 6,
+   "baseline_reg": 4190,
+   "baseline_suspense": 469,
+   "baseline_nonsuspense": 3721,
+   "current_reg": 4190,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4190
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Wise",
+   "precincts": 29,
+   "baseline_reg": 59841,
+   "baseline_suspense": 3869,
+   "baseline_nonsuspense": 55972,
+   "current_reg": 59841,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 59841
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Wood",
+   "precincts": 15,
+   "baseline_reg": 36213,
+   "baseline_suspense": 3097,
+   "baseline_nonsuspense": 33116,
+   "current_reg": 36213,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 36213
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Yoakum",
+   "precincts": 7,
+   "baseline_reg": 4340,
+   "baseline_suspense": 467,
+   "baseline_nonsuspense": 3873,
+   "current_reg": 4340,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 4340
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Young",
+   "precincts": 8,
+   "baseline_reg": 12892,
+   "baseline_suspense": 1281,
+   "baseline_nonsuspense": 11611,
+   "current_reg": 12892,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 12892
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Zapata",
+   "precincts": 8,
+   "baseline_reg": 8263,
+   "baseline_suspense": 530,
+   "baseline_nonsuspense": 7733,
+   "current_reg": 8263,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 8263
+    }
+   ],
+   "events": []
+  },
+  {
+   "name": "Zavala",
+   "precincts": 7,
+   "baseline_reg": 7580,
+   "baseline_suspense": 616,
+   "baseline_nonsuspense": 6964,
+   "current_reg": 7580,
+   "delta": 0,
+   "pct": 0,
+   "changed": false,
+   "last_change_ts": null,
+   "series": [
+    {
+     "ts": "2026-10-27T11:53:15Z",
+     "reg": 7580
+    }
+   ],
+   "events": []
+  }
+ ]
+}

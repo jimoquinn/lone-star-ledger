@@ -87,6 +87,19 @@ footer { color:var(--muted); font-size:12.5px; padding-block:22px; border-top:1p
   .srccard dt:first-child { margin-top:0; }
   .srccard .src { margin-left:0; flex-basis:100%; }
 }
+html { scroll-behavior:smooth; }
+section, .part { scroll-margin-top:72px; }
+.toc { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; margin:18px 0 4px; }
+.toc .tocgrp { display:flex; flex-wrap:wrap; align-items:baseline; margin:5px 0; }
+.toc .tocgrp + .tocgrp { margin-top:10px; padding-top:10px; border-top:1px solid var(--line); }
+.toc .tocl { font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); flex:0 0 100%; margin-bottom:5px; }
+.toc a { font-size:13.5px; color:var(--accent); text-decoration:none; white-space:nowrap; }
+.toc .tocgrp a + a::before { content:"·"; color:var(--muted); margin:0 8px; }
+.toc a:hover { text-decoration:underline; }
+.part { margin:44px 0 0; padding-top:22px; border-top:2px solid var(--line); }
+.part .pn { display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:2px; }
+.part .pt { font-size:24px; font-weight:700; letter-spacing:-.01em; }
+.part + section { border-top:0; padding-top:10px; }
 </style>
 </head>
 <body>
@@ -104,7 +117,29 @@ footer { color:var(--muted); font-size:12.5px; padding-block:22px; border-top:1p
     <p class="meta">Collector: Python standard library · checks every 15 minutes · append-only archive</p>
   </header>
 
-  <section>
+  <nav class="toc" aria-label="On this page">
+    <div class="tocgrp">
+      <span class="tocl">The early-vote tracker</span>
+      <a href="#architecture">Architecture</a>
+      <a href="#sources">Sources</a>
+      <a href="#access">Access</a>
+      <a href="#match">Match</a>
+      <a href="#lean">Party lean</a>
+      <a href="#leadcheck">Lead check</a>
+      <a href="#limits">Limits</a>
+      <a href="#originals">The originals</a>
+      <a href="#source-by-source">Source by source</a>
+      <a href="#open-methods">Open methods</a>
+    </div>
+    <div class="tocgrp">
+      <span class="tocl">Registration churn</span>
+      <a href="#churn">How it works</a>
+    </div>
+  </nav>
+
+  <div class="part"><span class="pn">Part 1</span><span class="pt">The early-vote tracker</span></div>
+
+  <section id="architecture">
     <div class="step">01 · ARCHITECTURE</div>
     <h2>Collect, hash, keep everything</h2>
     <p>A small Python program runs every 15 minutes from <code>cron</code>. For each source it fetches the current file, takes a SHA-256 hash of the bytes, and writes a new copy only when the hash differs from the last one stored. Each new version is then compared against its predecessor and the difference is logged.</p>
@@ -116,7 +151,7 @@ if hash changed:
     diff against previous version -> changes.jsonl</code></pre>
   </section>
 
-  <section>
+  <section id="sources">
     <div class="step">02 · SOURCES</div>
     <h2>Two counts, eight counties</h2>
     <p>The <strong>state</strong> count comes from the Secretary of State's Civix early-voting report for election 53815. Each request returns a file whose contents are base64-encoded; we pull the turnout file for every early-voting date, plus the per-county voter rosters, every cycle.</p>
@@ -134,7 +169,7 @@ if hash changed:
     </table></div>
   </section>
 
-  <section>
+  <section id="access">
     <div class="step">03 · ACCESS</div>
     <h2>Two counties fought the fetch</h2>
     <p>Two county sites block automated requests from data-center addresses. We did not disguise the collector to get around that, because misrepresenting an automated client as a person is the one line the project will not cross. Instead:</p>
@@ -145,7 +180,7 @@ if hash changed:
     <p>We have asked both counties to allow the fetcher through, which is a small configuration change on their side and closes the gap cleanly.</p>
   </section>
 
-  <section>
+  <section id="match">
     <div class="step">04 · MATCH</div>
     <h2>Comparing the rosters voter by voter</h2>
     <p>For each county we build the set of voter ID numbers in the latest version of every dated state roster, and the set in the county's own roster, then compare them. Three groups come out of it:</p>
@@ -158,7 +193,7 @@ if hash changed:
     <div class="note"><p>All of this runs offline on files kept at owner-only permissions. The matching uses voter ID numbers; no names are read into the comparison, and only counts ever leave it. Nothing voter-level is published, logged, or committed to version control.</p></div>
   </section>
 
-  <section>
+  <section id="lean">
     <div class="step">05 · PARTY LEAN</div>
     <h2>Estimating lean, and its ceiling</h2>
     <p>Texas has no party registration. The standard proxy is which party's primary a voter has chosen, so we build each voter's primary history from public rosters and from the state's voter-history file where an organization can provide it. A voter who has only ever voted in Democratic primaries is counted D, only Republican is counted R, a mixed record takes the most recent primary, and a voter with no primary record is left unclassified.</p>
@@ -170,14 +205,14 @@ mixed                   -> most recent primary
 no primary on record    -> unclassified  <span class="c"># a quarter to a third of voters</span></code></pre>
   </section>
 
-  <section>
+  <section id="leadcheck">
     <div class="step">06 · LEAD CHECK</div>
     <h2>Resolving the "state only" voters</h2>
     <p>For the small group the state lists that a county does not, we join each voter ID to the county registration file and report counts only: how many are currently registered, their registration status, and the year they registered. This separates an innocent explanation, a brand-new registrant voting for the first time, from a real anomaly, a voter ID the state says voted that the registration file does not contain.</p>
     <p>In Travis County, of 184 such in-person voters on completed days, 103 had registered in 2026, 34 were in a routine address-check status but still eligible, and only 4 were absent from the registration file entirely. Those four are the only entries that warrant a closer look.</p>
   </section>
 
-  <section>
+  <section id="limits">
     <div class="step">07 · LIMITS</div>
     <h2>What these numbers cannot do</h2>
     <ul>
@@ -190,7 +225,7 @@ no primary on record    -> unclassified  <span class="c"># a quarter to a third 
     <p>The project's value is not a single verdict. It is that every number is captured with its source and its version, so a claim can be checked against the record instead of argued from memory.</p>
   </section>
 
-  <section>
+  <section id="originals">
     <div class="step">08 · THE ORIGINALS</div>
     <h2>Where to see the source data</h2>
     <p>Every figure traces back to a public page. The state count is the Secretary of State's Civix early-voting feed for election 53815; each county count is published on that county's own elections site. These are the pages the collector reads each cycle — the same originals anyone can open and check against our archive.</p>
@@ -209,7 +244,7 @@ no primary on record    -> unclassified  <span class="c"># a quarter to a third 
     <div class="note"><p>Roster files that carry voter names and ID numbers are downloaded to owner-only storage for the voter-by-voter match and are never republished — only aggregate counts appear on this site.</p></div>
   </section>
 
-  <section>
+  <section id="source-by-source">
     <div class="step">09 · SOURCE BY SOURCE</div>
     <h2>Every source, start to finish</h2>
     <p>The table above is the index; here is each source in full — where it comes from, how it is fetched, how it is parsed, and the specific quirk each one forced us to handle. Three things are shared across all of them: every spreadsheet is read by a small standard-library reader that concatenates <strong>all</strong> worksheets, not just the first tab; every file is hashed so only a genuine change is ever stored; and the voter-by-voter match uses ID numbers only, on files held at owner-only permissions — names are never read into it.</p>
@@ -317,7 +352,7 @@ no primary on record    -> unclassified  <span class="c"># a quarter to a third 
     </div>
   </section>
 
-  <section>
+  <section id="open-methods">
     <div class="step">10 · OPEN METHODS</div>
     <h2>Take these methods and run</h2>
     <p>Everything above is the whole method — there is no secret step. It runs on public county and state pages and the Python standard library, it keeps every version it fetches, and it reports counts with their source and date so any figure can be checked against the record instead of taken on trust.</p>
@@ -325,9 +360,25 @@ no primary on record    -> unclassified  <span class="c"># a quarter to a third 
     <p>The one line we hold is about people, not method: aggregate counts only, never voter-level data, and we never misrepresent an automated client as a person to get past a block. Full transparency about how; strict privacy about whom.</p>
   </section>
 
+  <div class="part" id="part-churn"><span class="pn">Part 2</span><span class="pt">The registration-churn tracker</span></div>
+
+  <section id="churn">
+    <div class="step">CHURN · HOW IT WORKS</div>
+    <h2>Watching the rolls that shouldn't move</h2>
+    <p>Texas registration closed on <strong>October 5, 2026</strong>, and federal law — the NVRA's 90-day "quiet period" — bars systematic voter removals in the run-up to a federal election. So between the deadline and Election Day, every county's registered-voter total should sit essentially still. That makes it an unusually clean thing to watch: the number is normally flat, so <strong>any</strong> movement, a drop especially, is a real event with no threshold to tune.</p>
+    <p>Two public, aggregate sources — no voter-level data:</p>
+    <ul>
+      <li><strong>The baseline</strong> is the Secretary of State's certified <em>November 2026 Voter Registration Figures</em> — all 254 counties' registration and suspense counts as of the October 5 deadline. We fetch and parse it once and keep it as the fixed anchor.</li>
+      <li><strong>The live total</strong> is each county's registered-voter count from the same SOS Civix feed the early-vote tracker already pulls every 15 minutes. We confirmed it equals the certified figure exactly, so we watch it for divergence and flag every change.</li>
+    </ul>
+    <p>It reuses the machinery above — hash-and-store, append-only, counts only — so there's nothing new about the collection itself. The <a href="churn.html">registration-churn page</a> shows all 254 counties against the baseline, sortable, with a steady-or-changed banner at the top.</p>
+    <div class="note"><p><strong>The one limit:</strong> this is <em>net, not gross</em>. The feed gives each county's total, not individual additions and removals, so equal churn in both directions would read as no change. Suspense counts are the October 5 baseline only (the live feed doesn't report them). As everywhere here, a flag is a question for a human, not a verdict.</p></div>
+  </section>
+
   <div class="readmore">
     <a href="index.html"><b>← Back to the dashboard</b><span>The live numbers, county by county.</span></a>
     <a href="discovered.html"><b>What we discovered →</b><span>The findings in plain language.</span></a>
+    <a href="churn.html"><b>Registration churn →</b><span>All 254 counties vs. the Oct 5 figures.</span></a>
   </div>
 
   <footer>Lone Star Ledger · ledger.precinctlabs.com · collector is Python standard library, checks every 15 minutes</footer>
