@@ -1,0 +1,260 @@
+{
+ "generated_utc": "2026-10-30 03:17 UTC",
+ "label": "Mail ballots reported RECEIVED by each county vs. COUNTED by the Secretary of State (election 53815). The gap is received-but-not-yet-counted, not a rejection rate.",
+ "statewide": {
+  "received": 109765,
+  "counted": 101592,
+  "gap": 8173,
+  "gap_pct": 7.4
+ },
+ "counties": [
+  {
+   "slug": "harris",
+   "name": "Harris",
+   "basis": "ballots returned (BBM roster)",
+   "comparable": true,
+   "sampled": false,
+   "received": 41089,
+   "counted": 37663,
+   "gap": 3426,
+   "gap_pct": 8.3,
+   "series": [
+    {
+     "date": "2026-10-28",
+     "received": 39185,
+     "counted": 35962,
+     "gap": 3223
+    },
+    {
+     "date": "2026-10-29",
+     "received": 41089,
+     "counted": 37663,
+     "gap": 3426
+    },
+    {
+     "date": "2026-10-30",
+     "received": 41089,
+     "counted": 37663,
+     "gap": 3426
+    }
+   ]
+  },
+  {
+   "slug": "dallas",
+   "name": "Dallas",
+   "basis": "ballots returned (return date)",
+   "comparable": true,
+   "sampled": false,
+   "received": 18366,
+   "counted": 15284,
+   "gap": 3082,
+   "gap_pct": 16.8,
+   "series": [
+    {
+     "date": "2026-10-28",
+     "received": 17538,
+     "counted": 14546,
+     "gap": 2992
+    },
+    {
+     "date": "2026-10-29",
+     "received": 18366,
+     "counted": 15284,
+     "gap": 3082
+    },
+    {
+     "date": "2026-10-30",
+     "received": 18366,
+     "counted": 15284,
+     "gap": 3082
+    }
+   ]
+  },
+  {
+   "slug": "bexar",
+   "name": "Bexar",
+   "basis": "ballots received (daily roster)",
+   "comparable": true,
+   "sampled": false,
+   "received": 22616,
+   "counted": 22836,
+   "gap": -220,
+   "gap_pct": -1.0,
+   "series": [
+    {
+     "date": "2026-10-28",
+     "received": 21339,
+     "counted": 20987,
+     "gap": 352
+    },
+    {
+     "date": "2026-10-29",
+     "received": 22616,
+     "counted": 22172,
+     "gap": 444
+    },
+    {
+     "date": "2026-10-30",
+     "received": 22616,
+     "counted": 22836,
+     "gap": -220
+    }
+   ]
+  },
+  {
+   "slug": "travis",
+   "name": "Travis",
+   "basis": "ballots received (daily roster)",
+   "comparable": true,
+   "sampled": false,
+   "received": 15358,
+   "counted": 15411,
+   "gap": -53,
+   "gap_pct": -0.3,
+   "series": [
+    {
+     "date": "2026-10-28",
+     "received": 14568,
+     "counted": 14111,
+     "gap": 457
+    },
+    {
+     "date": "2026-10-29",
+     "received": 15358,
+     "counted": 14937,
+     "gap": 421
+    },
+    {
+     "date": "2026-10-30",
+     "received": 15358,
+     "counted": 15411,
+     "gap": -53
+    }
+   ]
+  },
+  {
+   "slug": "hidalgo",
+   "name": "Hidalgo",
+   "basis": "applications for a ballot \u2014 not returned",
+   "comparable": false,
+   "sampled": false,
+   "received": 4044,
+   "counted": 3920,
+   "gap": 124,
+   "gap_pct": 3.1,
+   "series": [
+    {
+     "date": "2026-10-28",
+     "received": 3950,
+     "counted": 3828,
+     "gap": 122
+    },
+    {
+     "date": "2026-10-29",
+     "received": 4044,
+     "counted": 3920,
+     "gap": 124
+    },
+    {
+     "date": "2026-10-30",
+     "received": 4044,
+     "counted": 3920,
+     "gap": 124
+    }
+   ]
+  },
+  {
+   "slug": "el-paso",
+   "name": "El Paso",
+   "basis": "ballots received",
+   "comparable": true,
+   "sampled": false,
+   "received": 7279,
+   "counted": 6938,
+   "gap": 341,
+   "gap_pct": 4.7,
+   "series": [
+    {
+     "date": "2026-10-28",
+     "received": 7091,
+     "counted": 6760,
+     "gap": 331
+    },
+    {
+     "date": "2026-10-29",
+     "received": 7279,
+     "counted": 6938,
+     "gap": 341
+    },
+    {
+     "date": "2026-10-30",
+     "received": 7279,
+     "counted": 6938,
+     "gap": 341
+    }
+   ]
+  },
+  {
+   "slug": "cameron",
+   "name": "Cameron",
+   "basis": "ballots received",
+   "comparable": true,
+   "sampled": false,
+   "received": 1810,
+   "counted": 2155,
+   "gap": -345,
+   "gap_pct": -19.1,
+   "series": [
+    {
+     "date": "2026-10-28",
+     "received": 1810,
+     "counted": 1908,
+     "gap": -98
+    },
+    {
+     "date": "2026-10-29",
+     "received": 1810,
+     "counted": 2063,
+     "gap": -253
+    },
+    {
+     "date": "2026-10-30",
+     "received": 1810,
+     "counted": 2155,
+     "gap": -345
+    }
+   ]
+  },
+  {
+   "slug": "hays",
+   "name": "Hays",
+   "basis": "absentee ballots received",
+   "comparable": true,
+   "sampled": true,
+   "received": 3247,
+   "counted": 1305,
+   "gap": 1942,
+   "gap_pct": 59.8,
+   "series": [
+    {
+     "date": "2026-10-28",
+     "received": 2601,
+     "counted": 1299,
+     "gap": 1302
+    },
+    {
+     "date": "2026-10-29",
+     "received": 3247,
+     "counted": 1304,
+     "gap": 1943
+    },
+    {
+     "date": "2026-10-30",
+     "received": 3247,
+     "counted": 1305,
+     "gap": 1942
+    }
+   ]
+  }
+ ]
+}

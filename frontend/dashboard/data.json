@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-30 02:05 UTC",
+ "generated_utc": "2026-10-30 03:16 UTC",
  "sos_as_of": "2026-10-29",
  "election": "November 3, 2026 General Election (SOS election 53815)",
  "counties": [
@@ -95,11 +95,11 @@
    "sos_in_person": 124567,
    "sos_mail": 6938,
    "sos_total": 131505,
-   "roster_county": 132517,
+   "roster_county": 145258,
    "roster_sos": 127843,
    "both": 127810,
    "sos_only": 33,
-   "county_only": 4707,
+   "county_only": 17448,
    "definition": "in-person: cumulative Voter_List Ballot_Address DayN; mail: Received_Ballots_Voter_List (received)",
    "has_county_roster": true,
    "lean": null,
@@ -174,7 +174,7 @@
   {
    "key": "el-paso",
    "name": "El Paso",
-   "last_changed": "2026-10-29T19:15:32+00:00"
+   "last_changed": "2026-10-30T02:45:52+00:00"
   },
   {
    "key": "cameron",

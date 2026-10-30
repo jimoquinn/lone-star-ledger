@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mail Ballots: Received vs. Counted</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root {
+  color-scheme: dark;
+  --bg:#0a1020; --surface:#111a2e; --surface-2:#18243d; --line:#243150;
+  --fg:#eaf0fa; --fg-2:#b9c4d8; --muted:#7e8ba3; --accent:#7fbcff;
+  --await:#fab219; --good:#2fb344;
+  --font-ui:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:10px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg:#f3f5f9; --surface:#ffffff; --surface-2:#eef1f6; --line:#d8dee9;
+    --fg:#0f1829; --fg-2:#39455c; --muted:#6b7690; --accent:#1f5fbf; --await:#b4790f; --good:#1f8f38;
+  }
+}
+:root[data-theme="dark"] { color-scheme: dark; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:var(--font-ui); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg); }
+a { color:var(--accent); }
+.wrap { max-width:960px; margin:0 auto; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:0 56px; }
+.topbar { position:sticky; top:env(safe-area-inset-top,0px); z-index:9; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.topbar .in { max-width:960px; margin:0 auto; display:flex; align-items:center; gap:14px; padding:10px max(16px,env(safe-area-inset-left,0px)); }
+.brand { font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; color:var(--fg); white-space:nowrap; }
+.brand b { color:var(--accent); }
+.topbar a.back { margin-left:auto; font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--fg-2); text-decoration:none; }
+.eyebrow { font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+h1 { font-size:clamp(26px,4.4vw,38px); line-height:1.07; margin:12px 0 8px; font-weight:700; letter-spacing:-.01em; text-wrap:balance; }
+.lede { color:var(--fg-2); font-size:17px; margin:0 0 6px; max-width:72ch; }
+.meta { color:var(--muted); font-size:13px; font-family:var(--font-mono); }
+.callout { border-radius:var(--radius); padding:14px 16px; margin:18px 0 6px; border:1px solid var(--line); border-left:3px solid var(--await); background:color-mix(in srgb,var(--await) 8%,var(--surface)); font-size:14.5px; }
+.callout b { color:var(--fg); }
+.tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:18px 0; }
+.tile { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; }
+.tile .k { font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.tile .v { font-size:24px; font-weight:700; margin-top:4px; font-variant-numeric:tabular-nums; }
+.tile .s { color:var(--muted); font-size:12px; margin-top:2px; }
+.tbl { overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); margin:6px 0; }
+table { border-collapse:collapse; width:100%; font-size:13.5px; min-width:660px; }
+th { background:var(--surface-2); text-align:right; font-family:var(--font-mono); font-size:10.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--fg-2); padding:9px 12px; border-bottom:1px solid var(--line); white-space:nowrap; }
+th:first-child, td:first-child { text-align:left; }
+td { padding:9px 12px; border-bottom:1px solid var(--line); color:var(--fg-2); text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+tr:last-child td { border-bottom:0; }
+td.name { color:var(--fg); font-weight:500; }
+td.await { color:var(--await); font-weight:600; }
+td.neg { color:var(--muted); font-weight:600; }
+td.basis { text-align:left; color:var(--muted); font-size:12.5px; white-space:normal; min-width:150px; }
+tr.dim td { opacity:.65; }
+.badge { font-family:var(--font-mono); font-size:9.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border:1px solid var(--line); border-radius:20px; padding:1px 6px; margin-left:6px; }
+.sub { color:var(--muted); font-size:11px; }
+section { border-top:1px solid var(--line); padding-block:22px; margin-top:22px; }
+h2 { font-size:19px; font-weight:600; margin:0 0 10px; }
+p { margin:0 0 12px; color:var(--fg-2); } p strong { color:var(--fg); }
+ul { margin:0 0 12px; padding-left:20px; color:var(--fg-2); } li { margin:0 0 6px; }
+.readmore { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+.readmore a { display:flex; flex-direction:column; gap:3px; text-decoration:none; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; flex:1; min-width:200px; }
+.readmore a:hover { border-color:var(--accent); } .readmore a b { color:var(--fg); } .readmore a span { color:var(--muted); font-size:12.5px; }
+footer { color:var(--muted); font-size:12.5px; padding-block:22px; border-top:1px solid var(--line); margin-top:8px; }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="in">
+  <a class="brand" href="index.html">LONE STAR <b>LEDGER</b></a>
+  <a class="back" href="index.html">← Dashboard</a>
+</div></div>
+
+<main class="wrap">
+  <header style="padding-block:30px 6px">
+    <div class="eyebrow">Mail ballots · the counties we can compare</div>
+    <h1>Mail Ballots: Received vs. Counted</h1>
+    <p class="lede">Each county logs the mail ballots it <strong>receives</strong>. The Secretary of State reports the mail ballots that have been <strong>counted</strong>. This tracks the two side by side, over time, and the gap between them.</p>
+    <p class="meta" id="meta">Loading…</p>
+  </header>
+
+  <div class="callout">
+    <b>This is not a rejection rate.</b> The gap is ballots <em>received but not yet counted</em> — during voting that is mostly processing time and ballots pending a signature or ID cure, and it can even go negative when the state counts a ballot our county file hasn't captured yet. The real rejection numbers come from each county's ballot board and the post-election canvass; we will add those here once they are published. For now, watch the gap and whether it closes.
+  </div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="tbl"><table>
+    <thead><tr>
+      <th>County</th>
+      <th>Received</th>
+      <th>Counted</th>
+      <th>Gap (not yet counted)</th>
+      <th>Trend</th>
+      <th>Basis of "received"</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+
+  <section>
+    <h2>How to read this</h2>
+    <ul>
+      <li><strong>Received</strong> is the count in each county's own mail roster; <strong>counted</strong> is the SOS Civix feed's counted-mail total (the authoritative accepted figure — the SOS <em>roster</em> undercounts it, so we don't use that).</li>
+      <li><strong>A positive gap</strong> means the county has logged more received than the state has counted — normal during voting as ballots are processed and cures resolve. <strong>A negative gap</strong> means the state has counted more than our county file shows, usually a timing or definition mismatch between the two sources.</li>
+      <li><strong>Hidalgo is shown but set apart</strong> — its mail file is <em>applications</em> for a ballot, not returned ballots, so it isn't comparable and isn't in the statewide totals.</li>
+      <li><strong>Hays is sampled</strong> a few times a day (its county site blocks automated access), so its figure is noisier than the rest.</li>
+      <li><strong>What it becomes:</strong> after the canvass, the gap resolves into counted-plus-rejected, and the published rejection counts drop straight into this page — turning the acceptance gap into a true rejection rate.</li>
+    </ul>
+    <p class="sub" id="src"></p>
+  </section>
+
+  <div class="readmore">
+    <a href="index.html"><b>← Early-vote dashboard</b><span>County vs. SOS early-vote counts.</span></a>
+    <a href="churn.html"><b>Registration churn →</b><span>All 254 counties' rolls vs. Oct 5.</span></a>
+    <a href="technical.html"><b>Methods and code →</b><span>Every source and how it's collected.</span></a>
+  </div>
+
+  <footer>Lone Star Ledger · ledger.precinctlabs.com · received from each county's mail roster; counted from the SOS Civix feed (election 53815).</footer>
+</main>
+
+<script>
+const fmt = n => (n==null?"—":Number(n).toLocaleString("en-US"));
+const CT = new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",hour12:true,timeZoneName:"short"});
+function ctime(s){ const m=String(s).match(/(\d{4})-(\d\d)-(\d\d)[ T](\d\d):(\d\d)/); return m?CT.format(new Date(Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5]))):"—"; }
+
+function spark(series){
+  const g = series.filter(p=>p.gap!=null).map(p=>p.gap);
+  if(g.length<2) return `<span class="sub">building…</span>`;
+  const w=84,h=22,pad=3;
+  const min=Math.min(0,...g), max=Math.max(0,...g), rng=(max-min)||1;
+  const X=i=>pad+i*(w-2*pad)/(g.length-1), Y=v=>h-pad-(v-min)*(h-2*pad)/rng;
+  const pts=g.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ");
+  const last=g[g.length-1], col=last>0?"var(--await)":"var(--muted)";
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true">`
+    + `<line x1="${pad}" y1="${Y(0).toFixed(1)}" x2="${w-pad}" y2="${Y(0).toFixed(1)}" stroke="var(--line)"/>`
+    + `<polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.5"/></svg>`;
+}
+
+fetch("mail_gap.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
+  const s=d.statewide;
+  document.getElementById("meta").textContent = `Updated ${ctime(d.generated_utc)}. Checked every 15 minutes.`;
+  document.getElementById("src").innerHTML = `Received: each county's mail roster. Counted: SOS Civix early-voting feed, election 53815. Gap = received − counted.`;
+  const t=document.getElementById("tiles");
+  const tile=(k,v,sub)=>`<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${sub}</div></div>`;
+  t.innerHTML =
+    tile("Received", fmt(s.received), "comparable counties") +
+    tile("Counted", fmt(s.counted), "by the Secretary of State") +
+    tile("Gap — not yet counted", (s.gap>0?"+":"")+fmt(s.gap), (s.gap_pct>0?"+":"")+s.gap_pct+"% of received");
+  document.getElementById("rows").innerHTML = d.counties.map(c=>{
+    if(!c.comparable){
+      return `<tr class="dim"><td class="name">${c.name}</td><td>${fmt(c.received)}</td><td class="sub">n/a</td>`
+        + `<td class="sub">not comparable</td><td></td><td class="basis">${c.basis}</td></tr>`;
+    }
+    const cls = c.gap>0?"await":(c.gap<0?"neg":"sub");
+    const gtxt = c.gap==null?"—":`${c.gap>0?"+":""}${fmt(c.gap)} <span class="sub">(${c.gap_pct>0?"+":""}${c.gap_pct}%)</span>`;
+    return `<tr><td class="name">${c.name}${c.sampled?'<span class="badge">sampled</span>':''}</td>`
+      + `<td>${fmt(c.received)}</td><td>${fmt(c.counted)}</td><td class="${cls}">${gtxt}</td>`
+      + `<td>${spark(c.series)}</td><td class="basis">${c.basis}</td></tr>`;
+  }).join("");
+}).catch(()=>{ document.getElementById("meta").textContent="Could not load the mail data (mail_gap.json). Please refresh."; });
+</script>
+</body>
+</html>
