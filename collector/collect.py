@@ -46,7 +46,7 @@ TIMEOUT = 90
 # Those sources are fetched with curl on a US host over SSH: REMOTE_FETCH_HOST=<ssh host alias>.
 # REMOTE_FETCH_HOST=local runs the same curl here (useful when this box is on a US VPN, or for testing).
 REMOTE_HOST = os.environ.get("REMOTE_FETCH_HOST", "")
-REMOTE_SOURCES = {x.strip() for x in os.environ.get("REMOTE_FETCH_SOURCES", "dallas,hays").split(",") if x.strip()}
+REMOTE_SOURCES = {x.strip() for x in os.environ.get("REMOTE_FETCH_SOURCES", "dallas,hays,collin,denton").split(",") if x.strip()}
 # Sources that need a real browser (JavaScript interstitial). Fetched on REMOTE_FETCH_HOST with
 # collector/browser_fetch.py (deployed to ~/lsl/ there, venv at ~/lsl-venv). Example: BROWSER_SOURCES=hays
 BROWSER_SOURCES = {x.strip() for x in os.environ.get("BROWSER_SOURCES", "").split(",") if x.strip()}
@@ -66,6 +66,9 @@ SOS_ELECTION_ID = "53815"  # 2026 NOVEMBER GENERAL ELECTION
 COUNTIES = {  # name in Civix -> slug
     "TRAVIS": "travis", "BEXAR": "bexar", "HARRIS": "harris", "DALLAS": "dallas",
     "HAYS": "hays", "HIDALGO": "hidalgo", "EL PASO": "el-paso", "CAMERON": "cameron",
+    "TARRANT": "tarrant",
+    # Reconciler expansion (SOS roster side; county-side fetch wiring in progress):
+    "COLLIN": "collin", "COMAL": "comal", "DENTON": "denton",
 }
 
 DOC_EXT = r"\.(pdf|xlsx|xls|csv|zip|txt)(\?|$)"
@@ -94,6 +97,11 @@ FIXED = {
     "travis": [
         "https://votetravis.gov/wp-content/uploads/G26-Voter-Rosters.zip",
     ],
+    "tarrant": [
+        # Daily EV rosters (structured files; a published roster file layout). Static /dam paths.
+        "https://www.tarrantcountytx.gov/content/dam/main/elections/2026/1126/ev_reports/Early_voting_in_person_report.zip",
+        "https://www.tarrantcountytx.gov/content/dam/main/elections/2026/1126/ev_reports/absentee_returned_voter_report.zip",
+    ],
 }
 
 # Index pages: store the page, then download every linked document matching the filter.
@@ -108,6 +116,14 @@ PAGES = {
     "hays": [("https://www.hayscountytx.gov/873/November-3-2026-General-Election",
               r"DocumentCenter/View/.*(5414|5454|Early.?Voting|Absentee|Mail.?Ballot|Roster|Turnout)")],
     "harris": [("https://www.harrisvotes.com/Election-Results/Election-Reports?filter=EV%20Report", r"(EVPA_unofficial|Reports/.*(2026|1126))")],
+    # Collin: dated per-voter rosters (both .xlsx) linked off the rosters page; fetched via prod (AWS
+    # WAF blocks this container's non-US IP). CertificateNumber=VUID (SOS-verified 99.8% overlap).
+    "collin": [("https://www.collincountytx.gov/elections/rosters",
+                r"election-rosters/.*(early-voters|absentee-returns).*\.xlsx")],
+    # Denton: per-voter xlsx rosters (State ID / SOS_Vuid = VUID, SOS-verified 99.8%) on the rosters
+    # page; fetched via prod (AWS WAF blocks this container). Cumulative 1126_<MM-DD>_*.xlsx.
+    "denton": [("https://www.votedenton.gov/early-voting-election-day-rosters/",
+                r"wp-content/uploads/.*1126_.*(Early-Voting-Roster|Returned_Mail_Roster)\.xlsx")],
 }
 
 # Index pages fetched less often than every run (minutes). Hidalgo's host returns HTTP 429 when polled every 15 min.
@@ -531,7 +547,7 @@ def main() -> int:
             except Exception as e:
                 print(f"  ! SOS failed: {type(e).__name__}: {e}")
             save_state(state)
-        for slug in ["harris", "bexar", "travis", "dallas", "hays", "hidalgo", "el-paso", "cameron"]:
+        for slug in ["harris", "bexar", "travis", "dallas", "hays", "hidalgo", "el-paso", "cameron", "tarrant", "collin", "denton"]:
             if only and slug not in only:
                 continue
             try:

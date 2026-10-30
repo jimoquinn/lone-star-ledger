@@ -31,14 +31,17 @@ ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 OUT = ROOT / "frontend" / "dashboard" / "mail_gap.json"
 
-ORDER = ["harris", "dallas", "bexar", "travis", "hidalgo", "el-paso", "cameron", "hays"]
+ORDER = ["harris", "dallas", "bexar", "collin", "denton", "travis", "hidalgo", "el-paso", "cameron", "hays", "tarrant"]
 NICE = {"harris": "Harris", "dallas": "Dallas", "bexar": "Bexar", "travis": "Travis",
-        "hidalgo": "Hidalgo", "el-paso": "El Paso", "cameron": "Cameron", "hays": "Hays"}
+        "hidalgo": "Hidalgo", "el-paso": "El Paso", "cameron": "Cameron", "hays": "Hays",
+        "tarrant": "Tarrant", "collin": "Collin", "denton": "Denton"}
 # Short, plain basis for each county's RECEIVED figure (mail side).
 BASIS = {"harris": "ballots returned (BBM roster)", "dallas": "ballots returned (return date)",
          "bexar": "ballots received (daily roster)", "travis": "ballots received (daily roster)",
          "el-paso": "ballots received", "cameron": "ballots received",
-         "hays": "absentee ballots received", "hidalgo": "applications for a ballot — not returned"}
+         "hays": "absentee ballots received", "hidalgo": "applications for a ballot — not returned",
+         "tarrant": "ballots returned (return date)", "collin": "ballots received (received date)",
+         "denton": "ballots returned (return date)"}
 NOT_COMPARABLE = {"hidalgo"}   # mail file is applications, not returned ballots
 SAMPLED = {"hays"}             # pulled a few times a day, not every 15 min
 

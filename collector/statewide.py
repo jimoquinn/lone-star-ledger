@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 OUT = ROOT / "frontend" / "dashboard" / "statewide_ev.json"
-MATCHED = {"harris", "dallas", "bexar", "travis", "hidalgo", "el-paso", "cameron", "hays"}
+MATCHED = {"harris", "dallas", "bexar", "travis", "hidalgo", "el-paso", "cameron", "hays", "tarrant", "collin", "denton"}
 
 
 def slugify(name: str) -> str:

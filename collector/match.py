@@ -32,7 +32,7 @@ import diff  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
-COUNTIES = ["harris", "dallas", "bexar", "travis", "hidalgo", "el-paso", "cameron", "hays"]
+COUNTIES = ["harris", "dallas", "bexar", "travis", "hidalgo", "el-paso", "cameron", "hays", "tarrant", "collin", "denton"]
 
 COUNTY_DEFS = {
     "harris": "in-person: unofficial cumulative EV roster (check-ins); mail: unofficial BBM roster (ballots returned)",
@@ -43,6 +43,10 @@ COUNTY_DEFS = {
     "cameron": "in-person: 01_Cameron_County voter list (CHECK-IN date); mail: MAIL-GN26-Cameron-County-CC list (Ballot Received Date)",
     "bexar": "in-person: daily Early-Vote-Ballots roster (check-ins; no per-row date); mail: daily Received-Mail-Ballots roster (ballots received; elections.bexar.gov DocumentCenter folder 245)",
     "hays": "in-person: In-Person Check-ins searchable HTML, EARLY VOTED check-ins (item 5454, via the user's Chrome); mail: Absentee Ballots Received list (item 5414, received date)",
+    "tarrant": "in-person: Early Voting in-person roster (SOS Voter ID; no per-row date); mail: Absentee returned-ballot roster (Return Date)",
+    "comal": "in-person: daily IN PERSON roster (State ID = 10-digit VUID; no per-row date, file date = check-in date); mail: daily BBM RETD roster (ballots returned; comalcounty.gov DocumentCenter)",
+    "collin": "in-person: cumulative early-voting roster (CertificateNumber = VUID, VoteDate per-row); mail: cumulative absentee-returns roster (VUID, ReceivedDate = ballots received); collincountytx.gov/elections/rosters",
+    "denton": "in-person: cumulative Early-Voting-Roster (State ID = VUID, SOS-verified 99.8%; check-in Time only, no per-row vote date); mail: Returned_Mail_Roster (SOS_Vuid, Return Date = ballots returned); votedenton.gov/early-voting-election-day-rosters (via prod box)",
 }
 
 Rec = tuple  # (date 'YYYY-MM-DD' or '', method 'in-person'|'mail')
@@ -281,13 +285,104 @@ def county_bexar() -> dict:
     return out
 
 
+def county_tarrant() -> dict:
+    """Tarrant posts tab-delimited .txt rosters (one zip each): the EV in-person report and the
+    absentee returned-ballot report. Both carry a 'SOS Voter ID' column. In-person has no per-row
+    date; mail has 'Return Date' (the returned/received date)."""
+    out: dict = {}
+    for pat, datecol, meth in (("tarrant/*/*Early_voting_in_person_report.zip", None, "in-person"),
+                               ("tarrant/*/*absentee_returned_voter_report.zip", "Return Date", "mail")):
+        z = latest(pat)
+        if not z:
+            continue
+        with zipfile.ZipFile(z) as zf:
+            for n in zf.namelist():
+                if not n.lower().endswith(".txt"):
+                    continue
+                fh = io.TextIOWrapper(zf.open(n), encoding="utf-8-sig", errors="replace", newline="")
+                for r in csv.DictReader(fh, delimiter="\t"):
+                    date = us_date(r.get(datecol, "")) if datecol else ""
+                    add(out, r.get("SOS Voter ID", ""), date, meth)
+    return out
+
+
+def county_comal() -> dict:
+    """Comal posts daily per-voter PDFs on comalcounty.gov CivicPlus DocumentCenter: 'IN PERSON'
+    (columns No. | Name | State ID | Ballot Style; State ID = 10-digit VUID, the only 8-11 digit
+    token per row) and 'BBM RETD' (ballots returned by mail). Neither has a per-row date, so the
+    file's date is the check-in / received date; both daily (not cumulative), so union every date.
+    Same shape as Bexar -> reuse pdf_vuids(). Never prints rows."""
+    out: dict = {}
+    for pat, meth in (("comal/*/*_ev_*.pdf", "in-person"), ("comal/*/*_mail_*.pdf", "mail")):
+        byday = {}
+        for f in sorted(glob.glob(str(RAW / pat))):
+            m = re.search(r"_(?:ev|mail)_(\d{4}-\d\d-\d\d)\.pdf$", f)
+            if m:
+                byday[m[1]] = f  # one file per date; later capture wins
+        for date, f in sorted(byday.items()):
+            for v in pdf_vuids(f):
+                add(out, v, date, meth)
+    return out
+
+
+def _xlsx_dicts(path: str):
+    """Yield each data row of an xlsx as a {header: cell} dict (header = first row)."""
+    rows = diff.xlsx_rows(open(path, "rb").read())
+    if not rows:
+        return
+    hdr = rows[0]
+    for r in rows[1:]:
+        yield {hdr[i]: (r[i] if i < len(r) else "") for i in range(len(hdr))}
+
+
+def county_collin() -> dict:
+    """Collin publishes free per-voter rosters at collincountytx.gov/elections/rosters (both .xlsx):
+    in-person early voting (CertificateNumber = VUID verified against SOS ID_VOTER at 99.8%, VoteDate
+    per-row, all VotedPhase='Early Voting') and by-mail absentee returns (VUID, ReceivedDate = ballots
+    received). Both cumulative 'through <date>', so read the latest of each. excel_date() handles both
+    a serial and an M/D/YYYY[ time] string. Never prints rows."""
+    out: dict = {}
+    f = latest("collin/*/*early-voters*.xlsx")
+    if f:
+        for r in _xlsx_dicts(f):
+            add(out, r.get("CertificateNumber", ""), excel_date(r.get("VoteDate", "")), "in-person")
+    elif (f := latest("collin/*/*early-voters*.csv")):  # fallback: CSV export, same columns
+        with open(f, newline="", encoding="utf-8-sig", errors="replace") as fh:
+            for r in csv.DictReader(fh):
+                add(out, r.get("CertificateNumber", ""), us_date(r.get("VoteDate", "")), "in-person")
+    f = latest("collin/*/*absentee-returns*.xlsx")
+    if f:
+        for r in _xlsx_dicts(f):
+            add(out, r.get("VUID", ""), excel_date(r.get("ReceivedDate") or r.get("ReturnDate") or ""), "mail")
+    return out
+
+
+def county_denton() -> dict:
+    """Denton publishes free per-voter xlsx rosters at votedenton.gov/early-voting-election-day-rosters/
+    (fetched via the prod box; AWS WAF blocks the dev container's non-US IP). In-person
+    'Early-Voting-Roster' has State ID = VUID (SOS-verified 99.8%) and only a check-in Time, no per-row
+    vote date, so date is left blank. 'Returned_Mail_Roster' has SOS_Vuid + Return Date. Both cumulative
+    'through <date>', read the latest of each. Never prints rows."""
+    out: dict = {}
+    f = latest("denton/*/*Early-Voting-Roster*.xlsx")
+    if f:
+        for r in _xlsx_dicts(f):
+            add(out, r.get("State ID", ""), "", "in-person")
+    f = latest("denton/*/*Returned_Mail_Roster*.xlsx")
+    if f:
+        for r in _xlsx_dicts(f):
+            add(out, r.get("SOS_Vuid", ""), excel_date(r.get("Return Date", "")), "mail")
+    return out
+
+
 def county_none() -> dict:
     return {}
 
 
 COUNTY_PARSERS = {"harris": county_harris, "dallas": county_dallas, "travis": county_travis,
                   "hidalgo": county_hidalgo, "el-paso": county_el_paso, "cameron": county_cameron,
-                  "bexar": county_bexar, "hays": county_hays}
+                  "bexar": county_bexar, "hays": county_hays, "tarrant": county_tarrant,
+                  "comal": county_comal, "collin": county_collin, "denton": county_denton}
 
 
 # ---------------------------------------------------------------- compare

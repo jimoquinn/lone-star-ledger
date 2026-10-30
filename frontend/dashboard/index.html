@@ -319,6 +319,9 @@ const DEFS = {
   "el-paso":"In-person: cumulative voter list. Mail: ballots received.",
   cameron:  "In-person: county voter list (check-in date). Mail: ballots received.",
   hays:     "In-person: check-in list. Mail: absentee ballots received.",
+  tarrant:  "In-person: early-voting roster. Mail: ballots returned.",
+  collin:   "In-person: early-voting roster (certificate number = VUID). Mail: absentee ballots received.",
+  denton:   "In-person: early-voting roster (state ID = VUID). Mail: ballots returned.",
 };
 
 const fmt = n => Math.round(n).toLocaleString("en-US");
@@ -357,9 +360,9 @@ function renderTiles(DATA){
   const t = document.getElementById("tiles"); t.replaceChildren();
   const tile = (v,lbl,sub)=> el("div",{class:"tile"}, el("div",{class:"eyebrow"},lbl), el("div",{class:"v num"},v), el("div",{class:"sub"},sub));
   t.append(
-    tile(String(C.length), "Counties tracked", "Harris, Dallas, Bexar, Travis, Hidalgo, El Paso, Cameron, Hays"),
-    tile(compact(totEV), "Early votes counted", "state total across the eight, in person and by mail"),
-    tile(withRoster+" of "+C.length, "Matched voter by voter", withRoster===C.length ? "all eight counties, matched on voter ID (VUID)" : "the counties we can match on voter ID (VUID)"),
+    tile(String(C.length), "Counties tracked", C.map(c=>c.name).join(", ")),
+    tile(compact(totEV), "Early votes counted", "across the "+C.length+" tracked counties, in person and by mail"),
+    tile(withRoster+" of "+C.length, "Matched voter by voter", withRoster===C.length ? "all "+C.length+" counties, matched on voter ID (VUID)" : "the counties we can match on voter ID (VUID)"),
     tile(fmt(stateOnly), "On the state roster only", "votes the state records that a county roster does not — mostly next-day lag"),
   );
   document.getElementById("sec01title").textContent = "Early Votes by County as of " + centralTitle(DATA.generated);
@@ -471,7 +474,7 @@ fetch("data.json", {cache:"no-store"}).then(r=>r.json()).then(d=>{
   const fmt = n => Math.round(n).toLocaleString("en-US");
   const sgn = n => (n>0?"+":n<0?"−":"±")+fmt(Math.abs(n));
   const compact = n => Math.abs(n)>=1e3 ? Math.round(n/1e3)+"K" : String(Math.round(n));
-  const NAMES = {harris:"Harris",dallas:"Dallas",bexar:"Bexar",travis:"Travis",hidalgo:"Hidalgo","el-paso":"El Paso",cameron:"Cameron",hays:"Hays"};
+  const NAMES = {harris:"Harris",dallas:"Dallas",bexar:"Bexar",travis:"Travis",hidalgo:"Hidalgo","el-paso":"El Paso",cameron:"Cameron",hays:"Hays",tarrant:"Tarrant",collin:"Collin",denton:"Denton"};
   const mk = (t,a) => { const n=document.createElementNS("http://www.w3.org/2000/svg",t); for(const k in a) n.setAttribute(k,a[k]); return n; };
   const niceStep = m => { const raw=m/3, p=Math.pow(10,Math.floor(Math.log10(raw))), n=raw/p; return (n<1.5?1:n<3?2:n<7?5:10)*p; };
   let S=null, metric="ip", revCounty=null;
