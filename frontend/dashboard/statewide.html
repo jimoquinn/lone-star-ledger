@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Statewide Early Vote — 254 Counties</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root {
+  color-scheme: dark;
+  --bg:#0a1020; --surface:#111a2e; --surface-2:#18243d; --line:#243150;
+  --fg:#eaf0fa; --fg-2:#b9c4d8; --muted:#7e8ba3; --accent:#7fbcff; --good:#2fb344;
+  --font-ui:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:10px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg:#f3f5f9; --surface:#ffffff; --surface-2:#eef1f6; --line:#d8dee9;
+    --fg:#0f1829; --fg-2:#39455c; --muted:#6b7690; --accent:#1f5fbf; --good:#1f8f38;
+  }
+}
+:root[data-theme="dark"] { color-scheme: dark; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:var(--font-ui); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg); }
+a { color:var(--accent); }
+.wrap { max-width:1000px; margin:0 auto; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:0 56px; }
+.topbar { position:sticky; top:env(safe-area-inset-top,0px); z-index:9; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.topbar .in { max-width:1000px; margin:0 auto; display:flex; align-items:center; gap:14px; padding:10px max(16px,env(safe-area-inset-left,0px)); }
+.brand { font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; color:var(--fg); white-space:nowrap; }
+.brand b { color:var(--accent); }
+.topbar a.back { margin-left:auto; font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--fg-2); text-decoration:none; }
+.eyebrow { font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+h1 { font-size:clamp(26px,4.4vw,38px); line-height:1.07; margin:12px 0 8px; font-weight:700; letter-spacing:-.01em; text-wrap:balance; }
+.lede { color:var(--fg-2); font-size:17px; margin:0 0 6px; max-width:72ch; }
+.lede b { color:var(--fg); }
+.meta { color:var(--muted); font-size:13px; font-family:var(--font-mono); }
+.tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:20px 0; }
+.tile { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; }
+.tile .k { font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.tile .v { font-size:23px; font-weight:700; margin-top:4px; font-variant-numeric:tabular-nums; }
+.tile .s { color:var(--muted); font-size:12px; margin-top:2px; }
+.controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:16px 0 8px; }
+.controls input { background:var(--surface); border:1px solid var(--line); border-radius:8px; color:var(--fg); padding:7px 11px; font:inherit; font-size:14px; min-width:200px; }
+.controls label { font-size:13.5px; color:var(--fg-2); display:flex; align-items:center; gap:6px; }
+.tbl { overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); }
+table { border-collapse:collapse; width:100%; font-size:13.5px; min-width:680px; }
+th { background:var(--surface-2); text-align:right; font-family:var(--font-mono); font-size:10.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--fg-2); padding:9px 12px; border-bottom:1px solid var(--line); position:sticky; top:0; cursor:pointer; white-space:nowrap; }
+th:first-child, td:first-child { text-align:left; }
+th[aria-sort="ascending"]::after { content:" ▲"; color:var(--accent); }
+th[aria-sort="descending"]::after { content:" ▼"; color:var(--accent); }
+td { padding:8px 12px; border-bottom:1px solid var(--line); color:var(--fg-2); text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+tr:last-child td { border-bottom:0; }
+tbody tr:hover td { background:color-mix(in srgb,var(--accent) 6%,transparent); }
+td.name { color:var(--fg); font-weight:500; }
+td.total { color:var(--fg); font-weight:600; }
+.badge { font-family:var(--font-mono); font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--good); border:1px solid color-mix(in srgb,var(--good) 45%,var(--line)); border-radius:20px; padding:1px 7px; text-decoration:none; }
+.sub { color:var(--muted); font-size:11px; }
+section { border-top:1px solid var(--line); padding-block:22px; margin-top:22px; }
+h2 { font-size:19px; font-weight:600; margin:0 0 10px; }
+p { margin:0 0 12px; color:var(--fg-2); } p strong { color:var(--fg); }
+.readmore { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+.readmore a { display:flex; flex-direction:column; gap:3px; text-decoration:none; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; flex:1; min-width:200px; }
+.readmore a:hover { border-color:var(--accent); } .readmore a b { color:var(--fg); } .readmore a span { color:var(--muted); font-size:12.5px; }
+footer { color:var(--muted); font-size:12.5px; padding-block:22px; border-top:1px solid var(--line); margin-top:8px; }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="in">
+  <a class="brand" href="index.html">LONE STAR <b>LEDGER</b></a>
+  <a class="back" href="index.html">← Dashboard</a>
+</div></div>
+
+<main class="wrap">
+  <header style="padding-block:30px 6px">
+    <div class="eyebrow">Statewide · all 254 counties</div>
+    <h1>Statewide Early Vote</h1>
+    <p class="lede">Every Texas county's early-vote count, in person and by mail, as reported by the Secretary of State. For eight of them, <b>The Reconciler</b> also compares the state's count against the county's own roster voter by voter — those rows are marked, and link to the full comparison.</p>
+    <p class="meta" id="meta">Loading…</p>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="controls">
+    <input id="q" type="search" placeholder="Filter counties…" autocomplete="off">
+    <label><input type="checkbox" id="onlyMatched"> Only reconciled counties</label>
+  </div>
+
+  <div class="tbl"><table id="tbl">
+    <thead><tr>
+      <th data-k="name">County</th>
+      <th data-k="registered">Registered</th>
+      <th data-k="in_person">In person</th>
+      <th data-k="mail">By mail</th>
+      <th data-k="total" aria-sort="descending">Total early vote</th>
+      <th data-k="turnout_pct">Turnout</th>
+      <th data-k="matched">Reconciled</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+
+  <section>
+    <h2>How to read this</h2>
+    <p><strong>Early vote</strong> is in-person plus mail ballots counted so far for the November 3, 2026 general election, per the Secretary of State's Civix feed. <strong>Turnout</strong> is that total as a share of the county's registered voters. These are the state's figures for every county.</p>
+    <p><strong>Reconciled</strong> marks the counties where we also hold the county's own voter roster, so The Reconciler can match the two counts voter by voter and show where they agree or differ. Those are the eight on the main dashboard; the rest show the state's count only, until a county roster parser is added for them.</p>
+    <p class="sub" id="src"></p>
+  </section>
+
+  <div class="readmore">
+    <a href="index.html"><b>← The reconciled eight</b><span>County vs. SOS, voter by voter.</span></a>
+    <a href="churn.html"><b>Registration churn →</b><span>All 254 rolls vs. Oct 5.</span></a>
+    <a href="technical.html"><b>Methods and code →</b><span>Every source and how it's collected.</span></a>
+  </div>
+
+  <footer>Lone Star Ledger · ledger.precinctlabs.com · early-vote counts from the Texas Secretary of State Civix feed (election 53815).</footer>
+</main>
+
+<script>
+const fmt = n => (n==null?"—":Number(n).toLocaleString("en-US"));
+const CT = new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",hour12:true,timeZoneName:"short"});
+function ctime(s){ const m=String(s).match(/(\d{4})-(\d\d)-(\d\d)[ T](\d\d):(\d\d)/); return m?CT.format(new Date(Date.UTC(+m[1],+m[2]-1,+m[3],+m[4],+m[5]))):"—"; }
+function dateLong(s){ if(!s) return "—"; const [y,m,d]=s.slice(0,10).split("-").map(Number); return new Date(Date.UTC(y,m-1,d)).toLocaleDateString("en-US",{timeZone:"UTC",month:"long",day:"numeric",year:"numeric"}); }
+
+let rows=[], sortK="total", sortDir=-1;
+
+fetch("statewide_ev.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
+  rows = d.counties;
+  const s=d.statewide;
+  document.getElementById("meta").textContent = `State figures as of ${dateLong(d.as_of)}. Updated ${ctime(d.generated_utc)}. Checked every 15 minutes.`;
+  document.getElementById("src").innerHTML = `Source: Texas Secretary of State Civix early-voting feed, election 53815. Voter-by-voter reconciliation runs for ${s.matched} counties (see the main dashboard).`;
+  const t=document.getElementById("tiles");
+  const tile=(k,v,sub)=>`<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${sub}</div></div>`;
+  t.innerHTML =
+    tile("Early votes", fmt(s.total), `${s.counties_reporting} of ${s.counties} counties reporting`) +
+    tile("In person", fmt(s.in_person), "across all counties") +
+    tile("By mail", fmt(s.mail), "counted so far") +
+    tile("Turnout", s.turnout_pct+"%", `of ${fmt(s.registered)} registered`) +
+    tile("Reconciled", `${s.matched} of ${s.counties}`, "matched voter by voter");
+  applySort();
+}).catch(()=>{ document.getElementById("meta").textContent="Could not load the statewide data (statewide_ev.json). Please refresh."; });
+
+function applySort(){
+  const q=document.getElementById("q").value.trim().toLowerCase();
+  const only=document.getElementById("onlyMatched").checked;
+  let r=rows.filter(c=>(!q||c.name.toLowerCase().includes(q))&&(!only||c.matched));
+  r.sort((a,b)=>{
+    let av,bv;
+    if(sortK==="name"){ return sortDir*a.name.localeCompare(b.name); }
+    if(sortK==="matched"){ av=a.matched?1:0; bv=b.matched?1:0; }
+    else { av=a[sortK]??-1; bv=b[sortK]??-1; }
+    if(av<bv) return -sortDir; if(av>bv) return sortDir; return a.name.localeCompare(b.name);
+  });
+  document.getElementById("rows").innerHTML = r.map(c=>`<tr>
+    <td class="name">${c.name}</td>
+    <td>${fmt(c.registered)}</td>
+    <td>${fmt(c.in_person)}</td>
+    <td>${fmt(c.mail)}</td>
+    <td class="total">${fmt(c.total)}</td>
+    <td>${c.turnout_pct==null?"—":c.turnout_pct+"%"}</td>
+    <td>${c.matched?'<a class="badge" href="index.html">reconciled ↗</a>':'<span class="sub">—</span>'}</td>
+  </tr>`).join("") || `<tr><td colspan="7" class="sub" style="text-align:center;padding:18px">No counties match.</td></tr>`;
+}
+
+document.querySelectorAll("th[data-k]").forEach(th=>{
+  th.addEventListener("click",()=>{
+    const k=th.dataset.k;
+    if(sortK===k) sortDir=-sortDir; else { sortK=k; sortDir=(k==="name")?1:-1; }
+    document.querySelectorAll("th[data-k]").forEach(h=>h.removeAttribute("aria-sort"));
+    th.setAttribute("aria-sort", sortDir===1?"ascending":"descending");
+    applySort();
+  });
+});
+document.getElementById("q").addEventListener("input",applySort);
+document.getElementById("onlyMatched").addEventListener("change",applySort);
+</script>
+</body>
+</html>

@@ -1,0 +1,2557 @@
+{
+ "generated_utc": "2026-10-30 03:35 UTC",
+ "as_of": "2026-10-29",
+ "election": "November 3, 2026 General Election (SOS election 53815)",
+ "statewide": {
+  "registered": 19041684,
+  "in_person": 5997384,
+  "mail": 243541,
+  "total": 6240925,
+  "turnout_pct": 32.78,
+  "counties": 254,
+  "counties_reporting": 254,
+  "matched": 8
+ },
+ "counties": [
+  {
+   "slug": "harris",
+   "name": "Harris",
+   "registered": 2746177,
+   "in_person": 797855,
+   "mail": 37663,
+   "total": 835518,
+   "turnout_pct": 30.42,
+   "matched": true
+  },
+  {
+   "slug": "dallas",
+   "name": "Dallas",
+   "registered": 1493955,
+   "in_person": 487685,
+   "mail": 15284,
+   "total": 502969,
+   "turnout_pct": 33.67,
+   "matched": true
+  },
+  {
+   "slug": "tarrant",
+   "name": "Tarrant",
+   "registered": 1228367,
+   "in_person": 460118,
+   "mail": 17511,
+   "total": 477629,
+   "turnout_pct": 38.88,
+   "matched": false
+  },
+  {
+   "slug": "bexar",
+   "name": "Bexar",
+   "registered": 1325780,
+   "in_person": 410050,
+   "mail": 22836,
+   "total": 432886,
+   "turnout_pct": 32.65,
+   "matched": true
+  },
+  {
+   "slug": "travis",
+   "name": "Travis",
+   "registered": 945505,
+   "in_person": 353096,
+   "mail": 15411,
+   "total": 368507,
+   "turnout_pct": 38.97,
+   "matched": true
+  },
+  {
+   "slug": "collin",
+   "name": "Collin",
+   "registered": 788729,
+   "in_person": 298583,
+   "mail": 7162,
+   "total": 305745,
+   "turnout_pct": 38.76,
+   "matched": false
+  },
+  {
+   "slug": "denton",
+   "name": "Denton",
+   "registered": 688032,
+   "in_person": 258955,
+   "mail": 6423,
+   "total": 265378,
+   "turnout_pct": 38.57,
+   "matched": false
+  },
+  {
+   "slug": "fort-bend",
+   "name": "Fort Bend",
+   "registered": 581636,
+   "in_person": 216691,
+   "mail": 5219,
+   "total": 221910,
+   "turnout_pct": 38.15,
+   "matched": false
+  },
+  {
+   "slug": "williamson",
+   "name": "Williamson",
+   "registered": 472191,
+   "in_person": 183947,
+   "mail": 7224,
+   "total": 191171,
+   "turnout_pct": 40.49,
+   "matched": false
+  },
+  {
+   "slug": "montgomery",
+   "name": "Montgomery",
+   "registered": 487323,
+   "in_person": 144859,
+   "mail": 7988,
+   "total": 152847,
+   "turnout_pct": 31.36,
+   "matched": false
+  },
+  {
+   "slug": "hidalgo",
+   "name": "Hidalgo",
+   "registered": 466208,
+   "in_person": 131995,
+   "mail": 3920,
+   "total": 135915,
+   "turnout_pct": 29.15,
+   "matched": true
+  },
+  {
+   "slug": "el-paso",
+   "name": "El Paso",
+   "registered": 530978,
+   "in_person": 124567,
+   "mail": 6938,
+   "total": 131505,
+   "turnout_pct": 24.77,
+   "matched": true
+  },
+  {
+   "slug": "brazoria",
+   "name": "Brazoria",
+   "registered": 261323,
+   "in_person": 93129,
+   "mail": 3035,
+   "total": 96164,
+   "turnout_pct": 36.8,
+   "matched": false
+  },
+  {
+   "slug": "galveston",
+   "name": "Galveston",
+   "registered": 251059,
+   "in_person": 87215,
+   "mail": 3293,
+   "total": 90508,
+   "turnout_pct": 36.05,
+   "matched": false
+  },
+  {
+   "slug": "hays",
+   "name": "Hays",
+   "registered": 203490,
+   "in_person": 79302,
+   "mail": 1305,
+   "total": 80607,
+   "turnout_pct": 39.61,
+   "matched": true
+  },
+  {
+   "slug": "bell",
+   "name": "Bell",
+   "registered": 246817,
+   "in_person": 65238,
+   "mail": 3079,
+   "total": 68317,
+   "turnout_pct": 27.68,
+   "matched": false
+  },
+  {
+   "slug": "lubbock",
+   "name": "Lubbock",
+   "registered": 204340,
+   "in_person": 65618,
+   "mail": 1857,
+   "total": 67475,
+   "turnout_pct": 33.02,
+   "matched": false
+  },
+  {
+   "slug": "cameron",
+   "name": "Cameron",
+   "registered": 244070,
+   "in_person": 63181,
+   "mail": 2155,
+   "total": 65336,
+   "turnout_pct": 26.77,
+   "matched": true
+  },
+  {
+   "slug": "comal",
+   "name": "Comal",
+   "registered": 151987,
+   "in_person": 54932,
+   "mail": 2841,
+   "total": 57773,
+   "turnout_pct": 38.01,
+   "matched": false
+  },
+  {
+   "slug": "nueces",
+   "name": "Nueces",
+   "registered": 217666,
+   "in_person": 53175,
+   "mail": 4391,
+   "total": 57566,
+   "turnout_pct": 26.45,
+   "matched": false
+  },
+  {
+   "slug": "ellis",
+   "name": "Ellis",
+   "registered": 159133,
+   "in_person": 54979,
+   "mail": 1412,
+   "total": 56391,
+   "turnout_pct": 35.44,
+   "matched": false
+  },
+  {
+   "slug": "smith",
+   "name": "Smith",
+   "registered": 164156,
+   "in_person": 53306,
+   "mail": 2587,
+   "total": 55893,
+   "turnout_pct": 34.05,
+   "matched": false
+  },
+  {
+   "slug": "jefferson",
+   "name": "Jefferson",
+   "registered": 148754,
+   "in_person": 47200,
+   "mail": 2059,
+   "total": 49259,
+   "turnout_pct": 33.11,
+   "matched": false
+  },
+  {
+   "slug": "parker",
+   "name": "Parker",
+   "registered": 133925,
+   "in_person": 46007,
+   "mail": 1901,
+   "total": 47908,
+   "turnout_pct": 35.77,
+   "matched": false
+  },
+  {
+   "slug": "mclennan",
+   "name": "Mclennan",
+   "registered": 161164,
+   "in_person": 45040,
+   "mail": 2652,
+   "total": 47692,
+   "turnout_pct": 29.59,
+   "matched": false
+  },
+  {
+   "slug": "brazos",
+   "name": "Brazos",
+   "registered": 147077,
+   "in_person": 44340,
+   "mail": 118,
+   "total": 44458,
+   "turnout_pct": 30.23,
+   "matched": false
+  },
+  {
+   "slug": "johnson",
+   "name": "Johnson",
+   "registered": 135277,
+   "in_person": 43817,
+   "mail": 445,
+   "total": 44262,
+   "turnout_pct": 32.72,
+   "matched": false
+  },
+  {
+   "slug": "guadalupe",
+   "name": "Guadalupe",
+   "registered": 138088,
+   "in_person": 42184,
+   "mail": 988,
+   "total": 43172,
+   "turnout_pct": 31.26,
+   "matched": false
+  },
+  {
+   "slug": "kaufman",
+   "name": "Kaufman",
+   "registered": 119211,
+   "in_person": 36773,
+   "mail": 919,
+   "total": 37692,
+   "turnout_pct": 31.62,
+   "matched": false
+  },
+  {
+   "slug": "webb",
+   "name": "Webb",
+   "registered": 150324,
+   "in_person": 35593,
+   "mail": 724,
+   "total": 36317,
+   "turnout_pct": 24.16,
+   "matched": false
+  },
+  {
+   "slug": "rockwall",
+   "name": "Rockwall",
+   "registered": 91659,
+   "in_person": 34246,
+   "mail": 832,
+   "total": 35078,
+   "turnout_pct": 38.27,
+   "matched": false
+  },
+  {
+   "slug": "grayson",
+   "name": "Grayson",
+   "registered": 104013,
+   "in_person": 32523,
+   "mail": 1420,
+   "total": 33943,
+   "turnout_pct": 32.63,
+   "matched": false
+  },
+  {
+   "slug": "randall",
+   "name": "Randall",
+   "registered": 102715,
+   "in_person": 31785,
+   "mail": 2093,
+   "total": 33878,
+   "turnout_pct": 32.98,
+   "matched": false
+  },
+  {
+   "slug": "taylor",
+   "name": "Taylor",
+   "registered": 90886,
+   "in_person": 25015,
+   "mail": 1270,
+   "total": 26285,
+   "turnout_pct": 28.92,
+   "matched": false
+  },
+  {
+   "slug": "midland",
+   "name": "Midland",
+   "registered": 99805,
+   "in_person": 24582,
+   "mail": 617,
+   "total": 25199,
+   "turnout_pct": 25.25,
+   "matched": false
+  },
+  {
+   "slug": "bastrop",
+   "name": "Bastrop",
+   "registered": 65427,
+   "in_person": 22424,
+   "mail": 1148,
+   "total": 23572,
+   "turnout_pct": 36.03,
+   "matched": false
+  },
+  {
+   "slug": "tom-green",
+   "name": "Tom Green",
+   "registered": 73870,
+   "in_person": 20816,
+   "mail": 1708,
+   "total": 22524,
+   "turnout_pct": 30.49,
+   "matched": false
+  },
+  {
+   "slug": "wichita",
+   "name": "Wichita",
+   "registered": 78749,
+   "in_person": 20749,
+   "mail": 1293,
+   "total": 22042,
+   "turnout_pct": 27.99,
+   "matched": false
+  },
+  {
+   "slug": "gregg",
+   "name": "Gregg",
+   "registered": 74495,
+   "in_person": 19700,
+   "mail": 1444,
+   "total": 21144,
+   "turnout_pct": 28.38,
+   "matched": false
+  },
+  {
+   "slug": "wise",
+   "name": "Wise",
+   "registered": 59841,
+   "in_person": 19711,
+   "mail": 695,
+   "total": 20406,
+   "turnout_pct": 34.1,
+   "matched": false
+  },
+  {
+   "slug": "hunt",
+   "name": "Hunt",
+   "registered": 77012,
+   "in_person": 18062,
+   "mail": 948,
+   "total": 19010,
+   "turnout_pct": 24.68,
+   "matched": false
+  },
+  {
+   "slug": "henderson",
+   "name": "Henderson",
+   "registered": 61329,
+   "in_person": 18581,
+   "mail": 306,
+   "total": 18887,
+   "turnout_pct": 30.8,
+   "matched": false
+  },
+  {
+   "slug": "kendall",
+   "name": "Kendall",
+   "registered": 41174,
+   "in_person": 15961,
+   "mail": 994,
+   "total": 16955,
+   "turnout_pct": 41.18,
+   "matched": false
+  },
+  {
+   "slug": "angelina",
+   "name": "Angelina",
+   "registered": 56330,
+   "in_person": 15952,
+   "mail": 838,
+   "total": 16790,
+   "turnout_pct": 29.81,
+   "matched": false
+  },
+  {
+   "slug": "hood",
+   "name": "Hood",
+   "registered": 54192,
+   "in_person": 16422,
+   "mail": 28,
+   "total": 16450,
+   "turnout_pct": 30.36,
+   "matched": false
+  },
+  {
+   "slug": "victoria",
+   "name": "Victoria",
+   "registered": 58190,
+   "in_person": 14771,
+   "mail": 1559,
+   "total": 16330,
+   "turnout_pct": 28.06,
+   "matched": false
+  },
+  {
+   "slug": "kerr",
+   "name": "Kerr",
+   "registered": 39762,
+   "in_person": 15124,
+   "mail": 1149,
+   "total": 16273,
+   "turnout_pct": 40.93,
+   "matched": false
+  },
+  {
+   "slug": "orange",
+   "name": "Orange",
+   "registered": 56955,
+   "in_person": 15510,
+   "mail": 674,
+   "total": 16184,
+   "turnout_pct": 28.42,
+   "matched": false
+  },
+  {
+   "slug": "bowie",
+   "name": "Bowie",
+   "registered": 61596,
+   "in_person": 15061,
+   "mail": 996,
+   "total": 16057,
+   "turnout_pct": 26.07,
+   "matched": false
+  },
+  {
+   "slug": "burnet",
+   "name": "Burnet",
+   "registered": 39466,
+   "in_person": 14858,
+   "mail": 953,
+   "total": 15811,
+   "turnout_pct": 40.06,
+   "matched": false
+  },
+  {
+   "slug": "harrison",
+   "name": "Harrison",
+   "registered": 47906,
+   "in_person": 15216,
+   "mail": 564,
+   "total": 15780,
+   "turnout_pct": 32.94,
+   "matched": false
+  },
+  {
+   "slug": "potter",
+   "name": "Potter",
+   "registered": 59103,
+   "in_person": 14380,
+   "mail": 1020,
+   "total": 15400,
+   "turnout_pct": 26.06,
+   "matched": false
+  },
+  {
+   "slug": "liberty",
+   "name": "Liberty",
+   "registered": 59345,
+   "in_person": 14923,
+   "mail": 437,
+   "total": 15360,
+   "turnout_pct": 25.88,
+   "matched": false
+  },
+  {
+   "slug": "ector",
+   "name": "Ector",
+   "registered": 84739,
+   "in_person": 15345,
+   "mail": 2,
+   "total": 15347,
+   "turnout_pct": 18.11,
+   "matched": false
+  },
+  {
+   "slug": "wilson",
+   "name": "Wilson",
+   "registered": 40405,
+   "in_person": 13200,
+   "mail": 723,
+   "total": 13923,
+   "turnout_pct": 34.46,
+   "matched": false
+  },
+  {
+   "slug": "medina",
+   "name": "Medina",
+   "registered": 40743,
+   "in_person": 13251,
+   "mail": 520,
+   "total": 13771,
+   "turnout_pct": 33.8,
+   "matched": false
+  },
+  {
+   "slug": "walker",
+   "name": "Walker",
+   "registered": 40280,
+   "in_person": 13157,
+   "mail": 394,
+   "total": 13551,
+   "turnout_pct": 33.64,
+   "matched": false
+  },
+  {
+   "slug": "nacogdoches",
+   "name": "Nacogdoches",
+   "registered": 40402,
+   "in_person": 12408,
+   "mail": 701,
+   "total": 13109,
+   "turnout_pct": 32.45,
+   "matched": false
+  },
+  {
+   "slug": "waller",
+   "name": "Waller",
+   "registered": 46110,
+   "in_person": 12097,
+   "mail": 244,
+   "total": 12341,
+   "turnout_pct": 26.76,
+   "matched": false
+  },
+  {
+   "slug": "hardin",
+   "name": "Hardin",
+   "registered": 43968,
+   "in_person": 11752,
+   "mail": 280,
+   "total": 12032,
+   "turnout_pct": 27.37,
+   "matched": false
+  },
+  {
+   "slug": "chambers",
+   "name": "Chambers",
+   "registered": 39119,
+   "in_person": 11747,
+   "mail": 200,
+   "total": 11947,
+   "turnout_pct": 30.54,
+   "matched": false
+  },
+  {
+   "slug": "coryell",
+   "name": "Coryell",
+   "registered": 47037,
+   "in_person": 11215,
+   "mail": 537,
+   "total": 11752,
+   "turnout_pct": 24.98,
+   "matched": false
+  },
+  {
+   "slug": "van-zandt",
+   "name": "Van Zandt",
+   "registered": 43058,
+   "in_person": 11073,
+   "mail": 535,
+   "total": 11608,
+   "turnout_pct": 26.96,
+   "matched": false
+  },
+  {
+   "slug": "wood",
+   "name": "Wood",
+   "registered": 36213,
+   "in_person": 10759,
+   "mail": 527,
+   "total": 11286,
+   "turnout_pct": 31.17,
+   "matched": false
+  },
+  {
+   "slug": "polk",
+   "name": "Polk",
+   "registered": 44574,
+   "in_person": 9616,
+   "mail": 1651,
+   "total": 11267,
+   "turnout_pct": 25.28,
+   "matched": false
+  },
+  {
+   "slug": "san-patricio",
+   "name": "San Patricio",
+   "registered": 45611,
+   "in_person": 9978,
+   "mail": 391,
+   "total": 10369,
+   "turnout_pct": 22.73,
+   "matched": false
+  },
+  {
+   "slug": "rusk",
+   "name": "Rusk",
+   "registered": 34488,
+   "in_person": 9488,
+   "mail": 177,
+   "total": 9665,
+   "turnout_pct": 28.02,
+   "matched": false
+  },
+  {
+   "slug": "lamar",
+   "name": "Lamar",
+   "registered": 33431,
+   "in_person": 9526,
+   "mail": 14,
+   "total": 9540,
+   "turnout_pct": 28.54,
+   "matched": false
+  },
+  {
+   "slug": "gillespie",
+   "name": "Gillespie",
+   "registered": 22570,
+   "in_person": 8787,
+   "mail": 563,
+   "total": 9350,
+   "turnout_pct": 41.43,
+   "matched": false
+  },
+  {
+   "slug": "cherokee",
+   "name": "Cherokee",
+   "registered": 32796,
+   "in_person": 8583,
+   "mail": 415,
+   "total": 8998,
+   "turnout_pct": 27.44,
+   "matched": false
+  },
+  {
+   "slug": "anderson",
+   "name": "Anderson",
+   "registered": 31222,
+   "in_person": 8600,
+   "mail": 346,
+   "total": 8946,
+   "turnout_pct": 28.65,
+   "matched": false
+  },
+  {
+   "slug": "cooke",
+   "name": "Cooke",
+   "registered": 31222,
+   "in_person": 8329,
+   "mail": 441,
+   "total": 8770,
+   "turnout_pct": 28.09,
+   "matched": false
+  },
+  {
+   "slug": "navarro",
+   "name": "Navarro",
+   "registered": 33825,
+   "in_person": 8471,
+   "mail": 212,
+   "total": 8683,
+   "turnout_pct": 25.67,
+   "matched": false
+  },
+  {
+   "slug": "upshur",
+   "name": "Upshur",
+   "registered": 31152,
+   "in_person": 8172,
+   "mail": 502,
+   "total": 8674,
+   "turnout_pct": 27.84,
+   "matched": false
+  },
+  {
+   "slug": "llano",
+   "name": "Llano",
+   "registered": 18564,
+   "in_person": 8017,
+   "mail": 585,
+   "total": 8602,
+   "turnout_pct": 46.34,
+   "matched": false
+  },
+  {
+   "slug": "caldwell",
+   "name": "Caldwell",
+   "registered": 28491,
+   "in_person": 8231,
+   "mail": 328,
+   "total": 8559,
+   "turnout_pct": 30.04,
+   "matched": false
+  },
+  {
+   "slug": "atascosa",
+   "name": "Atascosa",
+   "registered": 32925,
+   "in_person": 8114,
+   "mail": 324,
+   "total": 8438,
+   "turnout_pct": 25.63,
+   "matched": false
+  },
+  {
+   "slug": "wharton",
+   "name": "Wharton",
+   "registered": 26520,
+   "in_person": 8012,
+   "mail": 340,
+   "total": 8352,
+   "turnout_pct": 31.49,
+   "matched": false
+  },
+  {
+   "slug": "erath",
+   "name": "Erath",
+   "registered": 26965,
+   "in_person": 7840,
+   "mail": 286,
+   "total": 8126,
+   "turnout_pct": 30.14,
+   "matched": false
+  },
+  {
+   "slug": "starr",
+   "name": "Starr",
+   "registered": 36485,
+   "in_person": 7943,
+   "mail": 103,
+   "total": 8046,
+   "turnout_pct": 22.05,
+   "matched": false
+  },
+  {
+   "slug": "val-verde",
+   "name": "Val Verde",
+   "registered": 31026,
+   "in_person": 7560,
+   "mail": 395,
+   "total": 7955,
+   "turnout_pct": 25.64,
+   "matched": false
+  },
+  {
+   "slug": "fannin",
+   "name": "Fannin",
+   "registered": 24550,
+   "in_person": 7439,
+   "mail": 412,
+   "total": 7851,
+   "turnout_pct": 31.98,
+   "matched": false
+  },
+  {
+   "slug": "hopkins",
+   "name": "Hopkins",
+   "registered": 25858,
+   "in_person": 7322,
+   "mail": 383,
+   "total": 7705,
+   "turnout_pct": 29.8,
+   "matched": false
+  },
+  {
+   "slug": "maverick",
+   "name": "Maverick",
+   "registered": 37239,
+   "in_person": 7495,
+   "mail": 167,
+   "total": 7662,
+   "turnout_pct": 20.58,
+   "matched": false
+  },
+  {
+   "slug": "austin",
+   "name": "Austin",
+   "registered": 22824,
+   "in_person": 7195,
+   "mail": 350,
+   "total": 7545,
+   "turnout_pct": 33.06,
+   "matched": false
+  },
+  {
+   "slug": "jasper",
+   "name": "Jasper",
+   "registered": 24585,
+   "in_person": 7242,
+   "mail": 199,
+   "total": 7441,
+   "turnout_pct": 30.27,
+   "matched": false
+  },
+  {
+   "slug": "brown",
+   "name": "Brown",
+   "registered": 25916,
+   "in_person": 6859,
+   "mail": 500,
+   "total": 7359,
+   "turnout_pct": 28.4,
+   "matched": false
+  },
+  {
+   "slug": "bandera",
+   "name": "Bandera",
+   "registered": 19330,
+   "in_person": 7013,
+   "mail": 331,
+   "total": 7344,
+   "turnout_pct": 37.99,
+   "matched": false
+  },
+  {
+   "slug": "aransas",
+   "name": "Aransas",
+   "registered": 19867,
+   "in_person": 6753,
+   "mail": 538,
+   "total": 7291,
+   "turnout_pct": 36.7,
+   "matched": false
+  },
+  {
+   "slug": "matagorda",
+   "name": "Matagorda",
+   "registered": 22526,
+   "in_person": 6664,
+   "mail": 275,
+   "total": 6939,
+   "turnout_pct": 30.8,
+   "matched": false
+  },
+  {
+   "slug": "hill",
+   "name": "Hill",
+   "registered": 27866,
+   "in_person": 6572,
+   "mail": 303,
+   "total": 6875,
+   "turnout_pct": 24.67,
+   "matched": false
+  },
+  {
+   "slug": "washington",
+   "name": "Washington",
+   "registered": 26247,
+   "in_person": 5941,
+   "mail": 416,
+   "total": 6357,
+   "turnout_pct": 24.22,
+   "matched": false
+  },
+  {
+   "slug": "cass",
+   "name": "Cass",
+   "registered": 21881,
+   "in_person": 5895,
+   "mail": 437,
+   "total": 6332,
+   "turnout_pct": 28.94,
+   "matched": false
+  },
+  {
+   "slug": "jim-wells",
+   "name": "Jim Wells",
+   "registered": 26107,
+   "in_person": 6199,
+   "mail": 1,
+   "total": 6200,
+   "turnout_pct": 23.75,
+   "matched": false
+  },
+  {
+   "slug": "fayette",
+   "name": "Fayette",
+   "registered": 18401,
+   "in_person": 5473,
+   "mail": 477,
+   "total": 5950,
+   "turnout_pct": 32.34,
+   "matched": false
+  },
+  {
+   "slug": "san-jacinto",
+   "name": "San Jacinto",
+   "registered": 21104,
+   "in_person": 5564,
+   "mail": 316,
+   "total": 5880,
+   "turnout_pct": 27.86,
+   "matched": false
+  },
+  {
+   "slug": "palo-pinto",
+   "name": "Palo Pinto",
+   "registered": 20923,
+   "in_person": 5512,
+   "mail": 367,
+   "total": 5879,
+   "turnout_pct": 28.1,
+   "matched": false
+  },
+  {
+   "slug": "grimes",
+   "name": "Grimes",
+   "registered": 22206,
+   "in_person": 5392,
+   "mail": 289,
+   "total": 5681,
+   "turnout_pct": 25.58,
+   "matched": false
+  },
+  {
+   "slug": "lampasas",
+   "name": "Lampasas",
+   "registered": 17556,
+   "in_person": 5423,
+   "mail": 204,
+   "total": 5627,
+   "turnout_pct": 32.05,
+   "matched": false
+  },
+  {
+   "slug": "milam",
+   "name": "Milam",
+   "registered": 17565,
+   "in_person": 5261,
+   "mail": 128,
+   "total": 5389,
+   "turnout_pct": 30.68,
+   "matched": false
+  },
+  {
+   "slug": "titus",
+   "name": "Titus",
+   "registered": 18307,
+   "in_person": 5177,
+   "mail": 195,
+   "total": 5372,
+   "turnout_pct": 29.34,
+   "matched": false
+  },
+  {
+   "slug": "colorado",
+   "name": "Colorado",
+   "registered": 14766,
+   "in_person": 5017,
+   "mail": 273,
+   "total": 5290,
+   "turnout_pct": 35.83,
+   "matched": false
+  },
+  {
+   "slug": "uvalde",
+   "name": "Uvalde",
+   "registered": 17679,
+   "in_person": 5019,
+   "mail": 252,
+   "total": 5271,
+   "turnout_pct": 29.82,
+   "matched": false
+  },
+  {
+   "slug": "blanco",
+   "name": "Blanco",
+   "registered": 11369,
+   "in_person": 5019,
+   "mail": 183,
+   "total": 5202,
+   "turnout_pct": 45.76,
+   "matched": false
+  },
+  {
+   "slug": "kleberg",
+   "name": "Kleberg",
+   "registered": 18028,
+   "in_person": 4956,
+   "mail": 206,
+   "total": 5162,
+   "turnout_pct": 28.63,
+   "matched": false
+  },
+  {
+   "slug": "montague",
+   "name": "Montague",
+   "registered": 15801,
+   "in_person": 4931,
+   "mail": 196,
+   "total": 5127,
+   "turnout_pct": 32.45,
+   "matched": false
+  },
+  {
+   "slug": "freestone",
+   "name": "Freestone",
+   "registered": 13538,
+   "in_person": 4638,
+   "mail": 121,
+   "total": 4759,
+   "turnout_pct": 35.15,
+   "matched": false
+  },
+  {
+   "slug": "lavaca",
+   "name": "Lavaca",
+   "registered": 14463,
+   "in_person": 4105,
+   "mail": 405,
+   "total": 4510,
+   "turnout_pct": 31.18,
+   "matched": false
+  },
+  {
+   "slug": "bee",
+   "name": "Bee",
+   "registered": 15758,
+   "in_person": 4241,
+   "mail": 254,
+   "total": 4495,
+   "turnout_pct": 28.53,
+   "matched": false
+  },
+  {
+   "slug": "robertson",
+   "name": "Robertson",
+   "registered": 12971,
+   "in_person": 4230,
+   "mail": 200,
+   "total": 4430,
+   "turnout_pct": 34.15,
+   "matched": false
+  },
+  {
+   "slug": "gonzales",
+   "name": "Gonzales",
+   "registered": 13364,
+   "in_person": 4201,
+   "mail": 205,
+   "total": 4406,
+   "turnout_pct": 32.97,
+   "matched": false
+  },
+  {
+   "slug": "burleson",
+   "name": "Burleson",
+   "registered": 14321,
+   "in_person": 4070,
+   "mail": 303,
+   "total": 4373,
+   "turnout_pct": 30.54,
+   "matched": false
+  },
+  {
+   "slug": "howard",
+   "name": "Howard",
+   "registered": 16861,
+   "in_person": 4179,
+   "mail": 176,
+   "total": 4355,
+   "turnout_pct": 25.83,
+   "matched": false
+  },
+  {
+   "slug": "panola",
+   "name": "Panola",
+   "registered": 17896,
+   "in_person": 4033,
+   "mail": 211,
+   "total": 4244,
+   "turnout_pct": 23.71,
+   "matched": false
+  },
+  {
+   "slug": "hale",
+   "name": "Hale",
+   "registered": 18374,
+   "in_person": 4110,
+   "mail": 127,
+   "total": 4237,
+   "turnout_pct": 23.06,
+   "matched": false
+  },
+  {
+   "slug": "houston",
+   "name": "Houston",
+   "registered": 13919,
+   "in_person": 3829,
+   "mail": 310,
+   "total": 4139,
+   "turnout_pct": 29.74,
+   "matched": false
+  },
+  {
+   "slug": "limestone",
+   "name": "Limestone",
+   "registered": 14484,
+   "in_person": 3886,
+   "mail": 240,
+   "total": 4126,
+   "turnout_pct": 28.49,
+   "matched": false
+  },
+  {
+   "slug": "lee",
+   "name": "Lee",
+   "registered": 12262,
+   "in_person": 3883,
+   "mail": 188,
+   "total": 4071,
+   "turnout_pct": 33.2,
+   "matched": false
+  },
+  {
+   "slug": "young",
+   "name": "Young",
+   "registered": 12892,
+   "in_person": 4052,
+   "mail": 2,
+   "total": 4054,
+   "turnout_pct": 31.45,
+   "matched": false
+  },
+  {
+   "slug": "bosque",
+   "name": "Bosque",
+   "registered": 13761,
+   "in_person": 3809,
+   "mail": 175,
+   "total": 3984,
+   "turnout_pct": 28.95,
+   "matched": false
+  },
+  {
+   "slug": "shelby",
+   "name": "Shelby",
+   "registered": 16476,
+   "in_person": 3614,
+   "mail": 172,
+   "total": 3786,
+   "turnout_pct": 22.98,
+   "matched": false
+  },
+  {
+   "slug": "hutchinson",
+   "name": "Hutchinson",
+   "registered": 13404,
+   "in_person": 3490,
+   "mail": 196,
+   "total": 3686,
+   "turnout_pct": 27.5,
+   "matched": false
+  },
+  {
+   "slug": "hockley",
+   "name": "Hockley",
+   "registered": 14373,
+   "in_person": 3448,
+   "mail": 149,
+   "total": 3597,
+   "turnout_pct": 25.03,
+   "matched": false
+  },
+  {
+   "slug": "dewitt",
+   "name": "Dewitt",
+   "registered": 11657,
+   "in_person": 3412,
+   "mail": 177,
+   "total": 3589,
+   "turnout_pct": 30.79,
+   "matched": false
+  },
+  {
+   "slug": "trinity",
+   "name": "Trinity",
+   "registered": 12380,
+   "in_person": 3444,
+   "mail": 70,
+   "total": 3514,
+   "turnout_pct": 28.38,
+   "matched": false
+  },
+  {
+   "slug": "tyler",
+   "name": "Tyler",
+   "registered": 14992,
+   "in_person": 3358,
+   "mail": 153,
+   "total": 3511,
+   "turnout_pct": 23.42,
+   "matched": false
+  },
+  {
+   "slug": "calhoun",
+   "name": "Calhoun",
+   "registered": 13031,
+   "in_person": 3325,
+   "mail": 161,
+   "total": 3486,
+   "turnout_pct": 26.75,
+   "matched": false
+  },
+  {
+   "slug": "leon",
+   "name": "Leon",
+   "registered": 12449,
+   "in_person": 3225,
+   "mail": 127,
+   "total": 3352,
+   "turnout_pct": 26.93,
+   "matched": false
+  },
+  {
+   "slug": "gray",
+   "name": "Gray",
+   "registered": 12303,
+   "in_person": 2970,
+   "mail": 261,
+   "total": 3231,
+   "turnout_pct": 26.26,
+   "matched": false
+  },
+  {
+   "slug": "eastland",
+   "name": "Eastland",
+   "registered": 12664,
+   "in_person": 2989,
+   "mail": 139,
+   "total": 3128,
+   "turnout_pct": 24.7,
+   "matched": false
+  },
+  {
+   "slug": "callahan",
+   "name": "Callahan",
+   "registered": 10636,
+   "in_person": 2828,
+   "mail": 133,
+   "total": 2961,
+   "turnout_pct": 27.84,
+   "matched": false
+  },
+  {
+   "slug": "comanche",
+   "name": "Comanche",
+   "registered": 10336,
+   "in_person": 2810,
+   "mail": 77,
+   "total": 2887,
+   "turnout_pct": 27.93,
+   "matched": false
+  },
+  {
+   "slug": "rains",
+   "name": "Rains",
+   "registered": 9772,
+   "in_person": 2866,
+   "mail": 2,
+   "total": 2868,
+   "turnout_pct": 29.35,
+   "matched": false
+  },
+  {
+   "slug": "camp",
+   "name": "Camp",
+   "registered": 8510,
+   "in_person": 2654,
+   "mail": 173,
+   "total": 2827,
+   "turnout_pct": 33.22,
+   "matched": false
+  },
+  {
+   "slug": "jackson",
+   "name": "Jackson",
+   "registered": 10054,
+   "in_person": 2645,
+   "mail": 124,
+   "total": 2769,
+   "turnout_pct": 27.54,
+   "matched": false
+  },
+  {
+   "slug": "somervell",
+   "name": "Somervell",
+   "registered": 7577,
+   "in_person": 2597,
+   "mail": 65,
+   "total": 2662,
+   "turnout_pct": 35.13,
+   "matched": false
+  },
+  {
+   "slug": "gaines",
+   "name": "Gaines",
+   "registered": 10888,
+   "in_person": 2550,
+   "mail": 44,
+   "total": 2594,
+   "turnout_pct": 23.82,
+   "matched": false
+  },
+  {
+   "slug": "sabine",
+   "name": "Sabine",
+   "registered": 8393,
+   "in_person": 2452,
+   "mail": 137,
+   "total": 2589,
+   "turnout_pct": 30.85,
+   "matched": false
+  },
+  {
+   "slug": "red-river",
+   "name": "Red River",
+   "registered": 8664,
+   "in_person": 2378,
+   "mail": 59,
+   "total": 2437,
+   "turnout_pct": 28.13,
+   "matched": false
+  },
+  {
+   "slug": "franklin",
+   "name": "Franklin",
+   "registered": 7801,
+   "in_person": 2255,
+   "mail": 106,
+   "total": 2361,
+   "turnout_pct": 30.27,
+   "matched": false
+  },
+  {
+   "slug": "madison",
+   "name": "Madison",
+   "registered": 8576,
+   "in_person": 2259,
+   "mail": 94,
+   "total": 2353,
+   "turnout_pct": 27.44,
+   "matched": false
+  },
+  {
+   "slug": "duval",
+   "name": "Duval",
+   "registered": 7777,
+   "in_person": 1964,
+   "mail": 335,
+   "total": 2299,
+   "turnout_pct": 29.56,
+   "matched": false
+  },
+  {
+   "slug": "morris",
+   "name": "Morris",
+   "registered": 8815,
+   "in_person": 2172,
+   "mail": 127,
+   "total": 2299,
+   "turnout_pct": 26.08,
+   "matched": false
+  },
+  {
+   "slug": "marion",
+   "name": "Marion",
+   "registered": 7878,
+   "in_person": 2122,
+   "mail": 174,
+   "total": 2296,
+   "turnout_pct": 29.14,
+   "matched": false
+  },
+  {
+   "slug": "andrews",
+   "name": "Andrews",
+   "registered": 10820,
+   "in_person": 2252,
+   "mail": 39,
+   "total": 2291,
+   "turnout_pct": 21.17,
+   "matched": false
+  },
+  {
+   "slug": "willacy",
+   "name": "Willacy",
+   "registered": 11578,
+   "in_person": 2231,
+   "mail": 56,
+   "total": 2287,
+   "turnout_pct": 19.75,
+   "matched": false
+  },
+  {
+   "slug": "scurry",
+   "name": "Scurry",
+   "registered": 9254,
+   "in_person": 2158,
+   "mail": 85,
+   "total": 2243,
+   "turnout_pct": 24.24,
+   "matched": false
+  },
+  {
+   "slug": "moore",
+   "name": "Moore",
+   "registered": 10247,
+   "in_person": 2132,
+   "mail": 97,
+   "total": 2229,
+   "turnout_pct": 21.75,
+   "matched": false
+  },
+  {
+   "slug": "reeves",
+   "name": "Reeves",
+   "registered": 8030,
+   "in_person": 2099,
+   "mail": 128,
+   "total": 2227,
+   "turnout_pct": 27.73,
+   "matched": false
+  },
+  {
+   "slug": "wilbarger",
+   "name": "Wilbarger",
+   "registered": 8256,
+   "in_person": 2023,
+   "mail": 176,
+   "total": 2199,
+   "turnout_pct": 26.64,
+   "matched": false
+  },
+  {
+   "slug": "brewster",
+   "name": "Brewster",
+   "registered": 7119,
+   "in_person": 2015,
+   "mail": 135,
+   "total": 2150,
+   "turnout_pct": 30.2,
+   "matched": false
+  },
+  {
+   "slug": "coleman",
+   "name": "Coleman",
+   "registered": 6144,
+   "in_person": 2019,
+   "mail": 120,
+   "total": 2139,
+   "turnout_pct": 34.81,
+   "matched": false
+  },
+  {
+   "slug": "jones",
+   "name": "Jones",
+   "registered": 11231,
+   "in_person": 1929,
+   "mail": 199,
+   "total": 2128,
+   "turnout_pct": 18.95,
+   "matched": false
+  },
+  {
+   "slug": "clay",
+   "name": "Clay",
+   "registered": 8340,
+   "in_person": 2025,
+   "mail": 102,
+   "total": 2127,
+   "turnout_pct": 25.5,
+   "matched": false
+  },
+  {
+   "slug": "hamilton",
+   "name": "Hamilton",
+   "registered": 6348,
+   "in_person": 2007,
+   "mail": 103,
+   "total": 2110,
+   "turnout_pct": 33.24,
+   "matched": false
+  },
+  {
+   "slug": "falls",
+   "name": "Falls",
+   "registered": 10771,
+   "in_person": 2084,
+   "mail": 10,
+   "total": 2094,
+   "turnout_pct": 19.44,
+   "matched": false
+  },
+  {
+   "slug": "archer",
+   "name": "Archer",
+   "registered": 7093,
+   "in_person": 1973,
+   "mail": 108,
+   "total": 2081,
+   "turnout_pct": 29.34,
+   "matched": false
+  },
+  {
+   "slug": "pecos",
+   "name": "Pecos",
+   "registered": 8431,
+   "in_person": 1939,
+   "mail": 90,
+   "total": 2029,
+   "turnout_pct": 24.07,
+   "matched": false
+  },
+  {
+   "slug": "newton",
+   "name": "Newton",
+   "registered": 9424,
+   "in_person": 1946,
+   "mail": 71,
+   "total": 2017,
+   "turnout_pct": 21.4,
+   "matched": false
+  },
+  {
+   "slug": "jack",
+   "name": "Jack",
+   "registered": 5967,
+   "in_person": 1896,
+   "mail": 113,
+   "total": 2009,
+   "turnout_pct": 33.67,
+   "matched": false
+  },
+  {
+   "slug": "goliad",
+   "name": "Goliad",
+   "registered": 5747,
+   "in_person": 1866,
+   "mail": 120,
+   "total": 1986,
+   "turnout_pct": 34.56,
+   "matched": false
+  },
+  {
+   "slug": "live-oak",
+   "name": "Live Oak",
+   "registered": 7686,
+   "in_person": 1890,
+   "mail": 94,
+   "total": 1984,
+   "turnout_pct": 25.81,
+   "matched": false
+  },
+  {
+   "slug": "deaf-smith",
+   "name": "Deaf Smith",
+   "registered": 8821,
+   "in_person": 1843,
+   "mail": 130,
+   "total": 1973,
+   "turnout_pct": 22.37,
+   "matched": false
+  },
+  {
+   "slug": "karnes",
+   "name": "Karnes",
+   "registered": 8281,
+   "in_person": 1696,
+   "mail": 173,
+   "total": 1869,
+   "turnout_pct": 22.57,
+   "matched": false
+  },
+  {
+   "slug": "zavala",
+   "name": "Zavala",
+   "registered": 7580,
+   "in_person": 1852,
+   "mail": 10,
+   "total": 1862,
+   "turnout_pct": 24.56,
+   "matched": false
+  },
+  {
+   "slug": "san-augustine",
+   "name": "San Augustine",
+   "registered": 6045,
+   "in_person": 1717,
+   "mail": 86,
+   "total": 1803,
+   "turnout_pct": 29.83,
+   "matched": false
+  },
+  {
+   "slug": "nolan",
+   "name": "Nolan",
+   "registered": 8835,
+   "in_person": 1681,
+   "mail": 106,
+   "total": 1787,
+   "turnout_pct": 20.23,
+   "matched": false
+  },
+  {
+   "slug": "frio",
+   "name": "Frio",
+   "registered": 9650,
+   "in_person": 1655,
+   "mail": 106,
+   "total": 1761,
+   "turnout_pct": 18.25,
+   "matched": false
+  },
+  {
+   "slug": "zapata",
+   "name": "Zapata",
+   "registered": 8263,
+   "in_person": 1719,
+   "mail": 35,
+   "total": 1754,
+   "turnout_pct": 21.23,
+   "matched": false
+  },
+  {
+   "slug": "stephens",
+   "name": "Stephens",
+   "registered": 5908,
+   "in_person": 1531,
+   "mail": 107,
+   "total": 1638,
+   "turnout_pct": 27.73,
+   "matched": false
+  },
+  {
+   "slug": "runnels",
+   "name": "Runnels",
+   "registered": 6848,
+   "in_person": 1510,
+   "mail": 96,
+   "total": 1606,
+   "turnout_pct": 23.45,
+   "matched": false
+  },
+  {
+   "slug": "mcculloch",
+   "name": "Mcculloch",
+   "registered": 5380,
+   "in_person": 1409,
+   "mail": 93,
+   "total": 1502,
+   "turnout_pct": 27.92,
+   "matched": false
+  },
+  {
+   "slug": "terry",
+   "name": "Terry",
+   "registered": 6202,
+   "in_person": 1424,
+   "mail": 59,
+   "total": 1483,
+   "turnout_pct": 23.91,
+   "matched": false
+  },
+  {
+   "slug": "dimmit",
+   "name": "Dimmit",
+   "registered": 6567,
+   "in_person": 1317,
+   "mail": 100,
+   "total": 1417,
+   "turnout_pct": 21.58,
+   "matched": false
+  },
+  {
+   "slug": "mason",
+   "name": "Mason",
+   "registered": 3320,
+   "in_person": 1358,
+   "mail": 59,
+   "total": 1417,
+   "turnout_pct": 42.68,
+   "matched": false
+  },
+  {
+   "slug": "dawson",
+   "name": "Dawson",
+   "registered": 6481,
+   "in_person": 1299,
+   "mail": 75,
+   "total": 1374,
+   "turnout_pct": 21.2,
+   "matched": false
+  },
+  {
+   "slug": "mills",
+   "name": "Mills",
+   "registered": 3643,
+   "in_person": 1294,
+   "mail": 79,
+   "total": 1373,
+   "turnout_pct": 37.69,
+   "matched": false
+  },
+  {
+   "slug": "lamb",
+   "name": "Lamb",
+   "registered": 7668,
+   "in_person": 1203,
+   "mail": 145,
+   "total": 1348,
+   "turnout_pct": 17.58,
+   "matched": false
+  },
+  {
+   "slug": "ward",
+   "name": "Ward",
+   "registered": 7027,
+   "in_person": 1273,
+   "mail": 59,
+   "total": 1332,
+   "turnout_pct": 18.96,
+   "matched": false
+  },
+  {
+   "slug": "refugio",
+   "name": "Refugio",
+   "registered": 4922,
+   "in_person": 1238,
+   "mail": 73,
+   "total": 1311,
+   "turnout_pct": 26.64,
+   "matched": false
+  },
+  {
+   "slug": "presidio",
+   "name": "Presidio",
+   "registered": 4373,
+   "in_person": 1242,
+   "mail": 43,
+   "total": 1285,
+   "turnout_pct": 29.38,
+   "matched": false
+  },
+  {
+   "slug": "san-saba",
+   "name": "San Saba",
+   "registered": 3774,
+   "in_person": 1171,
+   "mail": 71,
+   "total": 1242,
+   "turnout_pct": 32.91,
+   "matched": false
+  },
+  {
+   "slug": "ochiltree",
+   "name": "Ochiltree",
+   "registered": 5221,
+   "in_person": 1041,
+   "mail": 75,
+   "total": 1116,
+   "turnout_pct": 21.38,
+   "matched": false
+  },
+  {
+   "slug": "kimble",
+   "name": "Kimble",
+   "registered": 3353,
+   "in_person": 1055,
+   "mail": 51,
+   "total": 1106,
+   "turnout_pct": 32.99,
+   "matched": false
+  },
+  {
+   "slug": "lasalle",
+   "name": "Lasalle",
+   "registered": 4096,
+   "in_person": 1012,
+   "mail": 94,
+   "total": 1106,
+   "turnout_pct": 27.0,
+   "matched": false
+  },
+  {
+   "slug": "mitchell",
+   "name": "Mitchell",
+   "registered": 4473,
+   "in_person": 1012,
+   "mail": 30,
+   "total": 1042,
+   "turnout_pct": 23.3,
+   "matched": false
+  },
+  {
+   "slug": "delta",
+   "name": "Delta",
+   "registered": 4116,
+   "in_person": 941,
+   "mail": 81,
+   "total": 1022,
+   "turnout_pct": 24.83,
+   "matched": false
+  },
+  {
+   "slug": "carson",
+   "name": "Carson",
+   "registered": 4253,
+   "in_person": 1000,
+   "mail": 2,
+   "total": 1002,
+   "turnout_pct": 23.56,
+   "matched": false
+  },
+  {
+   "slug": "childress",
+   "name": "Childress",
+   "registered": 3580,
+   "in_person": 999,
+   "mail": 3,
+   "total": 1002,
+   "turnout_pct": 27.99,
+   "matched": false
+  },
+  {
+   "slug": "wheeler",
+   "name": "Wheeler",
+   "registered": 3347,
+   "in_person": 938,
+   "mail": 52,
+   "total": 990,
+   "turnout_pct": 29.58,
+   "matched": false
+  },
+  {
+   "slug": "brooks",
+   "name": "Brooks",
+   "registered": 4735,
+   "in_person": 884,
+   "mail": 91,
+   "total": 975,
+   "turnout_pct": 20.59,
+   "matched": false
+  },
+  {
+   "slug": "yoakum",
+   "name": "Yoakum",
+   "registered": 4340,
+   "in_person": 902,
+   "mail": 34,
+   "total": 936,
+   "turnout_pct": 21.57,
+   "matched": false
+  },
+  {
+   "slug": "real",
+   "name": "Real",
+   "registered": 2701,
+   "in_person": 885,
+   "mail": 43,
+   "total": 928,
+   "turnout_pct": 34.36,
+   "matched": false
+  },
+  {
+   "slug": "kinney",
+   "name": "Kinney",
+   "registered": 2195,
+   "in_person": 900,
+   "mail": 26,
+   "total": 926,
+   "turnout_pct": 42.19,
+   "matched": false
+  },
+  {
+   "slug": "swisher",
+   "name": "Swisher",
+   "registered": 3882,
+   "in_person": 798,
+   "mail": 84,
+   "total": 882,
+   "turnout_pct": 22.72,
+   "matched": false
+  },
+  {
+   "slug": "lynn",
+   "name": "Lynn",
+   "registered": 4475,
+   "in_person": 780,
+   "mail": 33,
+   "total": 813,
+   "turnout_pct": 18.17,
+   "matched": false
+  },
+  {
+   "slug": "martin",
+   "name": "Martin",
+   "registered": 3589,
+   "in_person": 778,
+   "mail": 13,
+   "total": 791,
+   "turnout_pct": 22.04,
+   "matched": false
+  },
+  {
+   "slug": "hartley",
+   "name": "Hartley",
+   "registered": 2821,
+   "in_person": 741,
+   "mail": 40,
+   "total": 781,
+   "turnout_pct": 27.69,
+   "matched": false
+  },
+  {
+   "slug": "coke",
+   "name": "Coke",
+   "registered": 2532,
+   "in_person": 700,
+   "mail": 79,
+   "total": 779,
+   "turnout_pct": 30.77,
+   "matched": false
+  },
+  {
+   "slug": "jim-hogg",
+   "name": "Jim Hogg",
+   "registered": 3405,
+   "in_person": 604,
+   "mail": 154,
+   "total": 758,
+   "turnout_pct": 22.26,
+   "matched": false
+  },
+  {
+   "slug": "haskell",
+   "name": "Haskell",
+   "registered": 3445,
+   "in_person": 706,
+   "mail": 51,
+   "total": 757,
+   "turnout_pct": 21.97,
+   "matched": false
+  },
+  {
+   "slug": "crosby",
+   "name": "Crosby",
+   "registered": 3557,
+   "in_person": 625,
+   "mail": 90,
+   "total": 715,
+   "turnout_pct": 20.1,
+   "matched": false
+  },
+  {
+   "slug": "fisher",
+   "name": "Fisher",
+   "registered": 2739,
+   "in_person": 642,
+   "mail": 66,
+   "total": 708,
+   "turnout_pct": 25.85,
+   "matched": false
+  },
+  {
+   "slug": "shackelford",
+   "name": "Shackelford",
+   "registered": 2467,
+   "in_person": 642,
+   "mail": 56,
+   "total": 698,
+   "turnout_pct": 28.29,
+   "matched": false
+  },
+  {
+   "slug": "sutton",
+   "name": "Sutton",
+   "registered": 2284,
+   "in_person": 669,
+   "mail": 18,
+   "total": 687,
+   "turnout_pct": 30.08,
+   "matched": false
+  },
+  {
+   "slug": "donley",
+   "name": "Donley",
+   "registered": 2463,
+   "in_person": 642,
+   "mail": 42,
+   "total": 684,
+   "turnout_pct": 27.77,
+   "matched": false
+  },
+  {
+   "slug": "baylor",
+   "name": "Baylor",
+   "registered": 2387,
+   "in_person": 659,
+   "mail": 24,
+   "total": 683,
+   "turnout_pct": 28.61,
+   "matched": false
+  },
+  {
+   "slug": "jeff-davis",
+   "name": "Jeff Davis",
+   "registered": 1539,
+   "in_person": 658,
+   "mail": 25,
+   "total": 683,
+   "turnout_pct": 44.38,
+   "matched": false
+  },
+  {
+   "slug": "hansford",
+   "name": "Hansford",
+   "registered": 2977,
+   "in_person": 614,
+   "mail": 66,
+   "total": 680,
+   "turnout_pct": 22.84,
+   "matched": false
+  },
+  {
+   "slug": "floyd",
+   "name": "Floyd",
+   "registered": 3582,
+   "in_person": 676,
+   "mail": 0,
+   "total": 676,
+   "turnout_pct": 18.87,
+   "matched": false
+  },
+  {
+   "slug": "culberson",
+   "name": "Culberson",
+   "registered": 1732,
+   "in_person": 675,
+   "mail": 0,
+   "total": 675,
+   "turnout_pct": 38.97,
+   "matched": false
+  },
+  {
+   "slug": "castro",
+   "name": "Castro",
+   "registered": 3467,
+   "in_person": 632,
+   "mail": 0,
+   "total": 632,
+   "turnout_pct": 18.23,
+   "matched": false
+  },
+  {
+   "slug": "bailey",
+   "name": "Bailey",
+   "registered": 3239,
+   "in_person": 581,
+   "mail": 41,
+   "total": 622,
+   "turnout_pct": 19.2,
+   "matched": false
+  },
+  {
+   "slug": "hemphill",
+   "name": "Hemphill",
+   "registered": 2290,
+   "in_person": 577,
+   "mail": 44,
+   "total": 621,
+   "turnout_pct": 27.12,
+   "matched": false
+  },
+  {
+   "slug": "parmer",
+   "name": "Parmer",
+   "registered": 4516,
+   "in_person": 571,
+   "mail": 43,
+   "total": 614,
+   "turnout_pct": 13.6,
+   "matched": false
+  },
+  {
+   "slug": "garza",
+   "name": "Garza",
+   "registered": 2528,
+   "in_person": 566,
+   "mail": 43,
+   "total": 609,
+   "turnout_pct": 24.09,
+   "matched": false
+  },
+  {
+   "slug": "schleicher",
+   "name": "Schleicher",
+   "registered": 1779,
+   "in_person": 548,
+   "mail": 34,
+   "total": 582,
+   "turnout_pct": 32.72,
+   "matched": false
+  },
+  {
+   "slug": "collingsworth",
+   "name": "Collingsworth",
+   "registered": 1857,
+   "in_person": 525,
+   "mail": 37,
+   "total": 562,
+   "turnout_pct": 30.26,
+   "matched": false
+  },
+  {
+   "slug": "armstrong",
+   "name": "Armstrong",
+   "registered": 1436,
+   "in_person": 522,
+   "mail": 35,
+   "total": 557,
+   "turnout_pct": 38.79,
+   "matched": false
+  },
+  {
+   "slug": "crockett",
+   "name": "Crockett",
+   "registered": 2259,
+   "in_person": 531,
+   "mail": 24,
+   "total": 555,
+   "turnout_pct": 24.57,
+   "matched": false
+  },
+  {
+   "slug": "crane",
+   "name": "Crane",
+   "registered": 2756,
+   "in_person": 528,
+   "mail": 19,
+   "total": 547,
+   "turnout_pct": 19.85,
+   "matched": false
+  },
+  {
+   "slug": "menard",
+   "name": "Menard",
+   "registered": 1474,
+   "in_person": 502,
+   "mail": 25,
+   "total": 527,
+   "turnout_pct": 35.75,
+   "matched": false
+  },
+  {
+   "slug": "upton",
+   "name": "Upton",
+   "registered": 2079,
+   "in_person": 496,
+   "mail": 4,
+   "total": 500,
+   "turnout_pct": 24.05,
+   "matched": false
+  },
+  {
+   "slug": "edwards",
+   "name": "Edwards",
+   "registered": 1488,
+   "in_person": 476,
+   "mail": 11,
+   "total": 487,
+   "turnout_pct": 32.73,
+   "matched": false
+  },
+  {
+   "slug": "hardeman",
+   "name": "Hardeman",
+   "registered": 2191,
+   "in_person": 459,
+   "mail": 23,
+   "total": 482,
+   "turnout_pct": 22.0,
+   "matched": false
+  },
+  {
+   "slug": "dallam",
+   "name": "Dallam",
+   "registered": 2836,
+   "in_person": 402,
+   "mail": 53,
+   "total": 455,
+   "turnout_pct": 16.04,
+   "matched": false
+  },
+  {
+   "slug": "concho",
+   "name": "Concho",
+   "registered": 1814,
+   "in_person": 390,
+   "mail": 63,
+   "total": 453,
+   "turnout_pct": 24.97,
+   "matched": false
+  },
+  {
+   "slug": "winkler",
+   "name": "Winkler",
+   "registered": 4190,
+   "in_person": 379,
+   "mail": 38,
+   "total": 417,
+   "turnout_pct": 9.95,
+   "matched": false
+  },
+  {
+   "slug": "dickens",
+   "name": "Dickens",
+   "registered": 1363,
+   "in_person": 361,
+   "mail": 31,
+   "total": 392,
+   "turnout_pct": 28.76,
+   "matched": false
+  },
+  {
+   "slug": "reagan",
+   "name": "Reagan",
+   "registered": 1808,
+   "in_person": 371,
+   "mail": 10,
+   "total": 381,
+   "turnout_pct": 21.07,
+   "matched": false
+  },
+  {
+   "slug": "cochran",
+   "name": "Cochran",
+   "registered": 1486,
+   "in_person": 316,
+   "mail": 38,
+   "total": 354,
+   "turnout_pct": 23.82,
+   "matched": false
+  },
+  {
+   "slug": "hall",
+   "name": "Hall",
+   "registered": 1831,
+   "in_person": 328,
+   "mail": 19,
+   "total": 347,
+   "turnout_pct": 18.95,
+   "matched": false
+  },
+  {
+   "slug": "sherman",
+   "name": "Sherman",
+   "registered": 1366,
+   "in_person": 322,
+   "mail": 16,
+   "total": 338,
+   "turnout_pct": 24.74,
+   "matched": false
+  },
+  {
+   "slug": "cottle",
+   "name": "Cottle",
+   "registered": 979,
+   "in_person": 325,
+   "mail": 9,
+   "total": 334,
+   "turnout_pct": 34.12,
+   "matched": false
+  },
+  {
+   "slug": "irion",
+   "name": "Irion",
+   "registered": 1221,
+   "in_person": 320,
+   "mail": 13,
+   "total": 333,
+   "turnout_pct": 27.27,
+   "matched": false
+  },
+  {
+   "slug": "oldham",
+   "name": "Oldham",
+   "registered": 1395,
+   "in_person": 292,
+   "mail": 24,
+   "total": 316,
+   "turnout_pct": 22.65,
+   "matched": false
+  },
+  {
+   "slug": "briscoe",
+   "name": "Briscoe",
+   "registered": 1022,
+   "in_person": 274,
+   "mail": 38,
+   "total": 312,
+   "turnout_pct": 30.53,
+   "matched": false
+  },
+  {
+   "slug": "knox",
+   "name": "Knox",
+   "registered": 2262,
+   "in_person": 278,
+   "mail": 34,
+   "total": 312,
+   "turnout_pct": 13.79,
+   "matched": false
+  },
+  {
+   "slug": "glasscock",
+   "name": "Glasscock",
+   "registered": 857,
+   "in_person": 294,
+   "mail": 11,
+   "total": 305,
+   "turnout_pct": 35.59,
+   "matched": false
+  },
+  {
+   "slug": "motley",
+   "name": "Motley",
+   "registered": 829,
+   "in_person": 239,
+   "mail": 26,
+   "total": 265,
+   "turnout_pct": 31.97,
+   "matched": false
+  },
+  {
+   "slug": "sterling",
+   "name": "Sterling",
+   "registered": 902,
+   "in_person": 221,
+   "mail": 15,
+   "total": 236,
+   "turnout_pct": 26.16,
+   "matched": false
+  },
+  {
+   "slug": "stonewall",
+   "name": "Stonewall",
+   "registered": 960,
+   "in_person": 226,
+   "mail": 8,
+   "total": 234,
+   "turnout_pct": 24.38,
+   "matched": false
+  },
+  {
+   "slug": "mcmullen",
+   "name": "Mcmullen",
+   "registered": 644,
+   "in_person": 225,
+   "mail": 4,
+   "total": 229,
+   "turnout_pct": 35.56,
+   "matched": false
+  },
+  {
+   "slug": "roberts",
+   "name": "Roberts",
+   "registered": 713,
+   "in_person": 216,
+   "mail": 10,
+   "total": 226,
+   "turnout_pct": 31.7,
+   "matched": false
+  },
+  {
+   "slug": "foard",
+   "name": "Foard",
+   "registered": 779,
+   "in_person": 202,
+   "mail": 12,
+   "total": 214,
+   "turnout_pct": 27.47,
+   "matched": false
+  },
+  {
+   "slug": "throckmorton",
+   "name": "Throckmorton",
+   "registered": 1192,
+   "in_person": 204,
+   "mail": 8,
+   "total": 212,
+   "turnout_pct": 17.79,
+   "matched": false
+  },
+  {
+   "slug": "lipscomb",
+   "name": "Lipscomb",
+   "registered": 1878,
+   "in_person": 188,
+   "mail": 23,
+   "total": 211,
+   "turnout_pct": 11.24,
+   "matched": false
+  },
+  {
+   "slug": "borden",
+   "name": "Borden",
+   "registered": 477,
+   "in_person": 191,
+   "mail": 5,
+   "total": 196,
+   "turnout_pct": 41.09,
+   "matched": false
+  },
+  {
+   "slug": "terrell",
+   "name": "Terrell",
+   "registered": 622,
+   "in_person": 174,
+   "mail": 14,
+   "total": 188,
+   "turnout_pct": 30.23,
+   "matched": false
+  },
+  {
+   "slug": "hudspeth",
+   "name": "Hudspeth",
+   "registered": 2103,
+   "in_person": 164,
+   "mail": 22,
+   "total": 186,
+   "turnout_pct": 8.84,
+   "matched": false
+  },
+  {
+   "slug": "kent",
+   "name": "Kent",
+   "registered": 566,
+   "in_person": 165,
+   "mail": 1,
+   "total": 166,
+   "turnout_pct": 29.33,
+   "matched": false
+  },
+  {
+   "slug": "kenedy",
+   "name": "Kenedy",
+   "registered": 269,
+   "in_person": 115,
+   "mail": 5,
+   "total": 120,
+   "turnout_pct": 44.61,
+   "matched": false
+  },
+  {
+   "slug": "king",
+   "name": "King",
+   "registered": 179,
+   "in_person": 58,
+   "mail": 1,
+   "total": 59,
+   "turnout_pct": 32.96,
+   "matched": false
+  },
+  {
+   "slug": "loving",
+   "name": "Loving",
+   "registered": 148,
+   "in_person": 37,
+   "mail": 1,
+   "total": 38,
+   "turnout_pct": 25.68,
+   "matched": false
+  }
+ ]
+}
