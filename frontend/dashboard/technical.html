@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Methods and Code</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Technical write-up: a reading column with step sections, code blocks and definition tables.
+   Same tokens and faces as the dashboard. Dark-first; light mirrored. */
+:root {
+  color-scheme: dark;
+  --bg:#0a1020; --surface:#111a2e; --surface-2:#18243d; --line:#243150;
+  --fg:#eaf0fa; --fg-2:#b9c4d8; --muted:#7e8ba3; --accent:#7fbcff;
+  --county:#3987e5; --sos:#d95926; --good:#2fb344; --warn:#fab219; --code:#9fe0b4;
+  --font-ui:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:10px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg:#f3f5f9; --surface:#ffffff; --surface-2:#eef1f6; --line:#d8dee9;
+    --fg:#0f1829; --fg-2:#39455c; --muted:#6b7690; --accent:#1f5fbf; --county:#2a78d6; --sos:#c44a1e; --code:#1a7f4b;
+  }
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg:#f3f5f9; --surface:#ffffff; --surface-2:#eef1f6; --line:#d8dee9;
+  --fg:#0f1829; --fg-2:#39455c; --muted:#6b7690; --accent:#1f5fbf; --county:#2a78d6; --sos:#c44a1e; --code:#1a7f4b;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:var(--font-ui); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg); }
+a { color:var(--accent); }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.wrap { max-width:780px; margin:0 auto; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:0 56px; }
+.topbar { position:sticky; top:env(safe-area-inset-top,0px); z-index:9; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.topbar .in { max-width:780px; margin:0 auto; display:flex; align-items:center; gap:14px; padding:10px max(16px,env(safe-area-inset-left,0px)); }
+.brand { font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; color:var(--fg); white-space:nowrap; }
+.brand b { color:var(--accent); }
+.topbar a.back { margin-left:auto; font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--fg-2); text-decoration:none; }
+.eyebrow { font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+h1 { font-size:clamp(28px,4.8vw,42px); line-height:1.06; margin:12px 0 8px; font-weight:700; letter-spacing:-.01em; text-wrap:balance; }
+.lede { color:var(--fg-2); font-size:17px; margin:0 0 6px; }
+.meta { color:var(--muted); font-size:13px; font-family:var(--font-mono); }
+section { border-top:1px solid var(--line); padding-block:24px; }
+section .step { font-family:var(--font-mono); font-size:12px; letter-spacing:.1em; color:var(--accent); }
+h2 { font-size:21px; font-weight:600; margin:6px 0 10px; letter-spacing:-.005em; }
+h3 { font-size:15px; font-weight:600; margin:16px 0 6px; color:var(--fg); }
+p { margin:0 0 12px; color:var(--fg-2); }
+p strong, li strong { color:var(--fg); font-weight:600; }
+ul { margin:0 0 12px; padding-left:20px; color:var(--fg-2); }
+li { margin:0 0 6px; }
+code { font-family:var(--font-mono); font-size:.86em; background:var(--surface-2); padding:1px 5px; border-radius:4px; color:var(--code); }
+pre { margin:12px 0; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:12px 14px; overflow-x:auto; }
+pre code { background:none; padding:0; color:var(--fg-2); font-size:12.5px; line-height:1.6; }
+pre code .c { color:var(--muted); }
+pre code .k { color:var(--accent); }
+.tbl { overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); margin:12px 0; }
+table { border-collapse:collapse; width:100%; font-size:13.5px; min-width:520px; }
+th { background:var(--surface-2); text-align:left; font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--fg-2); padding:9px 12px; border-bottom:1px solid var(--line); }
+td { padding:9px 12px; border-bottom:1px solid var(--line); color:var(--fg-2); vertical-align:top; }
+tr:last-child td { border-bottom:0; }
+.note { background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--warn); border-radius:var(--radius); padding:14px 16px; margin:12px 0; }
+.note p { margin:0; font-size:14.5px; }
+.readmore { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+.readmore a { display:flex; flex-direction:column; gap:3px; text-decoration:none; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; flex:1; min-width:220px; }
+.readmore a:hover { border-color:var(--accent); } .readmore a b { color:var(--fg); } .readmore a span { color:var(--muted); font-size:12.5px; }
+footer { color:var(--muted); font-size:12.5px; padding-block:22px; border-top:1px solid var(--line); margin-top:8px; }
+.srccards { display:flex; flex-direction:column; gap:16px; margin:16px 0 4px; }
+.srccard { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; }
+.srccard > header { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px; margin:0 0 12px; padding-bottom:10px; border-bottom:1px solid var(--line); }
+.srccard > header h3 { margin:0; font-size:17px; color:var(--fg); }
+.srccard .tag { font-family:var(--font-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:var(--county); padding:2px 8px; border-radius:20px; position:relative; top:-1px; }
+.srccard .tag.state { background:var(--sos); }
+.srccard .src { margin-left:auto; font-family:var(--font-mono); font-size:11.5px; word-break:break-word; }
+.srccard dl { margin:0; display:grid; grid-template-columns:116px 1fr; gap:9px 14px; }
+.srccard dt { font-family:var(--font-mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); padding-top:3px; }
+.srccard dd { margin:0; color:var(--fg-2); font-size:14.5px; }
+.srccard dd + dd { margin-top:4px; }
+@media (max-width:560px){
+  .srccard dl { grid-template-columns:1fr; gap:3px 0; }
+  .srccard dt { margin-top:10px; }
+  .srccard dt:first-child { margin-top:0; }
+  .srccard .src { margin-left:0; flex-basis:100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="in">
+  <a class="brand" href="index.html">LONE STAR <b>LEDGER</b></a>
+  <a class="back" href="index.html">← Dashboard</a>
+</div></div>
+
+<main class="wrap">
+  <header style="padding-block:34px 6px">
+    <div class="eyebrow">Methodology and implementation</div>
+    <h1>Methods and code</h1>
+    <p class="lede">How the tracker collects two independent counts, keeps every version, matches them voter by voter, and estimates party lean, with the caveats that bound each step.</p>
+    <p class="meta">Collector: Python standard library · checks every 15 minutes · append-only archive</p>
+  </header>
+
+  <section>
+    <div class="step">01 · ARCHITECTURE</div>
+    <h2>Collect, hash, keep everything</h2>
+    <p>A small Python program runs every 15 minutes from <code>cron</code>. For each source it fetches the current file, takes a SHA-256 hash of the bytes, and writes a new copy only when the hash differs from the last one stored. Each new version is then compared against its predecessor and the difference is logged.</p>
+    <p>The archive is append-only. Several counties and the state overwrite yesterday's file at the same web address, so a version we fail to capture is lost permanently. Nothing is ever overwritten on our side, which is what makes the revision history possible.</p>
+    <pre><code><span class="c"># every 15 minutes, per source</span>
+fetch -> sha256(bytes)
+if hash changed:
+    write data/raw/&lt;source&gt;/&lt;date&gt;/&lt;time&gt;_&lt;hash&gt;_&lt;name&gt;
+    diff against previous version -> changes.jsonl</code></pre>
+  </section>
+
+  <section>
+    <div class="step">02 · SOURCES</div>
+    <h2>Two counts, eight counties</h2>
+    <p>The <strong>state</strong> count comes from the Secretary of State's Civix early-voting report for election 53815. Each request returns a file whose contents are base64-encoded; we pull the turnout file for every early-voting date, plus the per-county voter rosters, every cycle.</p>
+    <p>The <strong>county</strong> counts come from each county's own site, in whatever form it publishes: PDF, spreadsheet, or HTML table. The formats differ by county, so each has its own parser. We label every county's figure with that county's definition of a counted vote, because they differ.</p>
+    <div class="tbl"><table>
+      <tr><th>County</th><th>In-person figure</th><th>Mail figure</th></tr>
+      <tr><td>Harris</td><td>cumulative early-voting roster (check-ins)</td><td>ballots returned</td></tr>
+      <tr><td>Dallas</td><td>early-voting details report</td><td>ballots returned</td></tr>
+      <tr><td>Travis</td><td>daily early-voting rosters</td><td>ballots received</td></tr>
+      <tr><td>Hidalgo</td><td>cumulative roster</td><td>applications for a mail ballot</td></tr>
+      <tr><td>El Paso</td><td>cumulative voter list</td><td>ballots received</td></tr>
+      <tr><td>Cameron</td><td>county voter list (check-in date)</td><td>ballots received</td></tr>
+      <tr><td>Hays</td><td>in-person check-in list</td><td>absentee ballots received</td></tr>
+      <tr><td>Bexar</td><td>daily early-voting roster (check-ins)</td><td>ballots received</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <div class="step">03 · ACCESS</div>
+    <h2>Two counties fought the fetch</h2>
+    <p>Two county sites block automated requests from data-center addresses. We did not disguise the collector to get around that, because misrepresenting an automated client as a person is the one line the project will not cross. Instead:</p>
+    <ul>
+      <li><strong>Dallas</strong> serves a CAPTCHA to addresses outside the United States. We route Dallas requests through a United-States server, which the site accepts.</li>
+      <li><strong>Hays</strong> is behind a security vendor that blocks data-center and automated browsers outright, even a real one. We collect it by a supervised pull: a staff member opens the files in their own browser, which clears the check as a person, and a script reuses that same open session to save them. It runs a few times a day rather than every 15 minutes, which is the one coverage gap we have.</li>
+    </ul>
+    <p>We have asked both counties to allow the fetcher through, which is a small configuration change on their side and closes the gap cleanly.</p>
+  </section>
+
+  <section>
+    <div class="step">04 · MATCH</div>
+    <h2>Comparing the rosters voter by voter</h2>
+    <p>For each county we build the set of voter ID numbers in the latest version of every dated state roster, and the set in the county's own roster, then compare them. Three groups come out of it:</p>
+    <ul>
+      <li><strong>On both</strong> rosters: the large majority.</li>
+      <li><strong>State only</strong>: the state records a vote the county's own list does not. This is the small group worth scrutiny.</li>
+      <li><strong>County only</strong>: larger, and mostly ordinary. The county posts a day ahead of the state, and the state's roster begins October 14, so earlier mail ballots have no state roster row to match.</li>
+    </ul>
+    <p>Every result is broken down by date and by method (in person or mail), because reading the raw totals without that breakdown overstates the gap. The latest day is nearly always "county only" simply because the state has not posted it yet.</p>
+    <div class="note"><p>All of this runs offline on files kept at owner-only permissions. The matching uses voter ID numbers; no names are read into the comparison, and only counts ever leave it. Nothing voter-level is published, logged, or committed to version control.</p></div>
+  </section>
+
+  <section>
+    <div class="step">05 · PARTY LEAN</div>
+    <h2>Estimating lean, and its ceiling</h2>
+    <p>Texas has no party registration. The standard proxy is which party's primary a voter has chosen, so we build each voter's primary history from public rosters and from the state's voter-history file where an organization can provide it. A voter who has only ever voted in Democratic primaries is counted D, only Republican is counted R, a mixed record takes the most recent primary, and a voter with no primary record is left unclassified.</p>
+    <p>The ceiling is that last group. Between a quarter and a third of this year's early voters have no primary history, so no lean can be assigned to them. We report the lean only as a share of the voters we can classify, never as the whole electorate, and we show the unclassified share next to it so the blind spot is always visible.</p>
+    <pre><code><span class="c"># per voter, from primary history</span>
+only D primaries        -> D
+only R primaries        -> R
+mixed                   -> most recent primary
+no primary on record    -> unclassified  <span class="c"># a quarter to a third of voters</span></code></pre>
+  </section>
+
+  <section>
+    <div class="step">06 · LEAD CHECK</div>
+    <h2>Resolving the "state only" voters</h2>
+    <p>For the small group the state lists that a county does not, we join each voter ID to the county registration file and report counts only: how many are currently registered, their registration status, and the year they registered. This separates an innocent explanation, a brand-new registrant voting for the first time, from a real anomaly, a voter ID the state says voted that the registration file does not contain.</p>
+    <p>In Travis County, of 184 such in-person voters on completed days, 103 had registered in 2026, 34 were in a routine address-check status but still eligible, and only 4 were absent from the registration file entirely. Those four are the only entries that warrant a closer look.</p>
+  </section>
+
+  <section>
+    <div class="step">07 · LIMITS</div>
+    <h2>What these numbers cannot do</h2>
+    <ul>
+      <li><strong>Mail coverage.</strong> The state's voter-level roster starts October 14, so mail ballots returned earlier cannot be checked name by name through it.</li>
+      <li><strong>Definitions differ.</strong> A check-in is not the same event as an accepted ballot. We label each county's definition so a gap is never read as an error when it is a difference in what is counted.</li>
+      <li><strong>Lean is partial.</strong> It speaks only for voters with a primary record.</li>
+      <li><strong>Hays is sampled.</strong> A few pulls a day, not every 15 minutes, until the county allows the fetcher through.</li>
+      <li><strong>Unofficial.</strong> All figures are unofficial until each county canvasses and reconciles after Election Day.</li>
+    </ul>
+    <p>The project's value is not a single verdict. It is that every number is captured with its source and its version, so a claim can be checked against the record instead of argued from memory.</p>
+  </section>
+
+  <section>
+    <div class="step">08 · THE ORIGINALS</div>
+    <h2>Where to see the source data</h2>
+    <p>Every figure traces back to a public page. The state count is the Secretary of State's Civix early-voting feed for election 53815; each county count is published on that county's own elections site. These are the pages the collector reads each cycle — the same originals anyone can open and check against our archive.</p>
+    <div class="tbl"><table>
+      <tr><th>Source</th><th>Public page we collect from</th></tr>
+      <tr><td>Texas SOS <span style="color:var(--muted)">(state)</span></td><td><a href="https://goelect.txelections.civixapps.com/api-ivis-system/api/v1/" target="_blank" rel="noopener noreferrer">Civix EVR API — election 53815</a> <span style="color:var(--muted)">(turnout + per-county rosters)</span></td></tr>
+      <tr><td>Harris</td><td><a href="https://www.harrisvotes.com/Election-Results/Election-Reports?filter=EV%20Report" target="_blank" rel="noopener noreferrer">harrisvotes.com — Election Reports</a> <span style="color:var(--muted)">(EVPA totals + EV/BBM rosters)</span></td></tr>
+      <tr><td>Dallas</td><td><a href="https://www.dallascountyvotes.org/election-results/historical/november-3-2026-general-and-joint-election/" target="_blank" rel="noopener noreferrer">dallascountyvotes.org — Nov 3, 2026 results</a></td></tr>
+      <tr><td>Bexar</td><td><a href="https://earlyvotecounts.bexar.org/" target="_blank" rel="noopener noreferrer">earlyvotecounts.bexar.org</a> <span style="color:var(--muted)">(daily totals)</span> · <a href="https://elections.bexar.gov/DocumentCenter/Index/245" target="_blank" rel="noopener noreferrer">elections.bexar.gov — DocumentCenter folder 245</a> <span style="color:var(--muted)">(voter rosters)</span></td></tr>
+      <tr><td>Travis</td><td><a href="https://votetravis.gov/current-election-information/current-election/" target="_blank" rel="noopener noreferrer">votetravis.gov — current election</a> <span style="color:var(--muted)">(daily rosters)</span></td></tr>
+      <tr><td>Hidalgo</td><td><a href="https://www.hidalgocounty.us/3523/Unofficial-Early-Voting-Totals-Rosters" target="_blank" rel="noopener noreferrer">hidalgocounty.us — EV totals &amp; rosters</a></td></tr>
+      <tr><td>El Paso</td><td><a href="https://epcountyvotestx.gov/voter-information/current-election" target="_blank" rel="noopener noreferrer">epcountyvotestx.gov — current election</a></td></tr>
+      <tr><td>Cameron</td><td><a href="https://cameroncountytx.gov/elections/results/" target="_blank" rel="noopener noreferrer">cameroncountytx.gov — election results</a></td></tr>
+      <tr><td>Hays</td><td><a href="https://www.hayscountytx.gov/873/November-3-2026-General-Election" target="_blank" rel="noopener noreferrer">hayscountytx.gov — Nov 3, 2026 election</a></td></tr>
+    </table></div>
+    <div class="note"><p>Roster files that carry voter names and ID numbers are downloaded to owner-only storage for the voter-by-voter match and are never republished — only aggregate counts appear on this site.</p></div>
+  </section>
+
+  <section>
+    <div class="step">09 · SOURCE BY SOURCE</div>
+    <h2>Every source, start to finish</h2>
+    <p>The table above is the index; here is each source in full — where it comes from, how it is fetched, how it is parsed, and the specific quirk each one forced us to handle. Three things are shared across all of them: every spreadsheet is read by a small standard-library reader that concatenates <strong>all</strong> worksheets, not just the first tab; every file is hashed so only a genuine change is ever stored; and the voter-by-voter match uses ID numbers only, on files held at owner-only permissions — names are never read into it.</p>
+    <div class="srccards">
+
+      <article class="srccard">
+        <header><h3>Secretary of State</h3><span class="tag state">state</span><a class="src" href="https://goelect.txelections.civixapps.com/api-ivis-system/api/v1/" target="_blank" rel="noopener noreferrer">Civix EVR API · election 53815</a></header>
+        <dl>
+          <dt>What it is</dt><dd>The state's official early-voting feed. A plain request returns a small JSON wrapper whose payload is base64-encoded; we decode it. Two kinds: a turnout summary per early-voting date, and a per-county, per-date voter roster (one row per voter — an ID, and whether the vote was in person or by mail).</dd>
+          <dt>Collection</dt><dd>The turnout summary for every early-voting date through today is pulled each cycle; the rosters every half hour. Only changed versions are written, and nothing is ever overwritten — the state silently revises past days, and we want every revision on the record.</dd>
+          <dt>Parsing</dt><dd>From turnout we read registered voters and the in-person and mail totals per county. From each roster we take the voter ID and the method; for a given date we use the latest capture and union the IDs, so a revision adds voters rather than replacing the day.</dd>
+          <dt>Cross-checks</dt><dd>Past-day revisions are found by hashing each capture and diffing it against the one before — the revision timeline on the dashboard is built straight from those diffs. A date with no data yet returns an empty body, which we treat as "nothing yet," not an error.</dd>
+          <dt>Caveat</dt><dd>The voter-level rosters begin October 14, so mail ballots accepted before then have no state roster row to match against. A transient server error on a single date simply retries next cycle.</dd>
+        </dl>
+      </article>
+
+      <article class="srccard">
+        <header><h3>Harris</h3><span class="tag">county</span><a class="src" href="https://www.harrisvotes.com/Election-Results/Election-Reports?filter=EV%20Report" target="_blank" rel="noopener noreferrer">harrisvotes.com — Election Reports</a></header>
+        <dl>
+          <dt>What it is</dt><dd>Three files. <code>EVPA_unofficial.pdf</code> is a per-location table of in-person check-in counts (the "Total Early Voters" figure). Two zips hold the voter rosters: the early-voting zip and the ballot-by-mail zip.</dd>
+          <dt>Collection</dt><dd>Fetched directly every 15 minutes with a conditional request — the server is asked "changed since my copy?" and answers <code>304 Not Modified</code> when it has not, so the multi-megabyte roster zip is not re-downloaded every cycle. The many 304s in the log are this working as designed.</dd>
+          <dt>Parsing</dt><dd>The early-voting zip holds ten daily CSVs plus a <code>DISCLAIMER.TXT</code>; we read every CSV and skip the disclaimer, taking the state voter ID and activity date from each. The mail zip is read the same way. IDs are unioned across all files.</dd>
+          <dt>Cross-checks</dt><dd>The ten daily files are summed, not sampled — reading only the first would under-count in-person voters by hundreds of thousands. The voter-by-voter numbers come from the roster zips, not the EVPA totals sheet.</dd>
+          <dt>Caveat</dt><dd>The EVPA check-in total runs ahead of the posted roster and of the state count: a check-in is the front-door event, not a reconciled, counted ballot.</dd>
+        </dl>
+      </article>
+
+      <article class="srccard">
+        <header><h3>Dallas</h3><span class="tag">county</span><a class="src" href="https://www.dallascountyvotes.org/election-results/historical/november-3-2026-general-and-joint-election/" target="_blank" rel="noopener noreferrer">dallascountyvotes.org — Nov 3, 2026 results</a></header>
+        <dl>
+          <dt>What it is</dt><dd>Two spreadsheets linked from the results page — an in-person early-voting details report (a state voter ID and the date voted) and a mail-ballot returns report (a voter ID and a return date).</dd>
+          <dt>Collection</dt><dd>Dallas serves a CAPTCHA to addresses outside the United States, so these requests are routed through a US server, which the site accepts. A conditional request keeps the ~50 MB roster from re-downloading when unchanged. The results page is read each cycle to find the current links.</dd>
+          <dt>Parsing</dt><dd>We locate the header row by its <code>SOS VOTERID</code> / <code>DATE VOTED</code> columns (their position varies) and read every data row. Dates arrive as either Excel serial numbers or <code>M/D/YYYY</code> text, and both are converted.</dd>
+          <dt>Cross-checks</dt><dd>Dallas renamed the in-person report mid-election (from <code>In-Person-Early-Voting-Turnout-Details-Report</code> to <code>Early-Voting-Turnout-Details</code>); our file-matcher accepts both names while still excluding the unrelated by-location summary. The rename briefly froze the county — which is how we caught it, as a one-day spike of ~42,000 phantom "state-only" voters.</dd>
+          <dt>Caveat</dt><dd>In-person is keyed to the date voted; mail to the return date.</dd>
+        </dl>
+      </article>
+
+      <article class="srccard">
+        <header><h3>Bexar</h3><span class="tag">county</span><a class="src" href="https://elections.bexar.gov/DocumentCenter/Index/245" target="_blank" rel="noopener noreferrer">earlyvotecounts.bexar.org · DocumentCenter folder 245</a></header>
+        <dl>
+          <dt>What it is</dt><dd>A live totals page (current day only) plus a document library of dated per-voter PDFs — a daily in-person roster (name, voter ID, polling place, precinct) and a daily mail-ballots-received roster.</dd>
+          <dt>Collection</dt><dd>The library's index is built by JavaScript and exposes no file links to a plain fetch, so we discover files by number: a document's "View" link redirects to an address that spells out its type and date, and the file downloads from a separate image endpoint. We scan document numbers forward from the last one seen and fetch each new one once — the files carry no cache validator, and each dated file is final once posted.</dd>
+          <dt>Parsing</dt><dd>Each PDF is converted to text; every data row carries exactly one 8–11 digit voter ID, which we extract. All daily in-person and mail files are unioned, each voter dated by the file it appears in.</dd>
+          <dt>Cross-checks</dt><dd>This closed the last gap — Bexar was the one county with no voter roster, so its entire state-only figure had been excluded from the match. The 787-page days parse exactly like the short ones.</dd>
+          <dt>Caveat</dt><dd>The PDFs carry no per-row date, so the file's date is used; mail is received, not yet accepted.</dd>
+        </dl>
+      </article>
+
+      <article class="srccard">
+        <header><h3>Travis</h3><span class="tag">county</span><a class="src" href="https://votetravis.gov/current-election-information/current-election/" target="_blank" rel="noopener noreferrer">votetravis.gov — current election</a></header>
+        <dl>
+          <dt>What it is</dt><dd>A single zip, <code>G26-Voter-Rosters.zip</code>, that currently holds about fifty spreadsheets — a separate file per day for Early Vote, Ballot by Mail and Limited Ballot, plus mid-stream "UPDATED" re-issues of some days.</dd>
+          <dt>Collection</dt><dd>Fetched directly each cycle; the current-election page is also read to catch the roster link.</dd>
+          <dt>Parsing</dt><dd>We walk every file in the zip and key off its name: <code>MM.DD.YYYY Early Vote</code> and <code>MM.DD.YYYY Ballot by Mail</code> are read (voter ID in the first column), and their <code>UPDATED</code> re-issues are read too, because the name still begins with that date and type. IDs are unioned, each voter keeping the earliest date it appears on.</dd>
+          <dt>Cross-checks</dt><dd>Fifty files, three roster types and same-day corrections collapse into one clean per-voter set; a voter in both an original and an UPDATED file is counted once. Limited-ballot files are skipped on purpose — those records carry no voter ID to match.</dd>
+          <dt>Caveat</dt><dd>Limited ballots are not matched (no ID on the record).</dd>
+        </dl>
+      </article>
+
+      <article class="srccard">
+        <header><h3>Hidalgo</h3><span class="tag">county</span><a class="src" href="https://www.hidalgocounty.us/3523/Unofficial-Early-Voting-Totals-Rosters" target="_blank" rel="noopener noreferrer">hidalgocounty.us — EV totals &amp; rosters</a></header>
+        <dl>
+          <dt>What it is</dt><dd>A cumulative early-voting roster (CSV, with a voter ID), a cumulative mail-application list (spreadsheet) and a totals PDF.</dd>
+          <dt>Collection</dt><dd>The document index is fetched only once an hour, not every 15 minutes: the county's server returns "too many requests" if polled harder, and the link filters are deliberately narrow for the same reason.</dd>
+          <dt>Parsing</dt><dd>The early-voting roster is read by column name; the mail list's ID column is found by its header.</dd>
+          <dt>Cross-checks</dt><dd>The collector backs off on the rate limit; both rosters are cumulative, so the latest capture is the full set.</dd>
+          <dt>Caveat</dt><dd>The mail list is <em>applications</em> for a mail ballot, not returned ballots — a different thing from the other counties' mail figures, and labeled as such.</dd>
+        </dl>
+      </article>
+
+      <article class="srccard">
+        <header><h3>El Paso</h3><span class="tag">county</span><a class="src" href="https://epcountyvotestx.gov/voter-information/current-election" target="_blank" rel="noopener noreferrer">epcountyvotestx.gov — current election</a></header>
+        <dl>
+          <dt>What it is</dt><dd>A cumulative in-person voter list (spreadsheet, voter ID) and a received-mail-ballots list (CSV with a received date), linked from the page and hosted on S3.</dd>
+          <dt>Collection</dt><dd>Fetched directly each cycle through the page's document links.</dd>
+          <dt>Parsing</dt><dd>In-person: the voter ID from the first column of the latest list. Mail: the voter ID and received date from the CSV.</dd>
+          <dt>Cross-checks</dt><dd>The in-person list is cumulative, so the latest "Day N" file is the whole roster.</dd>
+          <dt>Caveat</dt><dd>Mail is received, not yet accepted.</dd>
+        </dl>
+      </article>
+
+      <article class="srccard">
+        <header><h3>Cameron</h3><span class="tag">county</span><a class="src" href="https://cameroncountytx.gov/elections/results/" target="_blank" rel="noopener noreferrer">cameroncountytx.gov — election results</a></header>
+        <dl>
+          <dt>What it is</dt><dd>A county voter list (spreadsheet with a check-in date) and a mail list (spreadsheet with a ballot-received date).</dd>
+          <dt>Collection</dt><dd>Fetched directly through the results-page links each cycle.</dd>
+          <dt>Parsing</dt><dd>Voter ID in the first column, check-in date in the third; the mail ID and received date come from the mail file.</dd>
+          <dt>Cross-checks</dt><dd>Dates arrive in mixed formats (ISO text or Excel serial) and are normalized before the match.</dd>
+          <dt>Caveat</dt><dd>The in-person figure is keyed to the check-in date.</dd>
+        </dl>
+      </article>
+
+      <article class="srccard">
+        <header><h3>Hays</h3><span class="tag">county · sampled</span><a class="src" href="https://www.hayscountytx.gov/873/November-3-2026-General-Election" target="_blank" rel="noopener noreferrer">hayscountytx.gov — Nov 3, 2026 election</a></header>
+        <dl>
+          <dt>What it is</dt><dd>An in-person check-in list published as a searchable web page (its rows embedded as data arrays) and an absentee-ballots-received file delivered as a zip of CSV and spreadsheet.</dd>
+          <dt>Collection</dt><dd>Hays sits behind a security vendor that blocks every automated client, even a real headless browser — and we do not disguise ours. A staff member opens the files in their own browser, which clears the check as a person, and a script reuses that open session to save them into an inbox the collector ingests. It runs a few times a day.</dd>
+          <dt>Parsing</dt><dd>The check-in page's embedded rows are read with a pattern that pulls the voter ID and the vote date; the absentee zip ships the same data as both CSV and spreadsheet, and we read one.</dd>
+          <dt>Cross-checks</dt><dd>Reading one of the two duplicate absentee formats avoids a double count, and the inbox hand-off keeps the human-in-the-loop step from touching the rest of the automated pipeline.</dd>
+          <dt>Caveat</dt><dd>Sampled a few times a day, not every 15 minutes, until the county allows the fetcher through — our one coverage gap.</dd>
+        </dl>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="step">10 · OPEN METHODS</div>
+    <h2>Take these methods and run</h2>
+    <p>Everything above is the whole method — there is no secret step. It runs on public county and state pages and the Python standard library, it keeps every version it fetches, and it reports counts with their source and date so any figure can be checked against the record instead of taken on trust.</p>
+    <p>Please copy it. Point the same approach at a county we do not cover, at a different race, or at another state's feed; run it next to ours and compare. Independent eyes on the same public data — from anyone, of any persuasion — is the entire point: a discrepancy that two or three trackers surface separately is far harder to wave away than one that only we report. If you replicate this and your numbers disagree with ours, tell us — a contradiction we cannot reproduce is a bug we want to find. There is a contact link on the dashboard.</p>
+    <p>The one line we hold is about people, not method: aggregate counts only, never voter-level data, and we never misrepresent an automated client as a person to get past a block. Full transparency about how; strict privacy about whom.</p>
+  </section>
+
+  <div class="readmore">
+    <a href="index.html"><b>← Back to the dashboard</b><span>The live numbers, county by county.</span></a>
+    <a href="discovered.html"><b>What we discovered →</b><span>The findings in plain language.</span></a>
+  </div>
+
+  <footer>Lone Star Ledger · ledger.precinctlabs.com · collector is Python standard library, checks every 15 minutes</footer>
+</main>
+</body>
+</html>

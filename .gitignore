@@ -1,0 +1,12 @@
+data/raw/
+data/logs/
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.claude/settings.local.json
+collector/env
+data/inbox/
+data/match/
+data/history/
+data-test/

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What We Discovered</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Reading page: one narrow prose column on dark navy, numbered findings with a figure strip.
+   Same tokens and faces as the dashboard. Dark-first; light mirrored. */
+:root {
+  color-scheme: dark;
+  --bg:#0a1020; --surface:#111a2e; --surface-2:#18243d; --line:#243150;
+  --fg:#eaf0fa; --fg-2:#b9c4d8; --muted:#7e8ba3; --accent:#7fbcff;
+  --county:#3987e5; --sos:#d95926; --good:#2fb344; --warn:#fab219;
+  --font-ui:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:10px;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg:#f3f5f9; --surface:#ffffff; --surface-2:#eaeef5; --line:#d8dee9;
+    --fg:#0f1829; --fg-2:#39455c; --muted:#6b7690; --accent:#1f5fbf; --county:#2a78d6; --sos:#c44a1e;
+  }
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg:#f3f5f9; --surface:#ffffff; --surface-2:#eaeef5; --line:#d8dee9;
+  --fg:#0f1829; --fg-2:#39455c; --muted:#6b7690; --accent:#1f5fbf; --county:#2a78d6; --sos:#c44a1e;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:var(--font-ui); font-size:16.5px; line-height:1.62; -webkit-font-smoothing:antialiased; }
+body::before { content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--bg); }
+a { color:var(--accent); }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.wrap { max-width:720px; margin:0 auto; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); padding-block:0 56px; }
+.topbar { position:sticky; top:env(safe-area-inset-top,0px); z-index:9; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.topbar .in { max-width:720px; margin:0 auto; display:flex; align-items:center; gap:14px; padding:10px max(16px,env(safe-area-inset-left,0px)); }
+.brand { font-family:var(--font-mono); font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; color:var(--fg); white-space:nowrap; }
+.brand b { color:var(--accent); }
+.topbar a.back { margin-left:auto; font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--fg-2); text-decoration:none; }
+.eyebrow { font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+h1 { font-size:clamp(30px,5.2vw,46px); line-height:1.05; margin:12px 0 8px; font-weight:700; letter-spacing:-.01em; text-wrap:balance; }
+.lede { color:var(--fg-2); font-size:18px; margin:0 0 6px; }
+.meta { color:var(--muted); font-size:13px; font-family:var(--font-mono); margin-bottom:8px; }
+.finding { border-top:1px solid var(--line); padding-block:26px; }
+.finding .n { font-family:var(--font-mono); font-size:12px; letter-spacing:.1em; color:var(--accent); }
+.finding h2 { font-size:22px; font-weight:600; margin:6px 0 10px; letter-spacing:-.005em; text-wrap:balance; }
+.finding p { margin:0 0 12px; color:var(--fg-2); }
+.finding p strong { color:var(--fg); font-weight:600; }
+.figstrip { display:flex; flex-wrap:wrap; gap:14px 24px; margin:14px 0 4px; padding:14px 16px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); }
+.figstrip .f { min-width:0; }
+.figstrip .f .v { font-size:24px; font-weight:700; line-height:1; font-variant-numeric:tabular-nums; }
+.figstrip .f .v.flag { color:var(--warn); }
+.figstrip .f .s { font-size:12.5px; color:var(--muted); margin-top:4px; }
+.takeaway { background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--good); border-radius:var(--radius); padding:16px 18px; margin:10px 0; }
+.takeaway h3 { margin:0 0 8px; font-size:16px; }
+.takeaway p { margin:0; color:var(--fg-2); font-size:15px; }
+.readmore { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+.readmore a { display:flex; flex-direction:column; gap:3px; text-decoration:none; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:14px 16px; flex:1; min-width:220px; }
+.readmore a:hover { border-color:var(--accent); }
+.readmore a b { color:var(--fg); } .readmore a span { color:var(--muted); font-size:12.5px; }
+footer { color:var(--muted); font-size:12.5px; padding-block:22px; border-top:1px solid var(--line); margin-top:8px; }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="in">
+  <a class="brand" href="index.html">LONE STAR <b>LEDGER</b></a>
+  <a class="back" href="index.html">← Dashboard</a>
+</div></div>
+
+<main class="wrap">
+  <header style="padding-block:34px 6px">
+    <div class="eyebrow">A plain-language summary</div>
+    <h1>What we discovered</h1>
+    <p class="lede">We compared what eight Texas counties say about early voting with what the state says about the same counties, checking every 15 minutes and keeping every version. Here is what the first ten days show, written for anyone.</p>
+    <p class="meta">Through October 28, 2026 · eight counties · still collecting</p>
+  </header>
+
+  <section class="finding">
+    <div class="n">FINDING 1</div>
+    <h2>The two sets of numbers mostly agree</h2>
+    <p>For every county that publishes a voter list, we matched the state's early-voting roster against the county's own, one voter ID at a time. The overwhelming majority of voters appear on both. In Harris County, for example, nearly 648,000 voters are on both lists. The headline is that the system is largely doing what it should.</p>
+  </section>
+
+  <section class="finding">
+    <div class="n">FINDING 2</div>
+    <h2>Most of the differences are timing, not error</h2>
+    <p>Counties update their own totals first, often the evening a day ends. The state catches up over the following days, and it also revises earlier days upward as late ballots are processed. So a gap that looks large today usually closes within a day or two.</p>
+    <p>This is exactly why we keep every version instead of overwriting. A difference is only interesting if it does not close, or if a past day's number keeps changing after the fact. Those are the cases the tracker is built to catch.</p>
+  </section>
+
+  <section class="finding">
+    <div class="n">FINDING 3</div>
+    <h2>The state's mail-ballot list is incomplete by design</h2>
+    <p>The state's voter-by-voter roster only begins on October 14, but mail ballots start coming back weeks earlier. So the state's roster lists far fewer mail voters than the state's own headline mail count.</p>
+    <div class="figstrip">
+      <div class="f"><div class="v num">18,748</div><div class="s">Harris mail voters on the state roster</div></div>
+      <div class="f"><div class="v num">35,335</div><div class="s">Harris mail votes in the state's own total</div></div>
+    </div>
+    <p>This is not a county problem and not evidence of anything wrong. It means the earliest mail ballots cannot all be checked name by name through the state's roster. It is a limit on verification, and we flag it rather than paper over it.</p>
+  </section>
+
+  <section class="finding">
+    <div class="n">FINDING 4</div>
+    <h2>A few voters the state lists that the county does not, and we checked them</h2>
+    <p>Each day a small fraction of a percent of in-person voters show up on the state's list but not on the county's own list. That is the kind of difference worth examining, so in Travis County, where we have the full registration file, we looked up every one of them on days the state had finished posting.</p>
+    <div class="figstrip">
+      <div class="f"><div class="v num">184</div><div class="s">unexplained in-person voters examined</div></div>
+      <div class="f"><div class="v num">103</div><div class="s">had just registered in 2026, voting for the first time</div></div>
+      <div class="f"><div class="v num">34</div><div class="s">flagged for an address check, still eligible</div></div>
+      <div class="f"><div class="v flag num">4</div><div class="s">not in the registration file at all</div></div>
+    </div>
+    <p>Almost the whole group turned out to be people registering and voting for the first time, which is why they had no earlier record. Only four were missing from the registration file entirely. Those four are the only names that warrant a closer look, and that is a short, specific list the organizations can hand to the county, not a vague suspicion.</p>
+  </section>
+
+  <section class="finding">
+    <div class="n">FINDING 5</div>
+    <h2>We can only estimate party for voters who have voted in a primary</h2>
+    <p>Texas does not register voters by party. The only clue to someone's lean is which party's primary they have chosen before. Many voters have never voted in one.</p>
+    <div class="figstrip">
+      <div class="f"><div class="v num">27–36%</div><div class="s">of this year's early voters have no primary history</div></div>
+      <div class="f"><div class="v num">1 in 10</div><div class="s">have never voted in any election since 2016</div></div>
+    </div>
+    <p>So a quarter to a third of early voters cannot be assigned a lean at all. Any statement about which way the electorate is tilting can only speak for the voters we are able to classify, and it should always be quoted that way.</p>
+  </section>
+
+  <div class="takeaway">
+    <h3>The short version</h3>
+    <p>Two independent counts of the same election mostly agree. The differences are mostly timing. The real oddities are small, specific, and now written down with their sources, so they can be checked instead of argued. That record is the point.</p>
+  </div>
+
+  <div class="readmore">
+    <a href="index.html"><b>← Back to the dashboard</b><span>The live numbers, county by county.</span></a>
+    <a href="technical.html"><b>How we did it →</b><span>Sources, code, and method in full.</span></a>
+  </div>
+
+  <footer>Lone Star Ledger · ledger.precinctlabs.com · figures through October 28, 2026</footer>
+</main>
+</body>
+</html>
